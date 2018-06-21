@@ -1,0 +1,2 @@
+# scool
+School system
