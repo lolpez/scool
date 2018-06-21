@@ -1,10 +1,1484 @@
 doctype html
 html
 	head
-		title= title
-		link(rel='stylesheet', href='/stylesheets/style.css')
-	body
+		meta(charset='UTF-8')
+		meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no', name='viewport')
+		title Jquery DataTable | Bootstrap Based Admin Template - Material Design
+		
+		link(href='/page/style.css', rel='stylesheet')
+		// Google Fonts
+		
+		// Bootstrap Core Css
+		link(href='/plugins/bootstrap/css/bootstrap.css', rel='stylesheet')
+		// Waves Effect Css
+		link(href='/plugins/node-waves/waves.css', rel='stylesheet')
+		// Animation Css
+		link(href='/plugins/animate-css/animate.css', rel='stylesheet')
+		// JQuery DataTable Css
+		link(href='/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css', rel='stylesheet')
+		// Custom Css
+		link(href='/css/style.css', rel='stylesheet')
+		// AdminBSB Themes. You can choose a theme from css/themes instead of get all themes
+		link(href='/css/themes/all-themes.css', rel='stylesheet')
+	body.theme-red
+		// Page Loader
+		.page-loader-wrapper
+			.loader
+				.preloader
+					.spinner-layer.pl-red
+						.circle-clipper.left
+							.circle
+						.circle-clipper.right
+							.circle
+				p Please wait...
+		// #END# Page Loader
+		// Overlay For Sidebars
+		.overlay
+		// #END# Overlay For Sidebars
+		// Search Bar
+		.search-bar
+			.search-icon
+				i.material-icons search
+			input(type='text', placeholder='START TYPING...')
+			.close-search
+				i.material-icons close
+		// #END# Search Bar
+		// Top Bar
+		nav.navbar
+			.container-fluid
+				.navbar-header
+					a.navbar-toggle.collapsed(href='javascript:void(0);', data-toggle='collapse', data-target='#navbar-collapse', aria-expanded='false')
+					a.bars(href='javascript:void(0);')
+					a.navbar-brand(href='/index.html') ADMINBSB - MATERIAL DESIGN
+				#navbar-collapse.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						// Call Search
+						li
+							a.js-search(href='javascript:void(0);', data-close='true')
+								i.material-icons search
+						// #END# Call Search
+						// Notifications
+						li.dropdown
+							a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button')
+								i.material-icons notifications
+								span.label-count 7
+							ul.dropdown-menu
+								li.header NOTIFICATIONS
+								li.body
+									ul.menu
+										li
+											a(href='javascript:void(0);')
+												.icon-circle.bg-light-green
+													i.material-icons person_add
+												.menu-info
+													h4 12 new members joined
+													p
+														i.material-icons access_time
+														|  14 mins ago
+										li
+											a(href='javascript:void(0);')
+												.icon-circle.bg-cyan
+													i.material-icons add_shopping_cart
+												.menu-info
+													h4 4 sales made
+													p
+														i.material-icons access_time
+														|  22 mins ago
+										li
+											a(href='javascript:void(0);')
+												.icon-circle.bg-red
+													i.material-icons delete_forever
+												.menu-info
+													h4
+														b Nancy Doe
+														|  deleted account
+													p
+														i.material-icons access_time
+														|  3 hours ago
+										li
+											a(href='javascript:void(0);')
+												.icon-circle.bg-orange
+													i.material-icons mode_edit
+												.menu-info
+													h4
+														b Nancy
+														|  changed name
+													p
+														i.material-icons access_time
+														|  2 hours ago
+										li
+											a(href='javascript:void(0);')
+												.icon-circle.bg-blue-grey
+													i.material-icons comment
+												.menu-info
+													h4
+														b John
+														|  commented your post
+													p
+														i.material-icons access_time
+														|  4 hours ago
+										li
+											a(href='javascript:void(0);')
+												.icon-circle.bg-light-green
+													i.material-icons cached
+												.menu-info
+													h4
+														b John
+														|  updated status
+													p
+														i.material-icons access_time
+														|  3 hours ago
+										li
+											a(href='javascript:void(0);')
+												.icon-circle.bg-purple
+													i.material-icons settings
+												.menu-info
+													h4 Settings updated
+													p
+														i.material-icons access_time
+														|  Yesterday
+								li.footer
+									a(href='javascript:void(0);') View All Notifications
+						// #END# Notifications
+						// Tasks
+						li.dropdown
+							a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button')
+								i.material-icons flag
+								span.label-count 9
+							ul.dropdown-menu
+								li.header TASKS
+								li.body
+									ul.menu.tasks
+										li
+											a(href='javascript:void(0);')
+												h4
+													| Footer display issue
+													small 32%
+												.progress
+													.progress-bar.bg-pink(role='progressbar', aria-valuenow='85', aria-valuemin='0', aria-valuemax='100', style='width: 32%')
+										li
+											a(href='javascript:void(0);')
+												h4
+													| Make new buttons
+													small 45%
+												.progress
+													.progress-bar.bg-cyan(role='progressbar', aria-valuenow='85', aria-valuemin='0', aria-valuemax='100', style='width: 45%')
+										li
+											a(href='javascript:void(0);')
+												h4
+													| Create new dashboard
+													small 54%
+												.progress
+													.progress-bar.bg-teal(role='progressbar', aria-valuenow='85', aria-valuemin='0', aria-valuemax='100', style='width: 54%')
+										li
+											a(href='javascript:void(0);')
+												h4
+													| Solve transition issue
+													small 65%
+												.progress
+													.progress-bar.bg-orange(role='progressbar', aria-valuenow='85', aria-valuemin='0', aria-valuemax='100', style='width: 65%')
+										li
+											a(href='javascript:void(0);')
+												h4
+													| Answer GitHub questions
+													small 92%
+												.progress
+													.progress-bar.bg-purple(role='progressbar', aria-valuenow='85', aria-valuemin='0', aria-valuemax='100', style='width: 92%')
+								li.footer
+									a(href='javascript:void(0);') View All Tasks
+						// #END# Tasks
+						li.pull-right
+							a.js-right-sidebar(href='javascript:void(0);', data-close='true')
+								i.material-icons more_vert
+		// #Top Bar
+		section
+			// Left Sidebar
+			aside#leftsidebar.sidebar
+				// User Info
+				.user-info
+					.image
+						img(src='/images/user.png', width='48', height='48', alt='User')
+					.info-container
+						.name(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') John Doe
+						.email john.doe@example.com
+						.btn-group.user-helper-dropdown
+							i.material-icons(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true') keyboard_arrow_down
+							ul.dropdown-menu.pull-right
+								li
+									a(href='javascript:void(0);')
+										i.material-icons person
+										| Profile
+								li.divider(role='separator')
+								li
+									a(href='javascript:void(0);')
+										i.material-icons group
+										| Followers
+								li
+									a(href='javascript:void(0);')
+										i.material-icons shopping_cart
+										| Sales
+								li
+									a(href='javascript:void(0);')
+										i.material-icons favorite
+										| Likes
+								li.divider(role='separator')
+								li
+									a(href='javascript:void(0);')
+										i.material-icons input
+										| Sign Out
+				// #User Info
+				// Menu
+				.menu
+					ul.list
+						li.header MAIN NAVIGATION
+						li
+							a(href='/index.html')
+								i.material-icons home
+								span Home
+						li
+							a(href='/pages/typography.html')
+								i.material-icons text_fields
+								span Typography
+						li
+							a(href='/pages/helper-classes.html')
+								i.material-icons layers
+								span Helper Classes
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								i.material-icons widgets
+								span Widgets
+							ul.ml-menu
+								li
+									a.menu-toggle(href='javascript:void(0);')
+										span Cards
+									ul.ml-menu
+										li
+											a(href='/pages/widgets/cards/basic.html') Basic
+										li
+											a(href='/pages/widgets/cards/colored.html') Colored
+										li
+											a(href='/pages/widgets/cards/no-header.html') No Header
+								li
+									a.menu-toggle(href='javascript:void(0);')
+										span Infobox
+									ul.ml-menu
+										li
+											a(href='/pages/widgets/infobox/infobox-1.html') Infobox-1
+										li
+											a(href='/pages/widgets/infobox/infobox-2.html') Infobox-2
+										li
+											a(href='/pages/widgets/infobox/infobox-3.html') Infobox-3
+										li
+											a(href='/pages/widgets/infobox/infobox-4.html') Infobox-4
+										li
+											a(href='/pages/widgets/infobox/infobox-5.html') Infobox-5
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								i.material-icons swap_calls
+								span User Interface (UI)
+							ul.ml-menu
+								li
+									a(href='/pages/ui/alerts.html') Alerts
+								li
+									a(href='/pages/ui/animations.html') Animations
+								li
+									a(href='/pages/ui/badges.html') Badges
+								li
+									a(href='/pages/ui/breadcrumbs.html') Breadcrumbs
+								li
+									a(href='/pages/ui/buttons.html') Buttons
+								li
+									a(href='/pages/ui/collapse.html') Collapse
+								li
+									a(href='/pages/ui/colors.html') Colors
+								li
+									a(href='/pages/ui/dialogs.html') Dialogs
+								li
+									a(href='/pages/ui/icons.html') Icons
+								li
+									a(href='/pages/ui/labels.html') Labels
+								li
+									a(href='/pages/ui/list-group.html') List Group
+								li
+									a(href='/pages/ui/media-object.html') Media Object
+								li
+									a(href='/pages/ui/modals.html') Modals
+								li
+									a(href='/pages/ui/notifications.html') Notifications
+								li
+									a(href='/pages/ui/pagination.html') Pagination
+								li
+									a(href='/pages/ui/preloaders.html') Preloaders
+								li
+									a(href='/pages/ui/progressbars.html') Progress Bars
+								li
+									a(href='/pages/ui/range-sliders.html') Range Sliders
+								li
+									a(href='/pages/ui/sortable-nestable.html') Sortable & Nestable
+								li
+									a(href='/pages/ui/tabs.html') Tabs
+								li
+									a(href='/pages/ui/thumbnails.html') Thumbnails
+								li
+									a(href='/pages/ui/tooltips-popovers.html') Tooltips & Popovers
+								li
+									a(href='/pages/ui/waves.html') Waves
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								i.material-icons assignment
+								span Forms
+							ul.ml-menu
+								li
+									a(href='/pages/forms/basic-form-elements.html') Basic Form Elements
+								li
+									a(href='/pages/forms/advanced-form-elements.html') Advanced Form Elements
+								li
+									a(href='/pages/forms/form-examples.html') Form Examples
+								li
+									a(href='/pages/forms/form-validation.html') Form Validation
+								li
+									a(href='/pages/forms/form-wizard.html') Form Wizard
+								li
+									a(href='/pages/forms/editors.html') Editors
+						li.active
+							a.menu-toggle(href='javascript:void(0);')
+								i.material-icons view_list
+								span Tables
+							ul.ml-menu
+								li
+									a(href='/pages/tables/normal-tables.html') Normal Tables
+								li.active
+									a(href='/pages/tables/jquery-datatable.html') Jquery Datatables
+								li
+									a(href='/pages/tables/editable-table.html') Editable Tables
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								i.material-icons perm_media
+								span Medias
+							ul.ml-menu
+								li
+									a(href='/pages/medias/image-gallery.html') Image Gallery
+								li
+									a(href='/pages/medias/carousel.html') Carousel
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								i.material-icons pie_chart
+								span Charts
+							ul.ml-menu
+								li
+									a(href='/pages/charts/morris.html') Morris
+								li
+									a(href='/pages/charts/flot.html') Flot
+								li
+									a(href='/pages/charts/chartjs.html') ChartJS
+								li
+									a(href='/pages/charts/sparkline.html') Sparkline
+								li
+									a(href='/pages/charts/jquery-knob.html') Jquery Knob
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								i.material-icons content_copy
+								span Example Pages
+							ul.ml-menu
+								li
+									a(href='/pages/examples/sign-in.html') Sign In
+								li
+									a(href='/pages/examples/sign-up.html') Sign Up
+								li
+									a(href='/pages/examples/forgot-password.html') Forgot Password
+								li
+									a(href='/pages/examples/blank.html') Blank Page
+								li
+									a(href='/pages/examples/404.html') 404 - Not Found
+								li
+									a(href='/pages/examples/500.html') 500 - Server Error
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								i.material-icons map
+								span Maps
+							ul.ml-menu
+								li
+									a(href='/pages/maps/google.html') Google Map
+								li
+									a(href='/pages/maps/yandex.html') YandexMap
+								li
+									a(href='/pages/maps/jvectormap.html') jVectorMap
+						li
+							a.menu-toggle(href='javascript:void(0);')
+								i.material-icons trending_down
+								span Multi Level Menu
+							ul.ml-menu
+								li
+									a(href='javascript:void(0);')
+										span Menu Item
+								li
+									a(href='javascript:void(0);')
+										span Menu Item - 2
+								li
+									a.menu-toggle(href='javascript:void(0);')
+										span Level - 2
+									ul.ml-menu
+										li
+											a(href='javascript:void(0);')
+												span Menu Item
+										li
+											a.menu-toggle(href='javascript:void(0);')
+												span Level - 3
+											ul.ml-menu
+												li
+													a(href='javascript:void(0);')
+														span Level - 4
+						li
+							a(href='../changelogs.html')
+								i.material-icons update
+								span Changelogs
+						li.header LABELS
+						li
+							a(href='javascript:void(0);')
+								i.material-icons.col-red donut_large
+								span Important
+						li
+							a(href='javascript:void(0);')
+								i.material-icons.col-amber donut_large
+								span Warning
+						li
+							a(href='javascript:void(0);')
+								i.material-icons.col-light-blue donut_large
+								span Information
+				// #Menu
+				// Footer
+				.legal
+					.copyright
+						| © 2016 - 2017 
+						a(href='javascript:void(0);') AdminBSB - Material Design
+						| .
+					.version
+						b Version: 
+						|  1.0.5
+				// #Footer
+			// #END# Left Sidebar
+			// Right Sidebar
+			aside#rightsidebar.right-sidebar
+				ul.nav.nav-tabs.tab-nav-right(role='tablist')
+					li.active(role='presentation')
+						a(href='#skins', data-toggle='tab') SKINS
+					li(role='presentation')
+						a(href='#settings', data-toggle='tab') SETTINGS
+				.tab-content
+					#skins.tab-pane.fade.in.active.in.active(role='tabpanel')
+						ul.demo-choose-skin
+							li.active(data-theme='red')
+								.red
+								span Red
+							li(data-theme='pink')
+								.pink
+								span Pink
+							li(data-theme='purple')
+								.purple
+								span Purple
+							li(data-theme='deep-purple')
+								.deep-purple
+								span Deep Purple
+							li(data-theme='indigo')
+								.indigo
+								span Indigo
+							li(data-theme='blue')
+								.blue
+								span Blue
+							li(data-theme='light-blue')
+								.light-blue
+								span Light Blue
+							li(data-theme='cyan')
+								.cyan
+								span Cyan
+							li(data-theme='teal')
+								.teal
+								span Teal
+							li(data-theme='green')
+								.green
+								span Green
+							li(data-theme='light-green')
+								.light-green
+								span Light Green
+							li(data-theme='lime')
+								.lime
+								span Lime
+							li(data-theme='yellow')
+								.yellow
+								span Yellow
+							li(data-theme='amber')
+								.amber
+								span Amber
+							li(data-theme='orange')
+								.orange
+								span Orange
+							li(data-theme='deep-orange')
+								.deep-orange
+								span Deep Orange
+							li(data-theme='brown')
+								.brown
+								span Brown
+							li(data-theme='grey')
+								.grey
+								span Grey
+							li(data-theme='blue-grey')
+								.blue-grey
+								span Blue Grey
+							li(data-theme='black')
+								.black
+								span Black
+					#settings.tab-pane.fade(role='tabpanel')
+						.demo-settings
+							p GENERAL SETTINGS
+							ul.setting-list
+								li
+									span Report Panel Usage
+									.switch
+										label
+											input(type='checkbox', checked='')
+											span.lever
+								li
+									span Email Redirect
+									.switch
+										label
+											input(type='checkbox')
+											span.lever
+							p SYSTEM SETTINGS
+							ul.setting-list
+								li
+									span Notifications
+									.switch
+										label
+											input(type='checkbox', checked='')
+											span.lever
+								li
+									span Auto Updates
+									.switch
+										label
+											input(type='checkbox', checked='')
+											span.lever
+							p ACCOUNT SETTINGS
+							ul.setting-list
+								li
+									span Offline
+									.switch
+										label
+											input(type='checkbox')
+											span.lever
+								li
+									span Location Permission
+									.switch
+										label
+											input(type='checkbox', checked='')
+											span.lever
+			// #END# Right Sidebar
+		section.content
+			.container-fluid
+				.block-header
+					h2
+						| JQUERY DATATABLES
+						small
+							| Taken from 
+							a(href='https://datatables.net/', target='_blank') datatables.net
+				// Basic Examples
+				.row.clearfix
+					.col-lg-12.col-md-12.col-sm-12.col-xs-12
+						.card
+							.header
+								h2
+									| BASIC EXAMPLE
+								ul.header-dropdown.m-r--5
+									li.dropdown
+										a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+											i.material-icons more_vert
+										ul.dropdown-menu.pull-right
+											li
+												a(href='javascript:void(0);') Action
+											li
+												a(href='javascript:void(0);') Another action
+											li
+												a(href='javascript:void(0);') Something else here
+							.body
+								.table-responsive
+									table.table.table-bordered.table-striped.table-hover.js-basic-example.dataTable
+										thead
+											tr
+												th Name
+												th Position
+												th Office
+												th Age
+												th Start date
+												th Salary
+										tfoot
+											tr
+												th Name
+												th Position
+												th Office
+												th Age
+												th Start date
+												th Salary
+										tbody
+											tr
+												td Tiger Nixon
+												td System Architect
+												td Edinburgh
+												td 61
+												td 2011/04/25
+												td $320,800
+											tr
+												td Garrett Winters
+												td Accountant
+												td Tokyo
+												td 63
+												td 2011/07/25
+												td $170,750
+											tr
+												td Ashton Cox
+												td Junior Technical Author
+												td San Francisco
+												td 66
+												td 2009/01/12
+												td $86,000
+											tr
+												td Cedric Kelly
+												td Senior Javascript Developer
+												td Edinburgh
+												td 22
+												td 2012/03/29
+												td $433,060
+											tr
+												td Airi Satou
+												td Accountant
+												td Tokyo
+												td 33
+												td 2008/11/28
+												td $162,700
+											tr
+												td Brielle Williamson
+												td Integration Specialist
+												td New York
+												td 61
+												td 2012/12/02
+												td $372,000
+											tr
+												td Herrod Chandler
+												td Sales Assistant
+												td San Francisco
+												td 59
+												td 2012/08/06
+												td $137,500
+											tr
+												td Rhona Davidson
+												td Integration Specialist
+												td Tokyo
+												td 55
+												td 2010/10/14
+												td $327,900
+											tr
+												td Colleen Hurst
+												td Javascript Developer
+												td San Francisco
+												td 39
+												td 2009/09/15
+												td $205,500
+											tr
+												td Sonya Frost
+												td Software Engineer
+												td Edinburgh
+												td 23
+												td 2008/12/13
+												td $103,600
+											tr
+												td Jena Gaines
+												td Office Manager
+												td London
+												td 30
+												td 2008/12/19
+												td $90,560
+											tr
+												td Quinn Flynn
+												td Support Lead
+												td Edinburgh
+												td 22
+												td 2013/03/03
+												td $342,000
+											tr
+												td Charde Marshall
+												td Regional Director
+												td San Francisco
+												td 36
+												td 2008/10/16
+												td $470,600
+											tr
+												td Haley Kennedy
+												td Senior Marketing Designer
+												td London
+												td 43
+												td 2012/12/18
+												td $313,500
+											tr
+												td Tatyana Fitzpatrick
+												td Regional Director
+												td London
+												td 19
+												td 2010/03/17
+												td $385,750
+											tr
+												td Michael Silva
+												td Marketing Designer
+												td London
+												td 66
+												td 2012/11/27
+												td $198,500
+											tr
+												td Paul Byrd
+												td Chief Financial Officer (CFO)
+												td New York
+												td 64
+												td 2010/06/09
+												td $725,000
+											tr
+												td Gloria Little
+												td Systems Administrator
+												td New York
+												td 59
+												td 2009/04/10
+												td $237,500
+											tr
+												td Bradley Greer
+												td Software Engineer
+												td London
+												td 41
+												td 2012/10/13
+												td $132,000
+											tr
+												td Dai Rios
+												td Personnel Lead
+												td Edinburgh
+												td 35
+												td 2012/09/26
+												td $217,500
+											tr
+												td Jenette Caldwell
+												td Development Lead
+												td New York
+												td 30
+												td 2011/09/03
+												td $345,000
+											tr
+												td Yuri Berry
+												td Chief Marketing Officer (CMO)
+												td New York
+												td 40
+												td 2009/06/25
+												td $675,000
+											tr
+												td Caesar Vance
+												td Pre-Sales Support
+												td New York
+												td 21
+												td 2011/12/12
+												td $106,450
+											tr
+												td Doris Wilder
+												td Sales Assistant
+												td Sidney
+												td 23
+												td 2010/09/20
+												td $85,600
+											tr
+												td Angelica Ramos
+												td Chief Executive Officer (CEO)
+												td London
+												td 47
+												td 2009/10/09
+												td $1,200,000
+											tr
+												td Gavin Joyce
+												td Developer
+												td Edinburgh
+												td 42
+												td 2010/12/22
+												td $92,575
+											tr
+												td Jennifer Chang
+												td Regional Director
+												td Singapore
+												td 28
+												td 2010/11/14
+												td $357,650
+											tr
+												td Brenden Wagner
+												td Software Engineer
+												td San Francisco
+												td 28
+												td 2011/06/07
+												td $206,850
+											tr
+												td Fiona Green
+												td Chief Operating Officer (COO)
+												td San Francisco
+												td 48
+												td 2010/03/11
+												td $850,000
+											tr
+												td Shou Itou
+												td Regional Marketing
+												td Tokyo
+												td 20
+												td 2011/08/14
+												td $163,000
+											tr
+												td Michelle House
+												td Integration Specialist
+												td Sidney
+												td 37
+												td 2011/06/02
+												td $95,400
+											tr
+												td Suki Burks
+												td Developer
+												td London
+												td 53
+												td 2009/10/22
+												td $114,500
+											tr
+												td Prescott Bartlett
+												td Technical Author
+												td London
+												td 27
+												td 2011/05/07
+												td $145,000
+											tr
+												td Gavin Cortez
+												td Team Leader
+												td San Francisco
+												td 22
+												td 2008/10/26
+												td $235,500
+											tr
+												td Martena Mccray
+												td Post-Sales support
+												td Edinburgh
+												td 46
+												td 2011/03/09
+												td $324,050
+											tr
+												td Unity Butler
+												td Marketing Designer
+												td San Francisco
+												td 47
+												td 2009/12/09
+												td $85,675
+											tr
+												td Howard Hatfield
+												td Office Manager
+												td San Francisco
+												td 51
+												td 2008/12/16
+												td $164,500
+											tr
+												td Hope Fuentes
+												td Secretary
+												td San Francisco
+												td 41
+												td 2010/02/12
+												td $109,850
+											tr
+												td Vivian Harrell
+												td Financial Controller
+												td San Francisco
+												td 62
+												td 2009/02/14
+												td $452,500
+											tr
+												td Timothy Mooney
+												td Office Manager
+												td London
+												td 37
+												td 2008/12/11
+												td $136,200
+											tr
+												td Jackson Bradshaw
+												td Director
+												td New York
+												td 65
+												td 2008/09/26
+												td $645,750
+											tr
+												td Olivia Liang
+												td Support Engineer
+												td Singapore
+												td 64
+												td 2011/02/03
+												td $234,500
+											tr
+												td Bruno Nash
+												td Software Engineer
+												td London
+												td 38
+												td 2011/05/03
+												td $163,500
+											tr
+												td Sakura Yamamoto
+												td Support Engineer
+												td Tokyo
+												td 37
+												td 2009/08/19
+												td $139,575
+											tr
+												td Thor Walton
+												td Developer
+												td New York
+												td 61
+												td 2013/08/11
+												td $98,540
+											tr
+												td Finn Camacho
+												td Support Engineer
+												td San Francisco
+												td 47
+												td 2009/07/07
+												td $87,500
+											tr
+												td Serge Baldwin
+												td Data Coordinator
+												td Singapore
+												td 64
+												td 2012/04/09
+												td $138,575
+											tr
+												td Zenaida Frank
+												td Software Engineer
+												td New York
+												td 63
+												td 2010/01/04
+												td $125,250
+											tr
+												td Zorita Serrano
+												td Software Engineer
+												td San Francisco
+												td 56
+												td 2012/06/01
+												td $115,000
+											tr
+												td Jennifer Acosta
+												td Junior Javascript Developer
+												td Edinburgh
+												td 43
+												td 2013/02/01
+												td $75,650
+											tr
+												td Cara Stevens
+												td Sales Assistant
+												td New York
+												td 46
+												td 2011/12/06
+												td $145,600
+											tr
+												td Hermione Butler
+												td Regional Director
+												td London
+												td 47
+												td 2011/03/21
+												td $356,250
+											tr
+												td Lael Greer
+												td Systems Administrator
+												td London
+												td 21
+												td 2009/02/27
+												td $103,500
+											tr
+												td Jonas Alexander
+												td Developer
+												td San Francisco
+												td 30
+												td 2010/07/14
+												td $86,500
+											tr
+												td Shad Decker
+												td Regional Director
+												td Edinburgh
+												td 51
+												td 2008/11/13
+												td $183,000
+											tr
+												td Michael Bruce
+												td Javascript Developer
+												td Singapore
+												td 29
+												td 2011/06/27
+												td $183,000
+											tr
+												td Donna Snider
+												td Customer Support
+												td New York
+												td 27
+												td 2011/01/25
+												td $112,000
+				// #END# Basic Examples
+				// Exportable Table
+				.row.clearfix
+					.col-lg-12.col-md-12.col-sm-12.col-xs-12
+						.card
+							.header
+								h2
+									| EXPORTABLE TABLE
+								ul.header-dropdown.m-r--5
+									li.dropdown
+										a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+											i.material-icons more_vert
+										ul.dropdown-menu.pull-right
+											li
+												a(href='javascript:void(0);') Action
+											li
+												a(href='javascript:void(0);') Another action
+											li
+												a(href='javascript:void(0);') Something else here
+							.body
+								.table-responsive
+									table.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
+										thead
+											tr
+												th Name
+												th Position
+												th Office
+												th Age
+												th Start date
+												th Salary
+										tfoot
+											tr
+												th Name
+												th Position
+												th Office
+												th Age
+												th Start date
+												th Salary
+										tbody
+											tr
+												td Tiger Nixon
+												td System Architect
+												td Edinburgh
+												td 61
+												td 2011/04/25
+												td $320,800
+											tr
+												td Garrett Winters
+												td Accountant
+												td Tokyo
+												td 63
+												td 2011/07/25
+												td $170,750
+											tr
+												td Ashton Cox
+												td Junior Technical Author
+												td San Francisco
+												td 66
+												td 2009/01/12
+												td $86,000
+											tr
+												td Cedric Kelly
+												td Senior Javascript Developer
+												td Edinburgh
+												td 22
+												td 2012/03/29
+												td $433,060
+											tr
+												td Airi Satou
+												td Accountant
+												td Tokyo
+												td 33
+												td 2008/11/28
+												td $162,700
+											tr
+												td Brielle Williamson
+												td Integration Specialist
+												td New York
+												td 61
+												td 2012/12/02
+												td $372,000
+											tr
+												td Herrod Chandler
+												td Sales Assistant
+												td San Francisco
+												td 59
+												td 2012/08/06
+												td $137,500
+											tr
+												td Rhona Davidson
+												td Integration Specialist
+												td Tokyo
+												td 55
+												td 2010/10/14
+												td $327,900
+											tr
+												td Colleen Hurst
+												td Javascript Developer
+												td San Francisco
+												td 39
+												td 2009/09/15
+												td $205,500
+											tr
+												td Sonya Frost
+												td Software Engineer
+												td Edinburgh
+												td 23
+												td 2008/12/13
+												td $103,600
+											tr
+												td Jena Gaines
+												td Office Manager
+												td London
+												td 30
+												td 2008/12/19
+												td $90,560
+											tr
+												td Quinn Flynn
+												td Support Lead
+												td Edinburgh
+												td 22
+												td 2013/03/03
+												td $342,000
+											tr
+												td Charde Marshall
+												td Regional Director
+												td San Francisco
+												td 36
+												td 2008/10/16
+												td $470,600
+											tr
+												td Haley Kennedy
+												td Senior Marketing Designer
+												td London
+												td 43
+												td 2012/12/18
+												td $313,500
+											tr
+												td Tatyana Fitzpatrick
+												td Regional Director
+												td London
+												td 19
+												td 2010/03/17
+												td $385,750
+											tr
+												td Michael Silva
+												td Marketing Designer
+												td London
+												td 66
+												td 2012/11/27
+												td $198,500
+											tr
+												td Paul Byrd
+												td Chief Financial Officer (CFO)
+												td New York
+												td 64
+												td 2010/06/09
+												td $725,000
+											tr
+												td Gloria Little
+												td Systems Administrator
+												td New York
+												td 59
+												td 2009/04/10
+												td $237,500
+											tr
+												td Bradley Greer
+												td Software Engineer
+												td London
+												td 41
+												td 2012/10/13
+												td $132,000
+											tr
+												td Dai Rios
+												td Personnel Lead
+												td Edinburgh
+												td 35
+												td 2012/09/26
+												td $217,500
+											tr
+												td Jenette Caldwell
+												td Development Lead
+												td New York
+												td 30
+												td 2011/09/03
+												td $345,000
+											tr
+												td Yuri Berry
+												td Chief Marketing Officer (CMO)
+												td New York
+												td 40
+												td 2009/06/25
+												td $675,000
+											tr
+												td Caesar Vance
+												td Pre-Sales Support
+												td New York
+												td 21
+												td 2011/12/12
+												td $106,450
+											tr
+												td Doris Wilder
+												td Sales Assistant
+												td Sidney
+												td 23
+												td 2010/09/20
+												td $85,600
+											tr
+												td Angelica Ramos
+												td Chief Executive Officer (CEO)
+												td London
+												td 47
+												td 2009/10/09
+												td $1,200,000
+											tr
+												td Gavin Joyce
+												td Developer
+												td Edinburgh
+												td 42
+												td 2010/12/22
+												td $92,575
+											tr
+												td Jennifer Chang
+												td Regional Director
+												td Singapore
+												td 28
+												td 2010/11/14
+												td $357,650
+											tr
+												td Brenden Wagner
+												td Software Engineer
+												td San Francisco
+												td 28
+												td 2011/06/07
+												td $206,850
+											tr
+												td Fiona Green
+												td Chief Operating Officer (COO)
+												td San Francisco
+												td 48
+												td 2010/03/11
+												td $850,000
+											tr
+												td Shou Itou
+												td Regional Marketing
+												td Tokyo
+												td 20
+												td 2011/08/14
+												td $163,000
+											tr
+												td Michelle House
+												td Integration Specialist
+												td Sidney
+												td 37
+												td 2011/06/02
+												td $95,400
+											tr
+												td Suki Burks
+												td Developer
+												td London
+												td 53
+												td 2009/10/22
+												td $114,500
+											tr
+												td Prescott Bartlett
+												td Technical Author
+												td London
+												td 27
+												td 2011/05/07
+												td $145,000
+											tr
+												td Gavin Cortez
+												td Team Leader
+												td San Francisco
+												td 22
+												td 2008/10/26
+												td $235,500
+											tr
+												td Martena Mccray
+												td Post-Sales support
+												td Edinburgh
+												td 46
+												td 2011/03/09
+												td $324,050
+											tr
+												td Unity Butler
+												td Marketing Designer
+												td San Francisco
+												td 47
+												td 2009/12/09
+												td $85,675
+											tr
+												td Howard Hatfield
+												td Office Manager
+												td San Francisco
+												td 51
+												td 2008/12/16
+												td $164,500
+											tr
+												td Hope Fuentes
+												td Secretary
+												td San Francisco
+												td 41
+												td 2010/02/12
+												td $109,850
+											tr
+												td Vivian Harrell
+												td Financial Controller
+												td San Francisco
+												td 62
+												td 2009/02/14
+												td $452,500
+											tr
+												td Timothy Mooney
+												td Office Manager
+												td London
+												td 37
+												td 2008/12/11
+												td $136,200
+											tr
+												td Jackson Bradshaw
+												td Director
+												td New York
+												td 65
+												td 2008/09/26
+												td $645,750
+											tr
+												td Olivia Liang
+												td Support Engineer
+												td Singapore
+												td 64
+												td 2011/02/03
+												td $234,500
+											tr
+												td Bruno Nash
+												td Software Engineer
+												td London
+												td 38
+												td 2011/05/03
+												td $163,500
+											tr
+												td Sakura Yamamoto
+												td Support Engineer
+												td Tokyo
+												td 37
+												td 2009/08/19
+												td $139,575
+											tr
+												td Thor Walton
+												td Developer
+												td New York
+												td 61
+												td 2013/08/11
+												td $98,540
+											tr
+												td Finn Camacho
+												td Support Engineer
+												td San Francisco
+												td 47
+												td 2009/07/07
+												td $87,500
+											tr
+												td Serge Baldwin
+												td Data Coordinator
+												td Singapore
+												td 64
+												td 2012/04/09
+												td $138,575
+											tr
+												td Zenaida Frank
+												td Software Engineer
+												td New York
+												td 63
+												td 2010/01/04
+												td $125,250
+											tr
+												td Zorita Serrano
+												td Software Engineer
+												td San Francisco
+												td 56
+												td 2012/06/01
+												td $115,000
+											tr
+												td Jennifer Acosta
+												td Junior Javascript Developer
+												td Edinburgh
+												td 43
+												td 2013/02/01
+												td $75,650
+											tr
+												td Cara Stevens
+												td Sales Assistant
+												td New York
+												td 46
+												td 2011/12/06
+												td $145,600
+											tr
+												td Hermione Butler
+												td Regional Director
+												td London
+												td 47
+												td 2011/03/21
+												td $356,250
+											tr
+												td Lael Greer
+												td Systems Administrator
+												td London
+												td 21
+												td 2009/02/27
+												td $103,500
+											tr
+												td Jonas Alexander
+												td Developer
+												td San Francisco
+												td 30
+												td 2010/07/14
+												td $86,500
+											tr
+												td Shad Decker
+												td Regional Director
+												td Edinburgh
+												td 51
+												td 2008/11/13
+												td $183,000
+											tr
+												td Michael Bruce
+												td Javascript Developer
+												td Singapore
+												td 29
+												td 2011/06/27
+												td $183,000
+											tr
+												td Donna Snider
+												td Customer Support
+												td New York
+												td 27
+												td 2011/01/25
+												td $112,000
+				// #END# Exportable Table
+		// Jquery Core Js
+		script(src='/plugins/jquery/jquery.min.js')
+		// Bootstrap Core Js
+		script(src='/plugins/bootstrap/js/bootstrap.js')
+		// Select Plugin Js
+		script(src='/plugins/bootstrap-select/js/bootstrap-select.js')
+		// Slimscroll Plugin Js
+		script(src='/plugins/jquery-slimscroll/jquery.slimscroll.js')
+		// Waves Effect Plugin Js
+		script(src='/plugins/node-waves/waves.js')
+		// Jquery DataTable Plugin Js
+		script(src='/plugins/jquery-datatable/jquery.dataTables.js')
+		script(src='/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js')
+		script(src='/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js')
+		script(src='/plugins/jquery-datatable/extensions/export/buttons.flash.min.js')
+		script(src='/plugins/jquery-datatable/extensions/export/jszip.min.js')
+		script(src='/plugins/jquery-datatable/extensions/export/pdfmake.min.js')
+		script(src='/plugins/jquery-datatable/extensions/export/vfs_fonts.js')
+		script(src='/plugins/jquery-datatable/extensions/export/buttons.html5.min.js')
+		script(src='/plugins/jquery-datatable/extensions/export/buttons.print.min.js')
+		// Custom Js
+		script(src='/js/admin.js')
+		script(src='/js/pages/tables/jquery-datatable.js')
+		// Demo Js
+		script(src='/js/demo.js')
 		block content
-		a(href="/") Home
-		br
-		a(href="/user") User
