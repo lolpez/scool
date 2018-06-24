@@ -24,8 +24,4 @@ router.get('/', function(req, res, next) {
     });
 });
 
-router.get('/status', function(req, res, next) {
-    res.send({message: "Scool server running."});
-});
-
 module.exports = router;

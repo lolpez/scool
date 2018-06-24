@@ -6,8 +6,9 @@
 {"hello":"world","n":5,"today":{"$$date":1529813579085},"nedbIsAwesome":true,"notthere":null,"fruits":["apple","orange","pear"],"infos":{"name":"nedb"},"_id":"Yu2ChJMcKEPeOmcC"}
 {"hello":"world","n":5,"today":{"$$date":1529814869461},"nedbIsAwesome":true,"notthere":null,"fruits":["apple","orange","pear"],"infos":{"name":"nedb"},"_id":"dYdfZ3tCla9m5BNo"}
 {"hello":"world","n":5,"today":{"$$date":1529811811004},"nedbIsAwesome":true,"notthere":null,"fruits":["apple","orange","pear"],"infos":{"name":"nedb"},"_id":"fEQ5fS4MECmfdAYI"}
+{"hello":"world","n":5,"today":{"$$date":1529814942502},"nedbIsAwesome":true,"notthere":null,"fruits":["apple","orange","pear"],"infos":{"name":"nedb"},"_id":"hCFtSoIHQg7VKWmT"}
 {"hello":"world","n":5,"today":{"$$date":1529813512221},"nedbIsAwesome":true,"notthere":null,"fruits":["apple","orange","pear"],"infos":{"name":"nedb"},"_id":"kW0EI6LmIj4osIwp"}
 {"hello":"world","n":5,"today":{"$$date":1529813953679},"nedbIsAwesome":true,"notthere":null,"fruits":["apple","orange","pear"],"infos":{"name":"nedb"},"_id":"pPQt2Dp5ufhm5mxG"}
 {"hello":"world","n":5,"today":{"$$date":1529814803813},"nedbIsAwesome":true,"notthere":null,"fruits":["apple","orange","pear"],"infos":{"name":"nedb"},"_id":"rU7nhfxINLOo0mdE"}
 {"hello":"world","n":5,"today":{"$$date":1529814446303},"nedbIsAwesome":true,"notthere":null,"fruits":["apple","orange","pear"],"infos":{"name":"nedb"},"_id":"tckEDPoOXoEvmNVu"}
-{"hello":"world","n":5,"today":{"$$date":1529814942502},"nedbIsAwesome":true,"notthere":null,"fruits":["apple","orange","pear"],"infos":{"name":"nedb"},"_id":"hCFtSoIHQg7VKWmT"}
+{"hello":"world","n":5,"today":{"$$date":1529815374079},"nedbIsAwesome":true,"notthere":null,"fruits":["apple","orange","pear"],"infos":{"name":"nedb"},"_id":"4AIjN4gQvlwVbqHN"}

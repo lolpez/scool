@@ -84,7 +84,7 @@
 		}
 		
 		function init(){
-			$.get(`${expressAppUrl}/status`).done(function (response) {
+			$.post(`${expressAppUrl}/api/v1/status`).done(function (response) {
 				console.log(`%c${response.message}`, "color: blue");
 				$expressApp.attr("src", expressAppUrl);
 			}).fail(function() {
