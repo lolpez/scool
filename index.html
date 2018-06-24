@@ -36,7 +36,6 @@
 	<div id="loading">
 		<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
 	</div>
-	<pre id="serverLog"></pre>
 	<!-- <webview id="expressApp" class="expressApp"></webview> -->
 	<!-- For developing only -->
 	<iframe id="expressApp" class="expressApp" style="display: none"></iframe>
@@ -56,7 +55,6 @@
 			request = require("request"),
 			_ = require("lodash"),
 			key = require("keymaster"),
-			$serverLog = $("#serverLog"),
 			$expressApp = $("#expressApp"),
 			$loading = $("#loading");
 
