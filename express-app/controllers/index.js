@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
                , infos: { name: 'nedb' }
                };
     modelUser.insert(user);
-    modelUser.find({}, function (err, users) {
+    modelUser.find({}, (err, users) => {
         res.render('index',
             {
                 title: 'Home',
@@ -22,6 +22,10 @@ router.get('/', function(req, res, next) {
             }
         );
     });
+});
+
+router.get('/status', function(req, res, next) {
+    res.send({message: "Scool server running."});
 });
 
 module.exports = router;

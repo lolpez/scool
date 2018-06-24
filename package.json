@@ -1,12 +1,12 @@
 {
-  "name": "electron-with-express",
-  "description": "Demonstrates spawning Express from Electron and using it to serve content",
-  "version": "0.10.0",
+  "name": "Scool",
+  "description": "HHRR",
+  "version": "0.0.0",
   "main": "main.js",
   "authors": [
-    "Frank Hale <frankhale@gmail.com>"
+    "Luis Daniel <lopezsandi1666@gmail.com>"
   ],
-  "license": "GPL-3.0",
+  "license": "Apache 2.0",
   "private": true,
   "scripts": {
     "start": ".\\node.exe start-electron.js"

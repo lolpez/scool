@@ -4,10 +4,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Scool</title>
-	
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
-	 crossorigin="anonymous">
-
 	<style>
 		body {
 			overflow: hidden;
@@ -34,7 +30,7 @@
 
 <body>
 	<div id="loading">
-		<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+		Loading...
 	</div>
 	<!-- <webview id="expressApp" class="expressApp"></webview> -->
 	<!-- For developing only -->
@@ -57,10 +53,17 @@
 			key = require("keymaster"),
 			$expressApp = $("#expressApp"),
 			$loading = $("#loading");
+		
+		let attempts = 0;
 
 		ipcRenderer.on('stop-server', (event, data) => {
 			node.kill('SIGINT');
-		});		
+		});
+
+		$expressApp.on("load", function(){
+			$loading.hide();
+			$expressApp.show();
+		});
 
 		function strip(s) {
 			return s.replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '');
@@ -68,37 +71,32 @@
 
 		function redirectOutput(x) {
 			let lineBuffer = "";
-
 			x.on('data', function (data) {
 				lineBuffer += data.toString();
 				let lines = lineBuffer.split("\n");
-
 				_.forEach(lines, (l) => {
 					if (l !== "") {
-						console.log("%c" + strip(l), "color: blue");
+						console.log(`%c${strip(l)}`, "color: blue");
 					}
 				});
-
 				lineBuffer = lines[lines.length - 1];
 			});
+		}
+		
+		function init(){
+			$.get(`${expressAppUrl}/status`).done(function (response) {
+				console.log(`%c${response.message}`, "color: blue");
+				$expressApp.attr("src", expressAppUrl);
+			}).fail(function() {
+				attempts++;
+				console.warn(`Server not responding. Trying to connect again (Attempts: ${attempts}).`);				
+				init();				
+			});		
 		}
 
 		redirectOutput(node.stdout);
 		redirectOutput(node.stderr);
-
-		$expressApp.on("load", function(){
-			$loading.hide();
-			$expressApp.show();
-		});
-
-		let checkServerRunning = setInterval(() => {
-			request(expressAppUrl, (error, response, body) => {
-				if (!error && response.statusCode == 200) {
-					$expressApp.attr("src", expressAppUrl);
-					clearInterval(checkServerRunning);
-				}
-			});
-		}, 1000);		
+		init();
 	</script>
 </body>
 
