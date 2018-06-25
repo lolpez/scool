@@ -84,15 +84,20 @@
 		}
 		
 		function init(){
+			
+
 			$.post(`${expressAppUrl}/api/v1/status`).done(function (response) {
+				$.post(`${expressAppUrl}/api/v1/test2`).done(function (response) {
+					console.log(response)
+				})
 				console.log(`%c${response.message}`, "color: blue");
 				$expressApp.attr("src", expressAppUrl);
 			}).fail(function() {
 				attempts++;
 				console.warn(`Server not responding. Trying to connect again (Attempts: ${attempts}).`);				
 				init();				
-			});		
-		}
+			});
+		}		
 
 		redirectOutput(node.stdout);
 		redirectOutput(node.stderr);

@@ -31,32 +31,21 @@ block content
                         table.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
                             thead
                                 tr
-                                    th Hello
-                                    th N
-                                    th Today
-                                    th nedbIsAwesome
-                                    th notthere
-                                    th fruits
-                                    th infos
-                                    th id
+                                    th Nombre
+                                    th Apellido P.
+                                    th Apellido M.
+                                    th Última Modificación
                             tfoot
                                 tr
-                                    th Hello
-                                    th N
-                                    th Today
-                                    th nedbIsAwesome
-                                    th notthere
-                                    th fruits
-                                    th infos
-                                    th id
+                                    th Nombre
+                                    th Apellido P.
+                                    th Apellido M.
+                                    th Última Modificación
                             tbody
-                                each user in users
+                                each person in persons
                                     tr
-                                        td=user.hello
-                                        td=user.n
-                                        td=user.today
-                                        td=user.nedbIsAwesome
-                                        td=user.notthere
-                                        td=user.fruits
-                                        td=user.infos
-                                        td=user._id
+                                        td=person.name
+                                        td=person.paternalLastName
+                                        td=person.maternalLastName
+                                        td=person.lastUpdate
+                                        
