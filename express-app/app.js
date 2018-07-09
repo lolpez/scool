@@ -8,6 +8,7 @@ const express = require("express"),
 
 //Controllers
 var controllerIndex = require('./controllers/index');
+var controllerTemplate = require('./controllers/template');
 var controllerUser = require('./controllers/user');
 var controllerApiV1 = require('./controllers/api-v1');
 
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/', controllerIndex);
+app.use('/template', controllerTemplate);
 app.use('/user', controllerUser);
 app.use('/api/v1', controllerApiV1);
 

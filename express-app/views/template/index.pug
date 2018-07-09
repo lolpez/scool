@@ -1,0 +1,66 @@
+extends ../layout
+
+block content
+    .block-header
+        h2
+            | JQUERY DATATABLES #{title}
+            small
+                | Taken from 
+                a(href='https://datatables.net/', target='_blank') datatables.net
+    
+    // Exportable Table
+    .row.clearfix
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            .card
+                .header
+                    h2 Lista de planillas
+                    button#lol Helloo
+                    ul.header-dropdown.m-r--5
+                        li.dropdown
+                            a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                i.material-icons more_vert
+                            ul.dropdown-menu.pull-right
+                                li
+                                    a(href='javascript:void(0);') Action
+                                li
+                                    a(href='javascript:void(0);') Another action
+                                li
+                                    a(href='javascript:void(0);') Something else here
+                .body
+                    .table-responsive
+                        table.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
+                            thead
+                                tr
+                                    th Nº
+                                    th Nombre
+                            tfoot
+                                tr
+                                    th Nº
+                                    th Nombre
+                            tbody
+                                -var n = 1
+                                each template in templates
+                                    tr
+                                        td=n
+                                        td=template.name
+block scripts
+    script.
+        $("#lol").click(function(){
+            $.post({
+                url: "/template",
+                data: {name: "yolo"},
+                success: function(result, textStatus, xhr){
+                    switch (xhr.status){
+                        case 201:
+                            console.log(xhr.getResponseHeader("Location"))
+                        break;
+                        default:
+                            console.log(result, textStatus, xhr)
+                        break;
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown){
+                    console.log(XMLHttpRequest, textStatus, errorThrown)
+                }
+            })
+        })
