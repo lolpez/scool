@@ -56,6 +56,19 @@ Model.prototype.update = function(){
 	};	
 };
 
+Model.deleteById = function(id){
+	return new Promise((resolve, reject) => {
+		db.update({_id: id}, {$set: {enabled: false}}, {multi: true}), function (err, numReplaced) {
+			if (numReplaced > 1){
+				resolve(true);
+			}else{
+				resolve(false);
+			}
+			if (err) reject(`Error deleting record by ID in table "${tableName}": ${err}`)
+		};
+	});
+};
+
 Model.selectAll = function(){
 	return new Promise((resolve, reject) => {
 		db.find({}, (err, docs) => {

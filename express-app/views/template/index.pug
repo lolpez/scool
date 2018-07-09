@@ -14,7 +14,7 @@ block content
             .card
                 .header
                     h2 Lista de planillas
-                    button#lol Helloo
+                    button#addRecord Helloo
                     ul.header-dropdown.m-r--5
                         li.dropdown
                             a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
@@ -28,31 +28,81 @@ block content
                                     a(href='javascript:void(0);') Something else here
                 .body
                     .table-responsive
-                        table.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
+                        table#table-template.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
                             thead
                                 tr
                                     th Nº
                                     th Nombre
+                                    th Acciones
                             tfoot
                                 tr
                                     th Nº
                                     th Nombre
+                                    th Acciones
                             tbody
                                 -var n = 1
                                 each template in templates
-                                    tr
+                                    tr(id=template._id)
                                         td=n
                                         td=template.name
+                                        td
+                                            a.deleteRecord(href="#", data-id=template._id) Delete this
+                                    -n++
 block scripts
     script.
-        $("#lol").click(function(){
+        var n = "#{n}";
+        var t = $('#table-template').DataTable({
+            dom: 'Bfrtip',
+            responsive: true,
+            buttons: [
+                'excel', 'pdf', 'print'
+            ]
+        });
+        function updateTableActions(){
+            $(".deleteRecord").off("click").click(deleteRow);
+        }        
+
+        function deleteRow(){
+            var id = $(this).data("id");
+            console.log(id)
+            $.post({
+                url: "/template/delete",
+                data: {id: id},
+                success: function(result, textStatus, xhr){
+                    console.log(result, textStatus, xhr)
+                    switch (xhr.status){
+                        case 200:                            
+                            t.row($(`#${id}`)).remove().draw();
+                            updateTableActions();
+                            n--;
+                        break;
+                        default:
+                            console.log(result, textStatus, xhr)
+                        break;
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown){
+                    console.log(XMLHttpRequest, textStatus, errorThrown)
+                }
+            })
+        }        
+        
+        $("#addRecord").click(function(){
             $.post({
                 url: "/template",
                 data: {name: "yolo"},
                 success: function(result, textStatus, xhr){
                     switch (xhr.status){
                         case 201:
+                            var template = result.response;
                             console.log(xhr.getResponseHeader("Location"))
+                            t.row.add([
+                                n,
+                                template.name,
+                                `<a class="deleteRecord" href="#" data-id=${template._id}>Delete this</a>`
+                            ]).draw(false);
+                            n++;
+                            updateTableActions();
                         break;
                         default:
                             console.log(result, textStatus, xhr)
@@ -64,3 +114,5 @@ block scripts
                 }
             })
         })
+
+        updateTableActions();
