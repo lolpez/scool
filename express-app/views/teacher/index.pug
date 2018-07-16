@@ -1,0 +1,180 @@
+extends ../layout
+
+block content  
+    // Exportable Table
+    .row.clearfix
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            .card
+                .header
+                    h2=title
+                    ul.header-dropdown.m-r--5
+                        li.dropdown
+                            a#addRecord(href='javascript:void(0);', role='button', aria-haspopup='true', aria-expanded='false', data-toggle="modal", data-target="#largeModal")
+                                i.material-icons add
+                .body
+                    .table-responsive
+                        table#dataTable.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
+                            thead
+                                tr
+                                    th Nº
+                                    th ID
+                                    th Nombre
+                                    th Última Modificación
+                                    th Accciones
+                            tfoot
+                                tr
+                                    th Nº
+                                    th ID
+                                    th Nombre
+                                    th Última Modificación
+                                    th Accciones
+                            tbody
+                                -var n = 1
+                                each teacher in teachers
+                                    tr(id=teacher.id)
+                                        td=n
+                                        td=teacher.id
+                                        td=teacher.name
+                                        td=teacher.lastUpdate
+                                        td(style="text-align: center")
+                                            a.editRecord(href="#", data-id=teacher.id, title=`Editar el registro ${teacher.id}`)
+                                                i.material-icons edit
+                                            a.deleteRecord.col-red(href="#", data-id=teacher.id, title=`Eliminar el registro ${teacher.id}`)
+                                                i.material-icons delete
+                                    -n++
+
+    #formModal.modal.fade(tabindex='-1', role='dialog')
+        .modal-dialog.modal-lg(role='document')
+            .modal-content
+                .modal-header
+                    h4#largeModalLabel.modal-title Modal title
+                .modal-body
+                    .row.clearfix
+                    .col-sm-12
+                        .form-group.form-float
+                        .form-line
+                            input.form-control(type='text')
+                            |                                             
+                            label.form-label Username
+                    |                                 
+                    .col-sm-12
+                        .form-group.form-float
+                        .form-line
+                            input.form-control(type='password')
+                            |                                             
+                            label.form-label Password
+                    |                                 
+                    .col-sm-12
+                        .form-group.form-float.form-group-lg
+                        .form-line
+                            input.form-control(type='text')
+                            |                                             
+                            label.form-label Large Input
+                        |                                     
+                        .form-group.form-float
+                        .form-line
+                            input.form-control(type='text')
+                            |                                             
+                            label.form-label Default Input
+                        |                                     
+                        .form-group.form-float.form-group-sm
+                        .form-line
+                            input.form-control(type='text')
+                            |                                             
+                            label.form-label Small Input
+
+                .modal-footer
+                    button.btn.btn-link.waves-effect(type='button') SAVE CHANGES
+                    |                             
+                    button.btn.btn-link.waves-effect(type='button', data-dismiss='modal') CLOSE
+ 
+block scripts
+    script.
+        updateTableActions();
+        var n = parseInt("#{n}");
+        var t = $('#dataTable').DataTable({
+            dom: 'Bfrtip',
+            responsive: true,
+            buttons: [
+                'excel', 'pdf', 'print'
+            ],
+            "language": {
+                "emptyTable": "No existen registros en #{title}"
+            }
+        });
+
+        function updateTableActions(){
+            $(".deleteRecord").off("click").click(deleteRow);
+        }        
+
+        function deleteRow(){
+            var id = $(this).data("id");
+            swal({
+                title: `¿Está seguro de eliminar el registro ${id}?`,
+                text: "Esta operación puede eliminará el registro para siempre.",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí",
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true,
+            }, function () {
+                $.post({
+                    url: "#{url}/delete",
+                    data: {id: id},
+                    success: function(result, textStatus, xhr){
+                        switch (xhr.status){
+                            case 200:                            
+                                t.row($(`#${id}`)).remove().draw();                                
+                                n--;
+                                updateTableActions();
+                                swal("Registro eliminado", result.message, "success");
+                            break;
+                            default:
+                                console.log(result, textStatus, xhr)
+                            break;
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown){
+                        console.log(XMLHttpRequest, textStatus, errorThrown)
+                    }
+                })
+            });            
+        }        
+        
+        $("#addRecord").click(function(){
+            
+            $('#formModal').modal('show');
+           
+            /*$.post({
+                url: "#{url}",
+                data: {name: "yolo"},
+                success: function(result, textStatus, xhr){
+                    switch (xhr.status){
+                        case 201:
+                            var obj = result.response;
+                            t.row.add([
+                                n,
+                                obj.id,
+                                obj.name,
+                                obj.lastUpdate,
+                                `<a class="editRecord" href="javascript:void(0)" data-id="${obj.id}" title="Editar el registro ${obj.id}"><i class="material-icons">edit</i></a>
+                                <a class="deleteRecord" href="javascript:void(0)" data-id="${obj.id}" title="Eliminar el registro ${obj.id}"><i class="material-icons">delete</i></a>`
+                            ]).node().id = obj.id;
+                            t.draw(false);
+                            n++;
+                            updateTableActions();
+                            notify(result.message, result.success, xhr.getResponseHeader("Location"));                           
+                        break;
+                        default:
+                            console.log(result, textStatus, xhr)
+                        break;
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown){
+                    console.log(XMLHttpRequest, textStatus, errorThrown)
+                }
+            })*/
+        })
+        
+                                        

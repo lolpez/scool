@@ -76,3 +76,25 @@ function activateNotificationAndTasksScroll() {
         railBorderRadius: '0'
     });
 }
+
+function notify(message, succ, url=null) {
+    $.notify({
+        title: (succ) ?  'Operación exitosa.<br>' :  'Operación fallida.<br>',
+        message: `${message} ${(url) ? "haz click en este mensaje para verlo" : ""}`,
+        url: url,
+        target: "_self"
+    },{
+        type: (succ) ? "success" : "danger",
+        allow_dismiss: true,
+        placement: {
+            from: "top",
+            align: "center"
+        },
+        delay: 4000,
+        timer: 1000,
+        animate: {
+            enter: 'animated fadeInDown',
+            exit: 'animated fadeOutUp'
+        }
+    });
+}

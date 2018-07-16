@@ -14,6 +14,8 @@ html
 		link(href='/plugins/node-waves/waves.css', rel='stylesheet')
 		// Animation Css
 		link(href='/plugins/animate-css/animate.css', rel='stylesheet')
+		// Sweetalert Css
+		link(href='/plugins/sweetalert/sweetalert.css', rel='stylesheet')
 		// JQuery DataTable Css
 		link(href='/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css', rel='stylesheet')
 		// Custom Css
@@ -240,9 +242,9 @@ html
 								i.material-icons text_fields
 								span Planillas
 						li
-							a(href='/pages/helper-classes.html')
+							a(href='/teacher')
 								i.material-icons layers
-								span Helper Classes
+								span Maestros
 						li
 							a.menu-toggle(href='javascript:void(0);')
 								i.material-icons widgets
@@ -574,7 +576,7 @@ html
 			// #END# Right Sidebar
 		section.content
 			.container-fluid
-				block content				
+				block content
 		// Jquery Core Js
 		script(src='/plugins/jquery/jquery.min.js')
 		// Bootstrap Core Js
@@ -585,6 +587,10 @@ html
 		script(src='/plugins/jquery-slimscroll/jquery.slimscroll.js')
 		// Waves Effect Plugin Js
 		script(src='/plugins/node-waves/waves.js')
+		//Bootstrap Notify Plugin Js
+		script(src='/plugins/bootstrap-notify/bootstrap-notify.js')
+		//SweetAlert Plugin Js
+		script(src='plugins/sweetalert/sweetalert.min.js')
 		// Jquery DataTable Plugin Js
 		script(src='/plugins/jquery-datatable/jquery.dataTables.js')
 		script(src='/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js')
