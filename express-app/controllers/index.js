@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var modelPerson = require('../models/person');
+var modelWorker = require('../models/worker');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    new modelPerson().selectAll().then((persons) => {
+    modelWorker.selectAll().then((workers) => {
         res.render('index',
             {
                 title: 'Home',
-                persons: persons
+                workers: workers
             }
         );
     }).catch((err) => {

@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
             teachers:  modelTeacher.selectAll(),
             url: req.originalUrl
         }
-    );    
+    );
 });
 
 router.post('/', function(req, res, next) {

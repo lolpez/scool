@@ -1,95 +1,93 @@
-var tableName = "template";
-var db = require('../models/connection').get(tableName);
-var objID =  require('../models/connection').objID;
+const db = require("./connect"),
+	tableName = "template";
+	
+if (!db.has(tableName).value()) db.set(tableName, []).write()
 
- /** 
+/** 
  * Table Template
  * 
  * @param {object} data Information about the template
- * @param {string} data.id Register ID (optional)
- * @param {string} data.name Name of the discount template. I.E. "Personal descuentos 2015"
- * @param {int} data.month Name of the column for the discount excel template
- * @param {int} data.year Year of the generated template
- * @param {string} data.idTemplateType Type of the the generated template. I.E. "Trabajadores, Soporte y Servicio"
- * @param {date} data.lastUpdate Last update datetime
+ * @param {string} data.id template`s ID (optional)
+ * @param {date} data.generatedDate Date when the template was generated (optional)
+ * @param {string} data.title Title of the template
+ * @param {string} data.subtitle Subtitle of the template
+ * @param {date} data.lastUpdate Last update datetime (optional)
  * @param {bool} data.enabled Register is Enabled (optional)
- **/
+ * @param {object} data.row Row information
+ * @param {string} data.row.identification Worker's unique country ID
+ * @param {string} data.row.identificationExt Worker's unique city extension ID
+ * @param {string} data.row.afp Country nationality of the worker
+ * @param {string} data.row.afpAccount Worker's firt name
+ * @param {string} data.row.paternamLastName Worker's second name
+ * @param {string} data.row.maternalLastName Worker's father paternal last name
+ * @param {string} data.row.marriedLastName Worker's husband paternal last name only if the worker is woman and married
+ * @param {string} data.row.firstName Worker's first name
+ * @param {string} data.row.nationality Country nationality of the worker
+ * @param {date} data.row.birthday Date when the worker was born
+ * @param {date} data.row.sex Date when the worker was born
+ * @param {date} data.row.charge Date when the worker was born
+ * @param {string} data.row.startDate Date when the worker started working (optional)
+ * @param {string} data.row.salary Worker's husband paternal last name only if the worker is women and married
+ * @param {string} data.person.sex If the worker is man or women
+ *
+**/
 
 var Model = function(data){
-	if (data._id) this._id = data._id;	//Auto generated
-	this.id = (data.id) ? data.id : objID();
-	this.name = data.name;
-	this.month = data.month;
-	this.year = data.year;
-	this.idTemplateType = data.idTemplateType;
+	/*Worker Data*/
+	this.id = (data.id) ? data.id : db.objID();	
+	this.startDate = (data.startDate) ? data.startDate : new Date();
+	this.salary = data.salary;
+	this.charge = data.charge;
+	this.type = data.type;
+	this.afp = data.afp;
+	this.afpAccount= data.afpAccount;
 	this.lastUpdate = (data.lastUpdate) ? data.lastUpdate : new Date();
 	this.enabled = (data.enabled) ? data.enabled : true;
+	/*Person Data*/
+	this.person = {};
+	this.person.identification = data.person.identification;
+	this.person.identificationExt = data.person.identificationExt;
+	this.person.nationality = data.person.nationality;
+	this.person.firstName = data.person.firstName;
+	this.person.secondName = data.person.secondName;
+	this.person.paternalLastName = data.person.paternalLastName;
+	this.person.maternalLastName = data.person.maternalLastName;
+	this.person.marriedLastName = data.person.marriedLastName;
+	this.person.birthday = data.person.birthday;
+	this.person.sex = data.person.sex;
+}
+
+Model.prototype.findByID = function (id) {
+	return db.find({id: id}).value();
 }
 
 Model.prototype.insert = function(){
-	var obj = this;
+    var obj = this;
 	var fields = {};
 	Object.keys(this).forEach(function (k) {
 		if (typeof k !== "function") fields[k] = obj[k];
 	});
-	return new Promise((resolve, reject) => {
-		db.insert(fields, function(err, doc){
-			(err) ? reject(`Error inserting new record in table "${tableName}": ${err}`) : resolve(new Model(doc));
-		});
-	});
+	db.get(tableName).push(fields).write();
+	return obj;
 };
 
 Model.prototype.update = function(){
 	var obj = this;	
-	db.update({_id: obj._id}, {$set: {enabled: false}}, {multi: true}), function (err, numReplaced) {
-		if (numReplaced > 1){
-			delete obj._id;
-			obj.lastUpdate = new Date();
-			return new Promise((resolve, reject) => {
-				obj.insert().then((doc) => {
-					resolve(doc);
-				}).catch((err) => {
-					reject(err)
-				});
-			});
-		}
-	};	
+	db.get(tableName).find({ id: obj.id }).assign(obj).write();
+};
+
+Model.prototype.delete = function(){
+	var obj = this;	
+	db.get(tableName).remove({ id: obj.id }).write();
 };
 
 Model.deleteById = function(id){
-	return new Promise((resolve, reject) => {
-		db.update({_id: id}, {$set: {enabled: false}}, {multi: true}), function (err, numReplaced) {
-			if (numReplaced > 1){
-				resolve(true);
-			}else{
-				resolve(false);
-			}
-			if (err) reject(`Error deleting record by ID in table "${tableName}": ${err}`)
-		};
-	});
+	db.get(tableName).remove({ id: id }).write();
 };
 
-Model.selectAll = function(){
+Model.selectAll = function () {
 	return new Promise((resolve, reject) => {
-		db.find({}, (err, docs) => {
-			docs.forEach(function(doc, i){
-				docs[i] = new Model(doc);
-			});
-			(err) ? reject(`Error selecting all records in table "${tableName}": ${err}`) : resolve(docs);
-		});
-		//In case you need sorting
-		/*dataPerson.find({}).sort({ name: 1 }).exec((err, docs) => {
-			(err) ? reject(`Error selecting and sorting all record in table "${tableName}": ${err}`) : resolve(docs);
-		}); 
-		*/
-	});
-}
-
-Model.findById = function(id){
-	return new Promise((resolve, reject) => {
-		db.findOne({_id: id}, (err, doc) => {
-			(err) ? reject(`Error finding record by ID in table "${tableName}": ${err}`) : resolve(new Model(doc));
-		});
+		resolve(db.get(tableName).filter({ enabled: true }).value())
 	});
 }
 

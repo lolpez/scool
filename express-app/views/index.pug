@@ -1,51 +1,93 @@
 extends layout
 
 block content
-    .block-header
-        h2
-            | JQUERY DATATABLES #{title}
-            small
-                | Taken from 
-                a(href='https://datatables.net/', target='_blank') datatables.net
-    
-    // Exportable Table
     .row.clearfix
         .col-lg-12.col-md-12.col-sm-12.col-xs-12
             .card
                 .header
                     h2
-                        | EXPORTABLE TABLE
+                        | Personal Colegio
                     ul.header-dropdown.m-r--5
                         li.dropdown
                             a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
                                 i.material-icons more_vert
-                            ul.dropdown-menu.pull-right
+                            ul.dropdown-menu.pull-right(style="width: 230px")
                                 li
-                                    a(href='javascript:void(0);') Action
+                                    a(href='javascript:void(0);')
+                                        i.material-icons add
+                                        |  Registrar nuevo personal
                                 li
-                                    a(href='javascript:void(0);') Another action
+                                    a(href='/template')
+                                        i.material-icons assignment_returned
+                                        | Generar Planilla de sueldos
                                 li
-                                    a(href='javascript:void(0);') Something else here
+                                    a(href='javascript:void(0);') 
+                                        i.material-icons file_upload
+                                        | Importar desde excel                 
                 .body
                     .table-responsive
-                        table.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
+                        table#dataTable.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
                             thead
                                 tr
+                                    th Nº
+                                    th C.I.
                                     th Nombre
                                     th Apellido P.
                                     th Apellido M.
+                                    th Cargo
                                     th Última Modificación
                             tfoot
                                 tr
+                                    th Nº
+                                    th C.I.
                                     th Nombre
                                     th Apellido P.
                                     th Apellido M.
+                                    th Cargo
                                     th Última Modificación
                             tbody
-                                each person in persons
+                                -var n = 1
+                                each worker in workers
                                     tr
-                                        td=person.name
-                                        td=person.paternalLastName
-                                        td=person.maternalLastName
-                                        td=person.lastUpdate
-                                        
+                                        td=n
+                                        td=(worker.person.identification) ? `${worker.person.identification}-${worker.person.identificationExt}` : "(No registrado)"
+                                        td=(worker.person.firstName) ? worker.person.firstName : "(No registrado)"
+                                        td=(worker.person.paternalLastName) ? worker.person.paternalLastName : "(No registrado)"
+                                        td=(worker.person.maternalLastName) ? worker.person.maternalLastName : "(No registrado)"
+                                        td=(worker.charge) ? worker.charge : "(No registrado)"
+                                        td=worker.lastUpdate
+                                    -n++
+block scripts
+    script.
+        var n = parseInt("#{n}");
+        var t = $('#dataTable').DataTable({
+            dom: 'Bfrtip',
+            responsive: true,
+            buttons: [
+                'excel', 'pdf', 'print'
+            ],
+            "language": {                             
+                "decimal": "",
+                "emptyTable": "No existen registros en #{title}",   
+                "info": "Mostrando del registro _START_ al _END_ de un total de _TOTAL_ registros",
+                "infoEmpty": "Mostrando 0 registros (ninguno)",
+                "infoFiltered": "(Datos filtrados de _MAX_ registros)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Moostrar _MENU_ entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "No se encontraron registros",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                },
+                "aria": {
+                    "sortAscending": ": ordenar ascendentemente",
+                    "sortDescending": ": ordenar descendentemente"
+                }
+            }
+        });

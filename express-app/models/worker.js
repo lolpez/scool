@@ -1,48 +1,92 @@
-var tableName = "worker";
-var db = require('../models/connection').get(tableName);
-var objID =  require('../models/connection').objID;
+const db = require("./connect"),
+	tableName = "worker";
+	
+if (!db.has(tableName).value()) db.set(tableName, []).write()
 
 /** 
  * Table Worker
- * @param {_id} id ID auto generated
- * @param {string} name The name of the worker
- * @param {array} pays Collection of the worker´s pay
- **/
+ * 
+ * @param {object} data Information about the worker
+ * @param {string} data.id Worker`s ID (optional)
+ * @param {string} data.startDate Date when the worker started working (optional)
+ * @param {string} data.salary Ammount of money the worker can make when a month
+ * @param {string} data.charge Worker`s charge
+ * @param {string} data.type If worker is support, administrative or teacher
+ * @param {string} data.afp AFP
+ * @param {string} data.afpAccount AFP
+ * @param {date} data.lastUpdate Last update datetime (optional)
+ * @param {bool} data.enabled Register is Enabled (optional)
+ * @param {object} data.person Information about the worker's personal data
+ * @param {string} data.person.identification Worker's unique country ID
+ * @param {string} data.person.identificationExt Worker's unique city extension ID
+ * @param {string} data.person.nationality Country nationality of the worker
+ * @param {string} data.person.firstName Worker's firt name
+ * @param {string} data.person.secondName Worker's second name
+ * @param {string} data.person.paternamLastName Worker's father paternal last name
+ * @param {string} data.person.maternalLastName Worker's mother paternal lastname
+ * @param {string} data.person.marriedLastName Worker's husband paternal last name only if the worker is woman and married
+ * @param {date} data.person.birthday Date when the worker was born
+ * @param {string} data.person.sex If the worker is man or women
+ *
+**/
 
-var Model = function(name, _id=objID(), pays=null, lastUpdate=new Date(), enabled=true){
-	this._id = _id;
-	this.name = name;	
-	this.lastUpdate = lastUpdate;
-	this.enabled = enabled;
-	//Support keys
-	var fields = this;
-	this.pays = pays;
+var Model = function(data){
+	/*Worker Data*/
+	this.id = (data.id) ? data.id : db.objID();	
+	this.startDate = (data.startDate) ? data.startDate : new Date();
+	this.salary = data.salary;
+	this.charge = data.charge;
+	this.type = data.type;
+	this.afp = data.afp;
+	this.afpAccount= data.afpAccount;
+	this.lastUpdate = (data.lastUpdate) ? data.lastUpdate : new Date();
+	this.enabled = (data.enabled) ? data.enabled : true;
+	/*Person Data*/
+	this.person = {};
+	this.person.identification = data.person.identification;
+	this.person.identificationExt = data.person.identificationExt;
+	this.person.nationality = data.person.nationality;
+	this.person.firstName = data.person.firstName;
+	this.person.secondName = data.person.secondName;
+	this.person.paternalLastName = data.person.paternalLastName;
+	this.person.maternalLastName = data.person.maternalLastName;
+	this.person.marriedLastName = data.person.marriedLastName;
+	this.person.birthday = data.person.birthday;
+	this.person.sex = data.person.sex;
+}
 
-	this.insert = function() {
-		return new Promise((resolve, reject) => {
-			db.insert(fields, function(err, doc){
-				(err) ? reject(`Error inserting new record in table "${tableName}": ${err}`) : resolve(doc);
-			});
-		});
-	}
-	this.selectAll = function(){
-		return new Promise((resolve, reject) => {
-			db.find({}, (err, docs) => {
-				(err) ? reject(`Error selecting all records in table "${tableName}": ${err}`) : resolve(docs);
-			});
-			//In case you need sorting
-			/*dataPerson.find({}).sort({ name: 1 }).exec((err, docs) => {
-				(err) ? reject(`Error selecting and sorting all record in table "${tableName}": ${err}`) : resolve(docs);
-			});*/ 
-		});
-	}
-	this.findById = function(id){
-		return new Promise((resolve, reject) => {
-			db.findOne({_id: id}, (err, doc) => {
-				(err) ? reject(`Error finding record by ID in table "${tableName}": ${err}`) : resolve(doc);
-			});
-		});
-	}
+Model.prototype.findByID = function (id) {
+	return db.find({id: id}).value();
+}
+
+Model.prototype.insert = function(){
+    var obj = this;
+	var fields = {};
+	Object.keys(this).forEach(function (k) {
+		if (typeof k !== "function") fields[k] = obj[k];
+	});
+	db.get(tableName).push(fields).write();
+	return obj;
+};
+
+Model.prototype.update = function(){
+	var obj = this;	
+	db.get(tableName).find({ id: obj.id }).assign(obj).write();
+};
+
+Model.prototype.delete = function(){
+	var obj = this;	
+	db.get(tableName).remove({ id: obj.id }).write();
+};
+
+Model.deleteById = function(id){
+	db.get(tableName).remove({ id: id }).write();
+};
+
+Model.selectAll = function () {
+	return new Promise((resolve, reject) => {
+		resolve(db.get(tableName).filter({ enabled: true }).value())
+	});
 }
 
 module.exports = Model;
