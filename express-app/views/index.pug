@@ -2,92 +2,92 @@ extends layout
 
 block content
     .row.clearfix
-        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+        .col-lg-4.col-md-4.col-ms-6.col-xs-4
+            .info-box.bg-pink.hover-expand-effect
+                a.shortcut(href="/worker/docente", title="Ver personal de docencia")
+                    .icon
+                        i.material-icons school
+                .content
+                    .text Profesores
+                    .number=docenteCount
+        .col-lg-4.col-md-4.col-ms-6.col-xs-4
+            .info-box.bg-indigo.hover-expand-effect
+                a.shortcut(href="/worker/administrativo", title="Ver personal administrativo")
+                    .icon
+                        i.material-icons work
+                .content
+                    .text Personal Administrativo
+                    .number=administrativoCount
+        .col-lg-4.col-md-4.col-ms-6.col-xs-4
+            .info-box.bg-orange.hover-expand-effect
+                a.shortcut(href="/worker/soporte", title="Ver personal de soporte")
+                    .icon
+                        i.material-icons mood
+                .content
+                    .text Personal de soporte
+                    .number=soporteCount
+        .col-xs-6.col-sm-6.col-md-6.col-lg-6.col-xs-offset-3
             .card
-                .header
-                    h2
-                        | Personal Colegio
-                    ul.header-dropdown.m-r--5
-                        li.dropdown
-                            a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                                i.material-icons more_vert
-                            ul.dropdown-menu.pull-right(style="width: 230px")
-                                li
-                                    a(href='javascript:void(0);')
-                                        i.material-icons add
-                                        |  Registrar nuevo personal
-                                li
-                                    a(href='/template')
-                                        i.material-icons assignment_returned
-                                        | Generar Planilla de sueldos
-                                li
-                                    a(href='javascript:void(0);') 
-                                        i.material-icons file_upload
-                                        | Importar desde excel                 
-                .body
-                    .table-responsive
-                        table#dataTable.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
-                            thead
-                                tr
-                                    th Nº
-                                    th C.I.
-                                    th Nombre
-                                    th Apellido P.
-                                    th Apellido M.
-                                    th Cargo
-                                    th Última Modificación
-                            tfoot
-                                tr
-                                    th Nº
-                                    th C.I.
-                                    th Nombre
-                                    th Apellido P.
-                                    th Apellido M.
-                                    th Cargo
-                                    th Última Modificación
-                            tbody
-                                -var n = 1
-                                each worker in workers
-                                    tr
-                                        td=n
-                                        td=(worker.person.identification) ? `${worker.person.identification}-${worker.person.identificationExt}` : "(No registrado)"
-                                        td=(worker.person.firstName) ? worker.person.firstName : "(No registrado)"
-                                        td=(worker.person.paternalLastName) ? worker.person.paternalLastName : "(No registrado)"
-                                        td=(worker.person.maternalLastName) ? worker.person.maternalLastName : "(No registrado)"
-                                        td=(worker.charge) ? worker.charge : "(No registrado)"
-                                        td=worker.lastUpdate
-                                    -n++
-block scripts
-    script.
-        var n = parseInt("#{n}");
-        var t = $('#dataTable').DataTable({
-            dom: 'Bfrtip',
-            responsive: true,
-            buttons: [
-                'excel', 'pdf', 'print'
-            ],
-            "language": {                             
-                "decimal": "",
-                "emptyTable": "No existen registros en #{title}",   
-                "info": "Mostrando del registro _START_ al _END_ de un total de _TOTAL_ registros",
-                "infoEmpty": "Mostrando 0 registros (ninguno)",
-                "infoFiltered": "(Datos filtrados de _MAX_ registros)",
-                "infoPostFix": "",
-                "thousands": ",",
-                "lengthMenu": "Moostrar _MENU_ entradas",
-                "loadingRecords": "Cargando...",
-                "processing": "Procesando...",
-                "search": "Buscar:",
-                "zeroRecords": "No se encontraron registros",
-                "paginate": {
-                    "first": "Primero",
-                    "last": "Ultimo",
-                    "next": "Siguiente",
-                    "previous": "Anterior"
-                },
-                "aria": {
-                    "sortAscending": ": ordenar ascendentemente",
-                    "sortDescending": ": ordenar descendentemente"
-                }
-            }
-        });
+                .body.bg-purple
+                    .m-b--35.font-bold Resumen del año 2018
+                    ul.dashboard-stat-list
+                        li
+                            | Enero
+                            span.pull-right
+                                b 10000
+                                small Bs.
+                                a(href="/", title="Ver mes de Enero")
+                                    i.material-icons trending_up
+                        li
+                            | Febrero
+                            span.pull-right
+                                i.material-icons trending_down
+                        li
+                            | Marzo
+                            span.pull-right
+                                i.material-icons trending_up
+                        li
+                            | Abril
+                            span.pull-right
+                                i.material-icons trending_up
+                        li
+                            | Mayo
+                            span.pull-right
+                                i.material-icons trending_up
+                        li
+                            | Junio
+                            span.pull-right
+                                i.material-icons trending_up
+                        li
+                            | Julio
+                            span.pull-right
+                                i.material-icons trending_up
+                        li
+                            | Agosto
+                            span.pull-right
+                                i.material-icons trending_up
+                        li
+                            | Septiembre
+                            span.pull-right
+                                i.material-icons trending_up
+                        li
+                            | Octubre
+                            span.pull-right
+                                i.material-icons trending_up
+                        li
+                            | Noviembre
+                            span.pull-right
+                                i.material-icons trending_up
+                        li
+                            | Diciembre
+                            span.pull-right
+                                i.material-icons trending_up
+
+        .col-xs-6.col-sm-6.col-md-6.col-lg-6.col-xs-offset-3
+            .info-box.bg-light-green.hover-expand-effect
+                a.shortcut(href="/worker", title="Ver todo el personal")
+                    .icon
+                        i.material-icons attach_money
+                .content
+                    .text Total Invertido
+                    .number Bs. 20000000

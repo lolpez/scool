@@ -22,6 +22,7 @@ html
 		link(href='/css/style.css', rel='stylesheet')
 		// AdminBSB Themes. You can choose a theme from css/themes instead of get all themes
 		link(href='/css/themes/all-themes.css', rel='stylesheet')
+		block styles
 	body.theme-blue
 		// Page Loader
 		.page-loader-wrapper
@@ -50,7 +51,7 @@ html
 			.container-fluid
 				.navbar-header
 					a.bars(href='javascript:void(0);')
-					a.navbar-brand(href='javascript:void(0);') Colegio Rio Nuevo
+					a.navbar-brand(href='javascript:void(0);') SERN
 		// #Top Bar
 		section
 			// Left Sidebar
@@ -81,18 +82,32 @@ html
 						li
 							a(href='/')
 								i.material-icons home
-								span Inicio						
+								span Inicio
 						li
 							a.menu-toggle(href='javascript:void(0);')
-								i.material-icons widgets
+								i.material-icons face
 								span Personal
 							ul.ml-menu
 								li
-									a(href='/') Administrativo
+									a(href='/worker/administrativo')
+										i.material-icons work
+										span Administrativo
 								li
-									a(href='/') Docente
+									a(href='/worker/docente')
+										i.material-icons school
+										span Docente
 								li
-									a(href='/') Soporte
+									a(href='/worker/soporte')
+										i.material-icons mood
+										span Soporte
+								li
+									a(href='/worker')
+										i.material-icons people
+										span Ver todos
+						li
+							a(href='/')
+								i.material-icons settings
+								span Configuraciones
 				// #Menu
 				// Footer
 				.legal
@@ -135,4 +150,4 @@ html
 		//script(src='/js/pages/tables/jquery-datatable.js')
 		// Demo Js
 		script(src='/js/demo.js')
-		block  scripts
+		block scripts

@@ -9,6 +9,7 @@ const express = require("express"),
 //Controllers
 var controllerIndex = require('./controllers/index');
 var controllerTemplate = require('./controllers/template');
+var controllerWorker = require('./controllers/worker');
 var controllerApiV1 = require('./controllers/api-v1');
 
 //view engine setup
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/', controllerIndex);
 app.use('/template', controllerTemplate);
+app.use('/worker', controllerWorker);
 app.use('/api/v1', controllerApiV1);
 
 //catch 404 and forward to error handler

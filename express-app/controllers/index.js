@@ -4,13 +4,23 @@ var modelWorker = require('../models/worker');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    modelWorker.selectAll().then((workers) => {
-        res.render('index',
-            {
-                title: 'Home',
-                workers: workers
-            }
-        );
+    modelWorker.getCountByType("docente").then((docenteCount) => {
+        modelWorker.getCountByType("administrativo").then((administrativoCount) => {
+            modelWorker.getCountByType("soporte").then((soporteCount) => {
+                res.render('index',
+                    {
+                        title: 'Home',
+                        docenteCount: docenteCount,
+                        administrativoCount: administrativoCount,
+                        soporteCount: soporteCount
+                    }
+                );
+            }).catch((err) => {
+                res.send(err);
+            });
+        }).catch((err) => {
+            res.send(err);
+        });
     }).catch((err) => {
         res.send(err);
     });

@@ -89,4 +89,16 @@ Model.selectAll = function () {
 	});
 }
 
+Model.selectByType = function (type) {
+	return new Promise((resolve, reject) => {
+		resolve(db.get(tableName).filter({ type: type, enabled: true }).value())
+	});
+}
+
+Model.getCountByType = function (type) {
+	return new Promise((resolve, reject) => {
+		resolve(db.get(tableName).filter({ type: type, enabled: true }).size().value())
+	});
+}
+
 module.exports = Model;
