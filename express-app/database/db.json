@@ -1,14 +1,14 @@
 {
   "worker": [
     {
-      "id": "5b553d8b537b46f746b1d04d",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f844c18dfc6a38f3597d",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 49185822,
-      "lastUpdate": "2018-07-23T02:29:31.355Z",
+      "lastUpdate": "2018-07-25T22:23:00.785Z",
       "enabled": true,
       "person": {
         "identification": 1409849,
@@ -19,19 +19,19 @@
         "paternalLastName": "Aguilar ",
         "maternalLastName": null,
         "marriedLastName": "Huanca",
-        "birthday": "1965-01-09T04:00:00.000Z",
+        "birthday": "1965-01-09T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b2d0fda3041cd44c1",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8442f7f7c3c5ecea2cb",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 820787,
-      "lastUpdate": "2018-07-23T02:29:31.358Z",
+      "lastUpdate": "2018-07-25T22:23:00.794Z",
       "enabled": true,
       "person": {
         "identification": 3166868,
@@ -42,19 +42,19 @@
         "paternalLastName": "Aguirre ",
         "maternalLastName": "Patiño",
         "marriedLastName": "Correa",
-        "birthday": "1965-12-23T04:00:00.000Z",
+        "birthday": "1965-12-23T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8be6f2da909b9da13a",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f844f6ee1638a70c463a",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 669726,
-      "lastUpdate": "2018-07-23T02:29:31.371Z",
+      "lastUpdate": "2018-07-25T22:23:00.802Z",
       "enabled": true,
       "person": {
         "identification": 1731633,
@@ -65,19 +65,19 @@
         "paternalLastName": "Agreda",
         "maternalLastName": null,
         "marriedLastName": "Sabja",
-        "birthday": "1963-12-18T04:00:00.000Z",
+        "birthday": "1963-12-18T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b97df34fcec5eee44",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f8448afa14e64fb84156",
+      "startDate": 42772,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 41835426,
-      "lastUpdate": "2018-07-23T02:29:31.373Z",
+      "lastUpdate": "2018-07-25T22:23:00.812Z",
       "enabled": true,
       "person": {
         "identification": 6242002,
@@ -88,19 +88,19 @@
         "paternalLastName": "Alba",
         "maternalLastName": "Gutierrez",
         "marriedLastName": null,
-        "birthday": "1986-01-16T04:00:00.000Z",
+        "birthday": "1986-01-16T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8beffc8bd1a9471783",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f844d57d6ecde78eaaab",
+      "startDate": 42772,
       "salary": 1805,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 39261311,
-      "lastUpdate": "2018-07-23T02:29:31.376Z",
+      "lastUpdate": "2018-07-25T22:23:00.821Z",
       "enabled": true,
       "person": {
         "identification": 9652234,
@@ -111,19 +111,19 @@
         "paternalLastName": "Alejo",
         "maternalLastName": "Duran",
         "marriedLastName": null,
-        "birthday": "1991-08-04T04:00:00.000Z",
+        "birthday": "1991-08-04T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b56dd9aabd51ee68d",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f84413911baf5757acc9",
+      "startDate": 43132,
       "salary": null,
       "charge": "Conserje",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 1117041,
-      "lastUpdate": "2018-07-23T02:29:31.379Z",
+      "lastUpdate": "2018-07-25T22:23:00.830Z",
       "enabled": true,
       "person": {
         "identification": 3241515,
@@ -134,19 +134,19 @@
         "paternalLastName": "Alejo",
         "maternalLastName": null,
         "marriedLastName": null,
-        "birthday": "1965-07-27T04:00:00.000Z",
+        "birthday": "1965-07-27T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b60c27cf4223ebddd",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8445cba609c5f232e1e",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 32495705,
-      "lastUpdate": "2018-07-23T02:29:31.382Z",
+      "lastUpdate": "2018-07-25T22:23:00.841Z",
       "enabled": true,
       "person": {
         "identification": 2824263,
@@ -157,19 +157,19 @@
         "paternalLastName": "Alviz ",
         "maternalLastName": "Roca",
         "marriedLastName": "Deniz",
-        "birthday": "1962-10-07T04:00:00.000Z",
+        "birthday": "1962-10-07T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b96fd0cbf91996ebe",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f8449e02378c2840da13",
+      "startDate": 42772,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 36542179,
-      "lastUpdate": "2018-07-23T02:29:31.385Z",
+      "lastUpdate": "2018-07-25T22:23:00.849Z",
       "enabled": true,
       "person": {
         "identification": 5897260,
@@ -180,19 +180,19 @@
         "paternalLastName": "Alvis",
         "maternalLastName": "Villarpando",
         "marriedLastName": null,
-        "birthday": "1982-11-23T04:00:00.000Z",
+        "birthday": "1982-11-23T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bcdde312968560bd9",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f844d5972c23a5842290",
+      "startDate": 42401,
       "salary": 2000,
       "charge": "Regente",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 36532502,
-      "lastUpdate": "2018-07-23T02:29:31.389Z",
+      "lastUpdate": "2018-07-25T22:23:00.860Z",
       "enabled": true,
       "person": {
         "identification": 5347734,
@@ -203,19 +203,19 @@
         "paternalLastName": "Añez ",
         "maternalLastName": "Pedraza",
         "marriedLastName": null,
-        "birthday": "1978-11-22T04:00:00.000Z",
+        "birthday": "1978-11-22T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b098066a39d48da19",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f844b0c60070c22fac26",
+      "startDate": 42401,
       "salary": 3500,
       "charge": "Director",
       "type": "administrativo",
       "afp": "Futuro",
       "afpAccount": 1479593,
-      "lastUpdate": "2018-07-23T02:29:31.392Z",
+      "lastUpdate": "2018-07-25T22:23:00.862Z",
       "enabled": true,
       "person": {
         "identification": 2980145,
@@ -226,19 +226,19 @@
         "paternalLastName": "Añez",
         "maternalLastName": "Melgar",
         "marriedLastName": null,
-        "birthday": "1961-03-13T04:00:00.000Z",
+        "birthday": "1961-03-13T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b84840e6649ee098d",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84456c33b245fd994ab",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 31991439,
-      "lastUpdate": "2018-07-23T02:29:31.395Z",
+      "lastUpdate": "2018-07-25T22:23:00.873Z",
       "enabled": true,
       "person": {
         "identification": 5402898,
@@ -249,19 +249,19 @@
         "paternalLastName": "Añez ",
         "maternalLastName": "Vaca",
         "marriedLastName": null,
-        "birthday": "1973-07-12T04:00:00.000Z",
+        "birthday": "1973-07-12T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8bae2c25f69089c2c2",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f844a09aed2713047574",
+      "startDate": 42401,
       "salary": 3500,
       "charge": "Director",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 1475952,
-      "lastUpdate": "2018-07-23T02:29:31.398Z",
+      "lastUpdate": "2018-07-25T22:23:00.883Z",
       "enabled": true,
       "person": {
         "identification": 2814192,
@@ -272,19 +272,19 @@
         "paternalLastName": "Añez ",
         "maternalLastName": "Cuellar",
         "marriedLastName": null,
-        "birthday": "1956-05-07T04:00:00.000Z",
+        "birthday": "1956-05-07T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bf9676f954cdcef8b",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8443f488062fdad60c0",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 32785151,
-      "lastUpdate": "2018-07-23T02:29:31.401Z",
+      "lastUpdate": "2018-07-25T22:23:00.894Z",
       "enabled": true,
       "person": {
         "identification": 3295538,
@@ -295,19 +295,19 @@
         "paternalLastName": "Aponte",
         "maternalLastName": "Rocha",
         "marriedLastName": null,
-        "birthday": "1973-12-10T04:00:00.000Z",
+        "birthday": "1973-12-10T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b57c3a8e0f2f0dde8",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f844f74a7e9452973c44",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Secretaria ",
       "type": "administrativo",
       "afp": "Prevision",
       "afpAccount": 36871576,
-      "lastUpdate": "2018-07-23T02:29:31.404Z",
+      "lastUpdate": "2018-07-25T22:23:00.909Z",
       "enabled": true,
       "person": {
         "identification": 5884793,
@@ -318,19 +318,19 @@
         "paternalLastName": "Aponte ",
         "maternalLastName": "Rocha",
         "marriedLastName": null,
-        "birthday": "1980-10-28T04:00:00.000Z",
+        "birthday": "1980-10-28T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bc0961bb6f96b5d09",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84420d5ed8d92d10e40",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 1746625,
-      "lastUpdate": "2018-07-23T02:29:31.407Z",
+      "lastUpdate": "2018-07-25T22:23:00.919Z",
       "enabled": true,
       "person": {
         "identification": 1986865,
@@ -341,19 +341,19 @@
         "paternalLastName": "Aracena ",
         "maternalLastName": "Riera",
         "marriedLastName": null,
-        "birthday": "1957-04-26T04:00:00.000Z",
+        "birthday": "1957-04-26T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bba3c721cb3f4d0fc",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f844ec76e2817c283199",
+      "startDate": 42767,
       "salary": 1805,
       "charge": "Auxiliar",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 49180770,
-      "lastUpdate": "2018-07-23T02:29:31.410Z",
+      "lastUpdate": "2018-07-25T22:23:00.920Z",
       "enabled": true,
       "person": {
         "identification": 6342815,
@@ -364,19 +364,19 @@
         "paternalLastName": "Arias",
         "maternalLastName": "Aguilar",
         "marriedLastName": null,
-        "birthday": "1985-06-05T04:00:00.000Z",
+        "birthday": "1985-06-05T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8be7fd0b4a3b630e6b",
-      "startDate": "2018-02-05T04:00:00.000Z",
+      "id": "5b58f844c6475183a955a504",
+      "startDate": 43136,
       "salary": null,
       "charge": "Consejero",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 33531158,
-      "lastUpdate": "2018-07-23T02:29:31.415Z",
+      "lastUpdate": "2018-07-25T22:23:00.924Z",
       "enabled": true,
       "person": {
         "identification": 4444955,
@@ -387,19 +387,19 @@
         "paternalLastName": "Arias",
         "maternalLastName": "Nogales",
         "marriedLastName": null,
-        "birthday": "1973-07-27T04:00:00.000Z",
+        "birthday": "1973-07-27T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8bc184cb91b1592be6",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f8444c02b05ac1fe82b5",
+      "startDate": 43132,
       "salary": null,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 40209647,
-      "lastUpdate": "2018-07-23T02:29:31.418Z",
+      "lastUpdate": "2018-07-25T22:23:00.933Z",
       "enabled": true,
       "person": {
         "identification": 4684898,
@@ -410,19 +410,19 @@
         "paternalLastName": "Argiro",
         "maternalLastName": "Mendez",
         "marriedLastName": null,
-        "birthday": "1978-11-02T04:00:00.000Z",
+        "birthday": "1978-11-02T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bd88810d23ae5ea5d",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f8443e9adce8d66a2fbf",
+      "startDate": 42767,
       "salary": 2000,
       "charge": "Chofer",
       "type": "soporte",
       "afp": "Futuro",
       "afpAccount": 2150049,
-      "lastUpdate": "2018-07-23T02:29:31.422Z",
+      "lastUpdate": "2018-07-25T22:23:00.935Z",
       "enabled": true,
       "person": {
         "identification": 3833676,
@@ -433,19 +433,19 @@
         "paternalLastName": "Arroyo",
         "maternalLastName": "Castro",
         "marriedLastName": null,
-        "birthday": "1970-02-13T04:00:00.000Z",
+        "birthday": "1970-02-13T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8ba93ee8bad7936fc2",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f844d85baf7534408069",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 2482265,
-      "lastUpdate": "2018-07-23T02:29:31.425Z",
+      "lastUpdate": "2018-07-25T22:23:00.945Z",
       "enabled": true,
       "person": {
         "identification": 2988192,
@@ -456,19 +456,19 @@
         "paternalLastName": "Bazan ",
         "maternalLastName": "Cespedes",
         "marriedLastName": "Romero",
-        "birthday": "1962-09-21T04:00:00.000Z",
+        "birthday": "1962-09-21T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b9dc14c66787c6306",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f844a232eb732ab76604",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 3324456,
-      "lastUpdate": "2018-07-23T02:29:31.429Z",
+      "lastUpdate": "2018-07-25T22:23:00.955Z",
       "enabled": true,
       "person": {
         "identification": 6200594,
@@ -479,19 +479,19 @@
         "paternalLastName": "Belaunde ",
         "maternalLastName": "Zakovic",
         "marriedLastName": null,
-        "birthday": "1983-04-06T04:00:00.000Z",
+        "birthday": "1983-04-06T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8beeeca1674839ea78",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84491821afd1b68daaa",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 3254513,
-      "lastUpdate": "2018-07-23T02:29:31.432Z",
+      "lastUpdate": "2018-07-25T22:23:00.969Z",
       "enabled": true,
       "person": {
         "identification": 3193823,
@@ -502,19 +502,19 @@
         "paternalLastName": "Caballero ",
         "maternalLastName": "Rojas",
         "marriedLastName": null,
-        "birthday": "1963-07-02T04:00:00.000Z",
+        "birthday": "1963-07-02T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b67155fa37efb0129",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f844207f9eea09fc7156",
+      "startDate": 42401,
       "salary": 2000,
       "charge": "Secretaria",
       "type": "administrativo",
       "afp": "Futuro",
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.435Z",
+      "lastUpdate": "2018-07-25T22:23:00.981Z",
       "enabled": true,
       "person": {
         "identification": 4723570,
@@ -525,19 +525,19 @@
         "paternalLastName": "Caballero ",
         "maternalLastName": "Osinaga",
         "marriedLastName": null,
-        "birthday": "1980-05-24T04:00:00.000Z",
+        "birthday": "1980-05-24T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b930fbd8698a0249a",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f844a8cad59b779ae27a",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 27341227,
-      "lastUpdate": "2018-07-23T02:29:31.438Z",
+      "lastUpdate": "2018-07-25T22:23:00.991Z",
       "enabled": true,
       "person": {
         "identification": 4716754,
@@ -548,19 +548,19 @@
         "paternalLastName": "Cabrera",
         "maternalLastName": null,
         "marriedLastName": null,
-        "birthday": "1977-12-30T04:00:00.000Z",
+        "birthday": "1977-12-30T00:00:00.000Z",
         "sex": "f"
       }
     },
     {
-      "id": "5b553d8bf1bf8cecba5a9138",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845bd0685bb020f45fc",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 33522421,
-      "lastUpdate": "2018-07-23T02:29:31.442Z",
+      "lastUpdate": "2018-07-25T22:23:01.003Z",
       "enabled": true,
       "person": {
         "identification": "E-6286051",
@@ -571,19 +571,19 @@
         "paternalLastName": "Cahuana ",
         "maternalLastName": "Gil",
         "marriedLastName": null,
-        "birthday": "1972-11-29T04:00:00.000Z",
+        "birthday": "1972-11-29T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b2e54fb0baa7d5c13",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8458b40222693ca91ba",
+      "startDate": 42401,
       "salary": 2000,
       "charge": "Bibliot.",
       "type": "administrativo",
       "afp": "Prevision",
       "afpAccount": 100220691,
-      "lastUpdate": "2018-07-23T02:29:31.445Z",
+      "lastUpdate": "2018-07-25T22:23:01.014Z",
       "enabled": true,
       "person": {
         "identification": 3214230,
@@ -594,19 +594,19 @@
         "paternalLastName": "Callaú ",
         "maternalLastName": "Salvatierra",
         "marriedLastName": "Tapia",
-        "birthday": "1964-01-12T04:00:00.000Z",
+        "birthday": "1964-01-12T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bab1e82c55359ab1a",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f8456dc8570dd9c5f12d",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 41788552,
-      "lastUpdate": "2018-07-23T02:29:31.449Z",
+      "lastUpdate": "2018-07-25T22:23:01.025Z",
       "enabled": true,
       "person": {
         "identification": 7850154,
@@ -617,19 +617,19 @@
         "paternalLastName": "Callau",
         "maternalLastName": "Vasquez",
         "marriedLastName": null,
-        "birthday": "1989-04-13T04:00:00.000Z",
+        "birthday": "1989-04-13T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bf3e3d976e0f1b249",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f845d4b6b7674c61d9a7",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 39622741,
-      "lastUpdate": "2018-07-23T02:29:31.453Z",
+      "lastUpdate": "2018-07-25T22:23:01.035Z",
       "enabled": true,
       "person": {
         "identification": 3831526,
@@ -640,19 +640,19 @@
         "paternalLastName": "Candia",
         "maternalLastName": "Arce",
         "marriedLastName": null,
-        "birthday": "1968-09-13T04:00:00.000Z",
+        "birthday": "1968-09-13T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b102a3a995b264db2",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8456563ca4e06f6ce65",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 36088225,
-      "lastUpdate": "2018-07-23T02:29:31.456Z",
+      "lastUpdate": "2018-07-25T22:23:01.044Z",
       "enabled": true,
       "person": {
         "identification": 3278601,
@@ -663,19 +663,19 @@
         "paternalLastName": "Carrasco ",
         "maternalLastName": "Valverde",
         "marriedLastName": null,
-        "birthday": "1980-08-20T04:00:00.000Z",
+        "birthday": "1980-08-20T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b1c01b65ff239d429",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84534afa4be217f49b7",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 4189966,
-      "lastUpdate": "2018-07-23T02:29:31.459Z",
+      "lastUpdate": "2018-07-25T22:23:01.055Z",
       "enabled": true,
       "person": {
         "identification": 2982305,
@@ -686,19 +686,19 @@
         "paternalLastName": "Carrasco ",
         "maternalLastName": "Valverde",
         "marriedLastName": null,
-        "birthday": "1966-03-21T04:00:00.000Z",
+        "birthday": "1966-03-21T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b5b236a5c06fd172d",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845d340b12d4018b9b1",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 4225031,
-      "lastUpdate": "2018-07-23T02:29:31.463Z",
+      "lastUpdate": "2018-07-25T22:23:01.065Z",
       "enabled": true,
       "person": {
         "identification": 2920175,
@@ -709,19 +709,19 @@
         "paternalLastName": "Carrizales ",
         "maternalLastName": "Osinaga",
         "marriedLastName": null,
-        "birthday": "1960-02-06T04:00:00.000Z",
+        "birthday": "1960-02-06T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b55e17652ee134c6e",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845394d5bcb74682a9f",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 4276206,
-      "lastUpdate": "2018-07-23T02:29:31.466Z",
+      "lastUpdate": "2018-07-25T22:23:01.077Z",
       "enabled": true,
       "person": {
         "identification": 3858394,
@@ -732,19 +732,19 @@
         "paternalLastName": "Casanova ",
         "maternalLastName": null,
         "marriedLastName": "Mendoza ",
-        "birthday": "1970-09-16T04:00:00.000Z",
+        "birthday": "1970-09-16T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b7af5e0f60fd3d4b8",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8457c2aa12155a98cc7",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 26768392,
-      "lastUpdate": "2018-07-23T02:29:31.469Z",
+      "lastUpdate": "2018-07-25T22:23:01.079Z",
       "enabled": true,
       "person": {
         "identification": 4571814,
@@ -755,19 +755,19 @@
         "paternalLastName": "Castro ",
         "maternalLastName": "Rodriguez",
         "marriedLastName": null,
-        "birthday": "1975-10-23T04:00:00.000Z",
+        "birthday": "1975-10-23T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bf9fc83bfe8963c6f",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f845e08694df7591c09b",
+      "startDate": 42772,
       "salary": 1805,
       "charge": "Secretaria",
       "type": "administrativo",
       "afp": "Futuro",
       "afpAccount": 40959284,
-      "lastUpdate": "2018-07-23T02:29:31.473Z",
+      "lastUpdate": "2018-07-25T22:23:01.088Z",
       "enabled": true,
       "person": {
         "identification": 6287716,
@@ -778,19 +778,19 @@
         "paternalLastName": "Cayalo",
         "maternalLastName": "Perdriel",
         "marriedLastName": "Martinez",
-        "birthday": "1988-05-09T04:00:00.000Z",
+        "birthday": "1988-05-09T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bf30fb68e96e78785",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f8457a28250f6baee00e",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 43199872,
-      "lastUpdate": "2018-07-23T02:29:31.476Z",
+      "lastUpdate": "2018-07-25T22:23:01.099Z",
       "enabled": true,
       "person": {
         "identification": 4573521,
@@ -801,19 +801,19 @@
         "paternalLastName": "Cespedes",
         "maternalLastName": null,
         "marriedLastName": "Limachi",
-        "birthday": "1976-10-21T04:00:00.000Z",
+        "birthday": "1976-10-21T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b2747f059f5f72369",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84537afd79b42b2d9a1",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 4814332,
-      "lastUpdate": "2018-07-23T02:29:31.480Z",
+      "lastUpdate": "2018-07-25T22:23:01.106Z",
       "enabled": true,
       "person": {
         "identification": 3858027,
@@ -824,19 +824,19 @@
         "paternalLastName": "Changaray ",
         "maternalLastName": "Carrisales",
         "marriedLastName": null,
-        "birthday": "1971-03-01T04:00:00.000Z",
+        "birthday": "1971-03-01T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bc6b6ce4143059619",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845d69fe23880eb4e79",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 4987743,
-      "lastUpdate": "2018-07-23T02:29:31.484Z",
+      "lastUpdate": "2018-07-25T22:23:01.106Z",
       "enabled": true,
       "person": {
         "identification": 3210462,
@@ -847,19 +847,19 @@
         "paternalLastName": "Chimba ",
         "maternalLastName": "Valverde",
         "marriedLastName": null,
-        "birthday": "1962-07-26T04:00:00.000Z",
+        "birthday": "1962-07-26T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bf9d5200218849e39",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845cf20a6b143554a34",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 31891275,
-      "lastUpdate": "2018-07-23T02:29:31.488Z",
+      "lastUpdate": "2018-07-25T22:23:01.115Z",
       "enabled": true,
       "person": {
         "identification": 38790777,
@@ -870,19 +870,19 @@
         "paternalLastName": "Chilo ",
         "maternalLastName": "Terrazas",
         "marriedLastName": null,
-        "birthday": "1974-06-18T04:00:00.000Z",
+        "birthday": "1974-06-18T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b52b98d63c153e1fe",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f845abfd20770f4f6164",
+      "startDate": 42772,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 44391365,
-      "lastUpdate": "2018-07-23T02:29:31.491Z",
+      "lastUpdate": "2018-07-25T22:23:01.124Z",
       "enabled": true,
       "person": {
         "identification": 7716820,
@@ -893,19 +893,19 @@
         "paternalLastName": "Condori",
         "maternalLastName": "Jimenez",
         "marriedLastName": null,
-        "birthday": "1987-07-29T04:00:00.000Z",
+        "birthday": "1987-07-29T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b76a025e09af8ea45",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8456db24673624bc62b",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 40077081,
-      "lastUpdate": "2018-07-23T02:29:31.495Z",
+      "lastUpdate": "2018-07-25T22:23:01.134Z",
       "enabled": true,
       "person": {
         "identification": 3351977,
@@ -916,19 +916,19 @@
         "paternalLastName": "Cordero ",
         "maternalLastName": "Ruiz",
         "marriedLastName": null,
-        "birthday": "1979-01-15T04:00:00.000Z",
+        "birthday": "1979-01-15T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b02e4eed9b539f823",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f8459fcd4b4fe7f8f553",
+      "startDate": 42772,
       "salary": 2000,
       "charge": "Chofer",
       "type": "soporte",
       "afp": "Futuro",
       "afpAccount": 31780404,
-      "lastUpdate": "2018-07-23T02:29:31.498Z",
+      "lastUpdate": "2018-07-25T22:23:01.140Z",
       "enabled": true,
       "person": {
         "identification": 3904924,
@@ -939,19 +939,19 @@
         "paternalLastName": "Cordova",
         "maternalLastName": "Reynaga",
         "marriedLastName": null,
-        "birthday": "1973-04-08T04:00:00.000Z",
+        "birthday": "1973-04-08T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8bf510ca549b48b87a",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84543e75a5574128a74",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 6307565,
-      "lastUpdate": "2018-07-23T02:29:31.501Z",
+      "lastUpdate": "2018-07-25T22:23:01.154Z",
       "enabled": true,
       "person": {
         "identification": 2982560,
@@ -962,19 +962,19 @@
         "paternalLastName": "Correa",
         "maternalLastName": "Menacho",
         "marriedLastName": null,
-        "birthday": "1973-12-23T04:00:00.000Z",
+        "birthday": "1973-12-23T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b0224166c0296dc15",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8456965df7e752695d2",
+      "startDate": 42401,
       "salary": 3500,
       "charge": "Director",
       "type": "administrativo",
       "afp": "Futuro",
       "afpAccount": 6303869,
-      "lastUpdate": "2018-07-23T02:29:31.505Z",
+      "lastUpdate": "2018-07-25T22:23:01.164Z",
       "enabled": true,
       "person": {
         "identification": 2273534,
@@ -985,19 +985,19 @@
         "paternalLastName": "Correa ",
         "maternalLastName": "Menacho",
         "marriedLastName": null,
-        "birthday": "1965-06-27T04:00:00.000Z",
+        "birthday": "1965-06-27T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8bbbdf2b82bef496b6",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845f83fb1c17c958574",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 35205404,
-      "lastUpdate": "2018-07-23T02:29:31.508Z",
+      "lastUpdate": "2018-07-25T22:23:01.174Z",
       "enabled": true,
       "person": {
         "identification": 4712092,
@@ -1008,19 +1008,19 @@
         "paternalLastName": "Coulthard ",
         "maternalLastName": "Añez",
         "marriedLastName": null,
-        "birthday": "1982-10-23T04:00:00.000Z",
+        "birthday": "1982-10-23T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b17ee56b4cf9500cf",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8454832ac95837e32c3",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 43241773,
-      "lastUpdate": "2018-07-23T02:29:31.513Z",
+      "lastUpdate": "2018-07-25T22:23:01.182Z",
       "enabled": true,
       "person": {
         "identification": 767935,
@@ -1031,19 +1031,19 @@
         "paternalLastName": "Coulthard ",
         "maternalLastName": "Añez",
         "marriedLastName": null,
-        "birthday": "1988-10-12T04:00:00.000Z",
+        "birthday": "1988-10-12T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b8d6bed677cd3add8",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84575184c628fa758d1",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 34519026,
-      "lastUpdate": "2018-07-23T02:29:31.517Z",
+      "lastUpdate": "2018-07-25T22:23:01.195Z",
       "enabled": true,
       "person": {
         "identification": 4712090,
@@ -1054,19 +1054,19 @@
         "paternalLastName": "Coulthard ",
         "maternalLastName": "Añez",
         "marriedLastName": null,
-        "birthday": "1981-09-09T04:00:00.000Z",
+        "birthday": "1981-09-09T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8bb9b2699f86008b81",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84596d3d5a79626f0f1",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 43241967,
-      "lastUpdate": "2018-07-23T02:29:31.520Z",
+      "lastUpdate": "2018-07-25T22:23:01.208Z",
       "enabled": true,
       "person": {
         "identification": 8965513,
@@ -1077,19 +1077,19 @@
         "paternalLastName": "Coulthard ",
         "maternalLastName": "Añez",
         "marriedLastName": "Villibord",
-        "birthday": "1992-12-05T04:00:00.000Z",
+        "birthday": "1992-12-05T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b6a9ac5e4dcbd09fd",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8451fd91891b0e1cde1",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 39536361,
-      "lastUpdate": "2018-07-23T02:29:31.524Z",
+      "lastUpdate": "2018-07-25T22:23:01.229Z",
       "enabled": true,
       "person": {
         "identification": 3091619,
@@ -1100,19 +1100,19 @@
         "paternalLastName": "Cruz ",
         "maternalLastName": "Mercado",
         "marriedLastName": null,
-        "birthday": "1967-02-16T04:00:00.000Z",
+        "birthday": "1967-02-16T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b8ad5febcb52ddafa",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845e1eb5cf3decb167a",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 36532472,
-      "lastUpdate": "2018-07-23T02:29:31.527Z",
+      "lastUpdate": "2018-07-25T22:23:01.255Z",
       "enabled": true,
       "person": {
         "identification": 4646922,
@@ -1123,19 +1123,19 @@
         "paternalLastName": "Cruz ",
         "maternalLastName": "Saucedo",
         "marriedLastName": null,
-        "birthday": "1978-08-04T04:00:00.000Z",
+        "birthday": "1978-08-04T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b69d0c50fb425b108",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f8459e8db12338be699c",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 37842018,
-      "lastUpdate": "2018-07-23T02:29:31.531Z",
+      "lastUpdate": "2018-07-25T22:23:01.262Z",
       "enabled": true,
       "person": {
         "identification": 5837662,
@@ -1146,19 +1146,19 @@
         "paternalLastName": "Cuellar",
         "maternalLastName": "Lino",
         "marriedLastName": null,
-        "birthday": "1984-02-10T04:00:00.000Z",
+        "birthday": "1984-02-10T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bfeba1767bf009563",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845d09519dca078c5ef",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 176131772,
-      "lastUpdate": "2018-07-23T02:29:31.534Z",
+      "lastUpdate": "2018-07-25T22:23:01.279Z",
       "enabled": true,
       "person": {
         "identification": 3195559,
@@ -1169,19 +1169,19 @@
         "paternalLastName": "Del Castillo ",
         "maternalLastName": "Romero",
         "marriedLastName": null,
-        "birthday": "1964-08-27T04:00:00.000Z",
+        "birthday": "1964-08-27T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b4930152ba47b9276",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845b834f9a185969f5e",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 26166549,
-      "lastUpdate": "2018-07-23T02:29:31.537Z",
+      "lastUpdate": "2018-07-25T22:23:01.288Z",
       "enabled": true,
       "person": {
         "identification": 1906553,
@@ -1192,19 +1192,19 @@
         "paternalLastName": "Díaz ",
         "maternalLastName": "Antelo",
         "marriedLastName": null,
-        "birthday": "1969-05-18T04:00:00.000Z",
+        "birthday": "1969-05-18T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b4512cf04500e0de5",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8452c354315597989f4",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Secretaria",
       "type": "administrativo",
       "afp": "Futuro",
       "afpAccount": 43241827,
-      "lastUpdate": "2018-07-23T02:29:31.541Z",
+      "lastUpdate": "2018-07-25T22:23:01.298Z",
       "enabled": true,
       "person": {
         "identification": 6308795,
@@ -1215,19 +1215,19 @@
         "paternalLastName": "Denis ",
         "maternalLastName": "Alvis",
         "marriedLastName": null,
-        "birthday": "1983-12-09T04:00:00.000Z",
+        "birthday": "1983-12-09T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bd18834d84f35ff9f",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f8457a5d19ccb5c2fb10",
+      "startDate": 42767,
       "salary": 1805,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 44539800,
-      "lastUpdate": "2018-07-23T02:29:31.545Z",
+      "lastUpdate": "2018-07-25T22:23:01.307Z",
       "enabled": true,
       "person": {
         "identification": 69249763,
@@ -1238,19 +1238,19 @@
         "paternalLastName": "De Ugarte",
         "maternalLastName": "Quiroga",
         "marriedLastName": null,
-        "birthday": "1997-07-07T04:00:00.000Z",
+        "birthday": "1997-07-07T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b9ccf0370db10324c",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845049eace8a86ed6d8",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 25731579,
-      "lastUpdate": "2018-07-23T02:29:31.549Z",
+      "lastUpdate": "2018-07-25T22:23:01.317Z",
       "enabled": true,
       "person": {
         "identification": 1985439,
@@ -1261,19 +1261,19 @@
         "paternalLastName": "Doria",
         "maternalLastName": "Medina",
         "marriedLastName": null,
-        "birthday": "1955-12-05T04:00:00.000Z",
+        "birthday": "1955-12-05T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b6d29aa59aa0e38b9",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f8450244da8914083d63",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Auxiliar",
       "type": "soporte",
       "afp": "Futuro",
       "afpAccount": 43951144,
-      "lastUpdate": "2018-07-23T02:29:31.553Z",
+      "lastUpdate": "2018-07-25T22:23:01.326Z",
       "enabled": true,
       "person": {
         "identification": 6396343,
@@ -1284,19 +1284,19 @@
         "paternalLastName": "Dos Santos",
         "maternalLastName": "Moreno",
         "marriedLastName": null,
-        "birthday": "1986-11-16T04:00:00.000Z",
+        "birthday": "1986-11-16T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b50ce845d0a0cb7e0",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8455aade9126c68e59e",
+      "startDate": 42401,
       "salary": 1805,
       "charge": "Conserje",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 46932999,
-      "lastUpdate": "2018-07-23T02:29:31.559Z",
+      "lastUpdate": "2018-07-25T22:23:01.336Z",
       "enabled": true,
       "person": {
         "identification": 3238367,
@@ -1307,19 +1307,19 @@
         "paternalLastName": "Duran",
         "maternalLastName": null,
         "marriedLastName": null,
-        "birthday": "1969-05-16T04:00:00.000Z",
+        "birthday": "1969-05-16T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b33a9d0799c79bd4f",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84531f65985b24d412f",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 42231644,
-      "lastUpdate": "2018-07-23T02:29:31.562Z",
+      "lastUpdate": "2018-07-25T22:23:01.340Z",
       "enabled": true,
       "person": {
         "identification": 3893426,
@@ -1330,19 +1330,19 @@
         "paternalLastName": "Echeverria ",
         "maternalLastName": "Valle",
         "marriedLastName": null,
-        "birthday": "1974-10-02T04:00:00.000Z",
+        "birthday": "1974-10-02T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b3e674b0c6da36cf7",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f845c50ae358cfb8e8eb",
+      "startDate": 42767,
       "salary": 1805,
       "charge": "Chofer",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 7192563,
-      "lastUpdate": "2018-07-23T02:29:31.566Z",
+      "lastUpdate": "2018-07-25T22:23:01.350Z",
       "enabled": true,
       "person": {
         "identification": 3225845,
@@ -1353,19 +1353,19 @@
         "paternalLastName": "Encinas",
         "maternalLastName": "Olachea",
         "marriedLastName": null,
-        "birthday": "1960-02-04T04:00:00.000Z",
+        "birthday": "1960-02-04T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8be036ab589716c228",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845291e92d9665c2ce0",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Prodesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 40847299,
-      "lastUpdate": "2018-07-23T02:29:31.569Z",
+      "lastUpdate": "2018-07-25T22:23:01.353Z",
       "enabled": true,
       "person": {
         "identification": 3883294,
@@ -1376,19 +1376,19 @@
         "paternalLastName": "Escalante ",
         "maternalLastName": "Arauz ",
         "marriedLastName": null,
-        "birthday": "1972-05-13T04:00:00.000Z",
+        "birthday": "1972-05-13T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b8bc6cf3888a258d1",
-      "startDate": "2018-01-01T04:00:00.000Z",
+      "id": "5b58f84528bc5036542b9215",
+      "startDate": 43101,
       "salary": null,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.574Z",
+      "lastUpdate": "2018-07-25T22:23:01.360Z",
       "enabled": true,
       "person": {
         "identification": 3883294,
@@ -1399,19 +1399,19 @@
         "paternalLastName": "Escalante ",
         "maternalLastName": "Vargas",
         "marriedLastName": null,
-        "birthday": "1995-05-28T04:00:00.000Z",
+        "birthday": "1995-05-28T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bd2c09755b9692c2f",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f845c9610ce1ba222fa6",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 37454912,
-      "lastUpdate": "2018-07-23T02:29:31.577Z",
+      "lastUpdate": "2018-07-25T22:23:01.370Z",
       "enabled": true,
       "person": {
         "identification": 5880196,
@@ -1422,19 +1422,19 @@
         "paternalLastName": "Escobar",
         "maternalLastName": "Acuña",
         "marriedLastName": null,
-        "birthday": "1983-01-13T04:00:00.000Z",
+        "birthday": "1983-01-13T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8badc1d02c1800756e",
-      "startDate": "2018-03-01T04:00:00.000Z",
+      "id": "5b58f8450e0cdc5c8190c278",
+      "startDate": 43160,
       "salary": null,
       "charge": "Profesora",
       "type": "docente",
       "afp": null,
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.581Z",
+      "lastUpdate": "2018-07-25T22:23:01.380Z",
       "enabled": true,
       "person": {
         "identification": 3191469,
@@ -1445,19 +1445,19 @@
         "paternalLastName": "Espinoza",
         "maternalLastName": "Galviz",
         "marriedLastName": null,
-        "birthday": "1966-05-25T04:00:00.000Z",
+        "birthday": "1966-05-25T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bfb3b7fbec118ba57",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f8455a83e59fbb2aa8e0",
+      "startDate": 42772,
       "salary": 1805,
       "charge": "Guardia N.",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 38717633,
-      "lastUpdate": "2018-07-23T02:29:31.586Z",
+      "lastUpdate": "2018-07-25T22:23:01.389Z",
       "enabled": true,
       "person": {
         "identification": 6287612,
@@ -1468,19 +1468,19 @@
         "paternalLastName": "Farel",
         "maternalLastName": "Aldana",
         "marriedLastName": null,
-        "birthday": "1989-01-13T04:00:00.000Z",
+        "birthday": "1989-01-13T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8be71ad214f723affb",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f845f7fb9c4a53f66e2f",
+      "startDate": 43132,
       "salary": null,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 41968785,
-      "lastUpdate": "2018-07-23T02:29:31.590Z",
+      "lastUpdate": "2018-07-25T22:23:01.389Z",
       "enabled": true,
       "person": {
         "identification": 7487547,
@@ -1491,19 +1491,19 @@
         "paternalLastName": "Fernandez",
         "maternalLastName": "Zeballos",
         "marriedLastName": null,
-        "birthday": "1988-10-05T04:00:00.000Z",
+        "birthday": "1988-10-05T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bf148b5384a84d288",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84502298124525f51e7",
+      "startDate": 42401,
       "salary": 2000,
       "charge": "Aux.Sec.",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 39977213,
-      "lastUpdate": "2018-07-23T02:29:31.593Z",
+      "lastUpdate": "2018-07-25T22:23:01.400Z",
       "enabled": true,
       "person": {
         "identification": 4598573,
@@ -1514,19 +1514,19 @@
         "paternalLastName": "Figueroa ",
         "maternalLastName": "Schmidt",
         "marriedLastName": null,
-        "birthday": "1977-11-20T04:00:00.000Z",
+        "birthday": "1977-11-20T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8bd269d88572bc7a70",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8459a5d9c22886410d6",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 43241761,
-      "lastUpdate": "2018-07-23T02:29:31.597Z",
+      "lastUpdate": "2018-07-25T22:23:01.410Z",
       "enabled": true,
       "person": {
         "identification": 3898824,
@@ -1537,19 +1537,19 @@
         "paternalLastName": "Flores ",
         "maternalLastName": "Cayu",
         "marriedLastName": null,
-        "birthday": "1976-06-27T04:00:00.000Z",
+        "birthday": "1976-06-27T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b9141226d9f85a1bb",
-      "startDate": "2017-06-01T04:00:00.000Z",
+      "id": "5b58f8457c2e024e51bf9354",
+      "startDate": 42887,
       "salary": 1805,
       "charge": "Chofer",
       "type": "soporte",
       "afp": "Futuro",
       "afpAccount": 432141761,
-      "lastUpdate": "2018-07-23T02:29:31.600Z",
+      "lastUpdate": "2018-07-25T22:23:01.420Z",
       "enabled": true,
       "person": {
         "identification": 3298834,
@@ -1560,19 +1560,19 @@
         "paternalLastName": "Flores ",
         "maternalLastName": null,
         "marriedLastName": null,
-        "birthday": "1970-01-30T04:00:00.000Z",
+        "birthday": "1970-01-30T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b1f9bf003771b0a07",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84572afc0d83bcef959",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 30049908,
-      "lastUpdate": "2018-07-23T02:29:31.604Z",
+      "lastUpdate": "2018-07-25T22:23:01.430Z",
       "enabled": true,
       "person": {
         "identification": 3935870,
@@ -1583,19 +1583,19 @@
         "paternalLastName": "Gemio ",
         "maternalLastName": "Rodriguez",
         "marriedLastName": null,
-        "birthday": "1973-10-01T04:00:00.000Z",
+        "birthday": "1973-10-01T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b63030c5e3a446d44",
-      "startDate": "2018-01-01T04:00:00.000Z",
+      "id": "5b58f845789ccc3f827fd567",
+      "startDate": 43101,
       "salary": null,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 36866465,
-      "lastUpdate": "2018-07-23T02:29:31.608Z",
+      "lastUpdate": "2018-07-25T22:23:01.434Z",
       "enabled": true,
       "person": {
         "identification": 3923916,
@@ -1606,19 +1606,19 @@
         "paternalLastName": "Gonzales",
         "maternalLastName": "Mendoza",
         "marriedLastName": null,
-        "birthday": "1974-08-25T04:00:00.000Z",
+        "birthday": "1974-08-25T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8be5cfc3e93aab5bf3",
-      "startDate": "2018-01-01T04:00:00.000Z",
+      "id": "5b58f84530d8d494236bcbec",
+      "startDate": 43101,
       "salary": null,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 38428234,
-      "lastUpdate": "2018-07-23T02:29:31.612Z",
+      "lastUpdate": "2018-07-25T22:23:01.443Z",
       "enabled": true,
       "person": {
         "identification": 4687145,
@@ -1629,19 +1629,19 @@
         "paternalLastName": "Guardia",
         "maternalLastName": "Mustafa",
         "marriedLastName": null,
-        "birthday": "1978-06-20T04:00:00.000Z",
+        "birthday": "1978-06-20T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b2d38d17f10b2bf13",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8458ce07247a1678bab",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 9206619,
-      "lastUpdate": "2018-07-23T02:29:31.616Z",
+      "lastUpdate": "2018-07-25T22:23:01.452Z",
       "enabled": true,
       "person": {
         "identification": 2979920,
@@ -1652,19 +1652,19 @@
         "paternalLastName": "Guzman ",
         "maternalLastName": "Alba",
         "marriedLastName": null,
-        "birthday": "1960-12-22T04:00:00.000Z",
+        "birthday": "1960-12-22T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b094d935ddeae376d",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845c41f9ab35c93ebef",
+      "startDate": 42401,
       "salary": 1805,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 45376682,
-      "lastUpdate": "2018-07-23T02:29:31.620Z",
+      "lastUpdate": "2018-07-25T22:23:01.460Z",
       "enabled": true,
       "person": {
         "identification": 11383462,
@@ -1675,19 +1675,19 @@
         "paternalLastName": "Guzman ",
         "maternalLastName": "Coca",
         "marriedLastName": null,
-        "birthday": "1994-08-17T04:00:00.000Z",
+        "birthday": "1994-08-17T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bbdf42867c291ccee",
-      "startDate": "2017-03-01T04:00:00.000Z",
+      "id": "5b58f8457b2506235eb207e8",
+      "startDate": 42795,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 9403668,
-      "lastUpdate": "2018-07-23T02:29:31.623Z",
+      "lastUpdate": "2018-07-25T22:23:01.470Z",
       "enabled": true,
       "person": {
         "identification": 1989338,
@@ -1698,19 +1698,19 @@
         "paternalLastName": "Herrrera",
         "maternalLastName": "Mendoza",
         "marriedLastName": null,
-        "birthday": "1958-02-13T04:00:00.000Z",
+        "birthday": "1958-02-13T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b422d71ad9ad18276",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f845c01278ebc8432cc2",
+      "startDate": 42772,
       "salary": 1805,
       "charge": "Bibliot.",
       "type": "administrativo",
       "afp": "Prevision",
       "afpAccount": 4988483,
-      "lastUpdate": "2018-07-23T02:29:31.627Z",
+      "lastUpdate": "2018-07-25T22:23:01.474Z",
       "enabled": true,
       "person": {
         "identification": 2684718,
@@ -1721,19 +1721,19 @@
         "paternalLastName": "Hinojosa",
         "maternalLastName": "Laime",
         "marriedLastName": null,
-        "birthday": "1969-03-08T04:00:00.000Z",
+        "birthday": "1969-03-08T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bcf7b2e9a34998de1",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f845b6a37bdfb9318187",
+      "startDate": 43132,
       "salary": 1805,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.631Z",
+      "lastUpdate": "2018-07-25T22:23:01.482Z",
       "enabled": true,
       "person": {
         "identification": null,
@@ -1744,19 +1744,19 @@
         "paternalLastName": "Hurtado",
         "maternalLastName": "Zabala",
         "marriedLastName": null,
-        "birthday": "1998-07-27T04:00:00.000Z",
+        "birthday": "1998-07-27T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bba6b5fa2caee883b",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f845e65fa9514fddae8b",
+      "startDate": 43132,
       "salary": null,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 33268526,
-      "lastUpdate": "2018-07-23T02:29:31.635Z",
+      "lastUpdate": "2018-07-25T22:23:01.489Z",
       "enabled": true,
       "person": {
         "identification": 2369613,
@@ -1767,19 +1767,19 @@
         "paternalLastName": "Hurtado",
         "maternalLastName": "Calisaya",
         "marriedLastName": null,
-        "birthday": "1958-05-30T04:00:00.000Z",
+        "birthday": "1958-05-30T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b6dd4805a66dafc41",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84591a63319e6668ddb",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 10192694,
-      "lastUpdate": "2018-07-23T02:29:31.639Z",
+      "lastUpdate": "2018-07-25T22:23:01.500Z",
       "enabled": true,
       "person": {
         "identification": 3274871,
@@ -1790,19 +1790,19 @@
         "paternalLastName": "Jiménez ",
         "maternalLastName": "Chavez",
         "marriedLastName": null,
-        "birthday": "1966-08-05T04:00:00.000Z",
+        "birthday": "1966-08-05T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bc435474f25330d2e",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845f2d8661627231933",
+      "startDate": 42401,
       "salary": 2000,
       "charge": "Chofer",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.643Z",
+      "lastUpdate": "2018-07-25T22:23:01.510Z",
       "enabled": true,
       "person": {
         "identification": 1973031,
@@ -1813,19 +1813,19 @@
         "paternalLastName": "Justiniano ",
         "maternalLastName": "Roca",
         "marriedLastName": null,
-        "birthday": "1971-05-10T04:00:00.000Z",
+        "birthday": "1971-05-10T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b3030d6c7294079fd",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f845ada9c662efa1ddb7",
+      "startDate": 43132,
       "salary": null,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 40745171,
-      "lastUpdate": "2018-07-23T02:29:31.647Z",
+      "lastUpdate": "2018-07-25T22:23:01.514Z",
       "enabled": true,
       "person": {
         "identification": 3177739,
@@ -1836,19 +1836,19 @@
         "paternalLastName": "Justiniano ",
         "maternalLastName": "Menacho",
         "marriedLastName": null,
-        "birthday": "1968-08-01T04:00:00.000Z",
+        "birthday": "1968-08-01T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b02aebd80d6d20021",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f84528bfa20c26576280",
+      "startDate": 42772,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 39559284,
-      "lastUpdate": "2018-07-23T02:29:31.651Z",
+      "lastUpdate": "2018-07-25T22:23:01.514Z",
       "enabled": true,
       "person": {
         "identification": 6332864,
@@ -1859,19 +1859,19 @@
         "paternalLastName": "Lara",
         "maternalLastName": "Bustos",
         "marriedLastName": null,
-        "birthday": "1988-06-15T04:00:00.000Z",
+        "birthday": "1988-06-15T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8bbb82c969cbb90eed",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f84548a0c21cdf559f82",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 44539851,
-      "lastUpdate": "2018-07-23T02:29:31.654Z",
+      "lastUpdate": "2018-07-25T22:23:01.528Z",
       "enabled": true,
       "person": {
         "identification": 5850825,
@@ -1882,19 +1882,19 @@
         "paternalLastName": "Lazarte",
         "maternalLastName": "Aracena",
         "marriedLastName": null,
-        "birthday": "1984-06-13T04:00:00.000Z",
+        "birthday": "1984-06-13T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b46c3bd0bc4d45f8d",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f84582de364177d01fd8",
+      "startDate": 43132,
       "salary": null,
       "charge": "Regente",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.658Z",
+      "lastUpdate": "2018-07-25T22:23:01.531Z",
       "enabled": true,
       "person": {
         "identification": 4733983,
@@ -1910,14 +1910,14 @@
       }
     },
     {
-      "id": "5b553d8bea4e39efb5ffd660",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845fe8f01aa1a4ef65c",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 37557555,
-      "lastUpdate": "2018-07-23T02:29:31.662Z",
+      "lastUpdate": "2018-07-25T22:23:01.543Z",
       "enabled": true,
       "person": {
         "identification": 5871361,
@@ -1928,19 +1928,19 @@
         "paternalLastName": "Limpias ",
         "maternalLastName": "Antelo",
         "marriedLastName": null,
-        "birthday": "1984-01-07T04:00:00.000Z",
+        "birthday": "1984-01-07T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b29c5eeaf404e72e1",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8451d13ec228b7777a9",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 31553679,
-      "lastUpdate": "2018-07-23T02:29:31.666Z",
+      "lastUpdate": "2018-07-25T22:23:01.553Z",
       "enabled": true,
       "person": {
         "identification": 5419362,
@@ -1951,19 +1951,19 @@
         "paternalLastName": "Lizarraga",
         "maternalLastName": "Morales",
         "marriedLastName": null,
-        "birthday": "1980-09-04T04:00:00.000Z",
+        "birthday": "1980-09-04T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b9775e5c54113bbed",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845abae0ae81978d663",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 10657332,
-      "lastUpdate": "2018-07-23T02:29:31.670Z",
+      "lastUpdate": "2018-07-25T22:23:01.566Z",
       "enabled": true,
       "person": {
         "identification": 3866448,
@@ -1974,19 +1974,19 @@
         "paternalLastName": "Lecaro ",
         "maternalLastName": "Becerra",
         "marriedLastName": null,
-        "birthday": "1972-02-15T04:00:00.000Z",
+        "birthday": "1972-02-15T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8be36bd320c0359551",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f845634ebd3e9538d452",
+      "startDate": 42772,
       "salary": 1805,
       "charge": "Chofer",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 49185846,
-      "lastUpdate": "2018-07-23T02:29:31.674Z",
+      "lastUpdate": "2018-07-25T22:23:01.569Z",
       "enabled": true,
       "person": {
         "identification": 4660883,
@@ -1997,19 +1997,19 @@
         "paternalLastName": "Limachi",
         "maternalLastName": "Hurtado",
         "marriedLastName": null,
-        "birthday": "1977-05-18T04:00:00.000Z",
+        "birthday": "1977-05-18T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b616383b9c4b4e2dc",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f845e00c20a0aefae955",
+      "startDate": 42772,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 25731580,
-      "lastUpdate": "2018-07-23T02:29:31.678Z",
+      "lastUpdate": "2018-07-25T22:23:01.574Z",
       "enabled": true,
       "person": {
         "identification": 2985260,
@@ -2020,19 +2020,19 @@
         "paternalLastName": "Melgar",
         "maternalLastName": "Campero",
         "marriedLastName": "Vargas",
-        "birthday": "1963-01-31T04:00:00.000Z",
+        "birthday": "1963-01-31T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bf95f1dedcbbc4e49",
-      "startDate": "2018-03-01T04:00:00.000Z",
+      "id": "5b58f845497cc290aa9b05bc",
+      "startDate": 43160,
       "salary": null,
       "charge": "Profesor",
       "type": "docente",
       "afp": null,
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.681Z",
+      "lastUpdate": "2018-07-25T22:23:01.586Z",
       "enabled": true,
       "person": {
         "identification": 3897887,
@@ -2043,19 +2043,19 @@
         "paternalLastName": "Melgar",
         "maternalLastName": "Saavedra",
         "marriedLastName": null,
-        "birthday": "1973-01-31T04:00:00.000Z",
+        "birthday": "1973-01-31T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8ba4832aa28a29c88a",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f845cbdf464a434532dd",
+      "startDate": 43132,
       "salary": null,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 12710775,
-      "lastUpdate": "2018-07-23T02:29:31.685Z",
+      "lastUpdate": "2018-07-25T22:23:01.603Z",
       "enabled": true,
       "person": {
         "identification": 3823321,
@@ -2066,19 +2066,19 @@
         "paternalLastName": "Menchaca",
         "maternalLastName": "Mena",
         "marriedLastName": null,
-        "birthday": "1970-05-19T04:00:00.000Z",
+        "birthday": "1970-05-19T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b39ae0c1b0b27b410",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845c7c605e2d1c33e27",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Sub-Direct.",
       "type": "administrativo",
       "afp": "Prevision",
       "afpAccount": 30025722,
-      "lastUpdate": "2018-07-23T02:29:31.689Z",
+      "lastUpdate": "2018-07-25T22:23:01.608Z",
       "enabled": true,
       "person": {
         "identification": 3200176,
@@ -2089,19 +2089,19 @@
         "paternalLastName": "Mercado ",
         "maternalLastName": "Coulthard",
         "marriedLastName": null,
-        "birthday": "1972-10-07T04:00:00.000Z",
+        "birthday": "1972-10-07T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b9fc4e600d442f889",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f8458c4003d766853f7b",
+      "startDate": 42767,
       "salary": 1805,
       "charge": "Regente",
       "type": "soporte",
       "afp": "Futuro",
       "afpAccount": 12950661,
-      "lastUpdate": "2018-07-23T02:29:31.693Z",
+      "lastUpdate": "2018-07-25T22:23:01.621Z",
       "enabled": true,
       "person": {
         "identification": 1973085,
@@ -2112,19 +2112,19 @@
         "paternalLastName": "Mercado ",
         "maternalLastName": null,
         "marriedLastName": "Hurtado",
-        "birthday": "1966-04-19T04:00:00.000Z",
+        "birthday": "1966-04-19T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bd74792b852feec60",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f8454d61b868331dc637",
+      "startDate": 42772,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 41401335,
-      "lastUpdate": "2018-07-23T02:29:31.697Z",
+      "lastUpdate": "2018-07-25T22:23:01.625Z",
       "enabled": true,
       "person": {
         "identification": 3925516,
@@ -2135,19 +2135,19 @@
         "paternalLastName": "Molina",
         "maternalLastName": "Ortiz",
         "marriedLastName": null,
-        "birthday": "1975-09-07T04:00:00.000Z",
+        "birthday": "1975-09-07T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b8f0f26f6122f4f07",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84596987632571776d1",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 3314695,
-      "lastUpdate": "2018-07-23T02:29:31.702Z",
+      "lastUpdate": "2018-07-25T22:23:01.640Z",
       "enabled": true,
       "person": {
         "identification": 3185561,
@@ -2158,19 +2158,19 @@
         "paternalLastName": "Montalvo ",
         "maternalLastName": "Vargas",
         "marriedLastName": null,
-        "birthday": "1964-09-20T04:00:00.000Z",
+        "birthday": "1964-09-20T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b3c2e4931b2ee2efa",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f845afc0c4782d1ed963",
+      "startDate": 42772,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 26156398,
-      "lastUpdate": "2018-07-23T02:29:31.706Z",
+      "lastUpdate": "2018-07-25T22:23:01.652Z",
       "enabled": true,
       "person": {
         "identification": 3222998,
@@ -2181,19 +2181,19 @@
         "paternalLastName": "Morales",
         "maternalLastName": "Merubia",
         "marriedLastName": null,
-        "birthday": "1964-01-14T04:00:00.000Z",
+        "birthday": "1964-01-14T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b89c7b70e976ac4c9",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8455d1f9471e1ffedef",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 35094023,
-      "lastUpdate": "2018-07-23T02:29:31.710Z",
+      "lastUpdate": "2018-07-25T22:23:01.665Z",
       "enabled": true,
       "person": {
         "identification": 3228189,
@@ -2204,19 +2204,19 @@
         "paternalLastName": "Moreno ",
         "maternalLastName": null,
         "marriedLastName": "Do Santos",
-        "birthday": "1967-07-22T04:00:00.000Z",
+        "birthday": "1967-07-22T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8be65333286ec4234d",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845be36487df8955792",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 13587468,
-      "lastUpdate": "2018-07-23T02:29:31.714Z",
+      "lastUpdate": "2018-07-25T22:23:01.679Z",
       "enabled": true,
       "person": {
         "identification": 2846470,
@@ -2227,19 +2227,19 @@
         "paternalLastName": "Moreno ",
         "maternalLastName": "Balcazar",
         "marriedLastName": "Castillo",
-        "birthday": "1968-02-23T04:00:00.000Z",
+        "birthday": "1968-02-23T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bc987b3b3e774c61d",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84533c259310860513c",
+      "startDate": 42401,
       "salary": 2000,
       "charge": "Conserje",
       "type": "soporte",
       "afp": "Futuro",
       "afpAccount": 39596154,
-      "lastUpdate": "2018-07-23T02:29:31.718Z",
+      "lastUpdate": "2018-07-25T22:23:01.690Z",
       "enabled": true,
       "person": {
         "identification": 4991587,
@@ -2250,19 +2250,19 @@
         "paternalLastName": "Nina ",
         "maternalLastName": "Onori",
         "marriedLastName": null,
-        "birthday": "1977-02-10T04:00:00.000Z",
+        "birthday": "1977-02-10T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8ba0231e048d76db26",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84543c19e4d39f7f9d4",
+      "startDate": 42401,
       "salary": 2000,
       "charge": "Conserje",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 36921658,
-      "lastUpdate": "2018-07-23T02:29:31.722Z",
+      "lastUpdate": "2018-07-25T22:23:01.694Z",
       "enabled": true,
       "person": {
         "identification": 7005401,
@@ -2273,19 +2273,19 @@
         "paternalLastName": "Nina",
         "maternalLastName": "Honorio",
         "marriedLastName": null,
-        "birthday": "1980-04-05T04:00:00.000Z",
+        "birthday": "1980-04-05T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b00eace36a5cf205e",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f845d14fb2fe81a3ab01",
+      "startDate": 43132,
       "salary": 2000,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.726Z",
+      "lastUpdate": "2018-07-25T22:23:01.698Z",
       "enabled": true,
       "person": {
         "identification": 9004610,
@@ -2296,19 +2296,19 @@
         "paternalLastName": "Nina",
         "maternalLastName": "Gutierrez",
         "marriedLastName": null,
-        "birthday": "1995-04-11T04:00:00.000Z",
+        "birthday": "1995-04-11T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b724b2bc97d344784",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f845dfa40d5b5ede2d64",
+      "startDate": 43132,
       "salary": null,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 46174187,
-      "lastUpdate": "2018-07-23T02:29:31.730Z",
+      "lastUpdate": "2018-07-25T22:23:01.711Z",
       "enabled": true,
       "person": {
         "identification": 5832762,
@@ -2319,19 +2319,19 @@
         "paternalLastName": "Nota",
         "maternalLastName": "Licht",
         "marriedLastName": null,
-        "birthday": "1980-04-11T04:00:00.000Z",
+        "birthday": "1980-04-11T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b27526bdbe98125d5",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845dc14f3e3a3778235",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 14414831,
-      "lastUpdate": "2018-07-23T02:29:31.734Z",
+      "lastUpdate": "2018-07-25T22:23:01.731Z",
       "enabled": true,
       "person": {
         "identification": 2993513,
@@ -2342,19 +2342,19 @@
         "paternalLastName": "Ortiz ",
         "maternalLastName": "Rojas",
         "marriedLastName": null,
-        "birthday": "1965-03-04T04:00:00.000Z",
+        "birthday": "1965-03-04T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b4a7dabc3ed6990a9",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f845639fb2fe712cb1c4",
+      "startDate": 42767,
       "salary": 1805,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 43241943,
-      "lastUpdate": "2018-07-23T02:29:31.739Z",
+      "lastUpdate": "2018-07-25T22:23:01.750Z",
       "enabled": true,
       "person": {
         "identification": 7759541,
@@ -2365,19 +2365,19 @@
         "paternalLastName": "Oquendaqui",
         "maternalLastName": "Moirenda",
         "marriedLastName": null,
-        "birthday": "1985-08-21T04:00:00.000Z",
+        "birthday": "1985-08-21T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b7d56f1ba332b8847",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f845ab12d7b388efdde9",
+      "startDate": 42767,
       "salary": 1805,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 45345971,
-      "lastUpdate": "2018-07-23T02:29:31.743Z",
+      "lastUpdate": "2018-07-25T22:23:01.762Z",
       "enabled": true,
       "person": {
         "identification": 5384051,
@@ -2388,19 +2388,19 @@
         "paternalLastName": "Plata",
         "maternalLastName": "Jimenez",
         "marriedLastName": null,
-        "birthday": "1983-11-16T04:00:00.000Z",
+        "birthday": "1983-11-16T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bd8666665916d6146",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f845f746fc5d690d1448",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 44539885,
-      "lastUpdate": "2018-07-23T02:29:31.747Z",
+      "lastUpdate": "2018-07-25T22:23:01.766Z",
       "enabled": true,
       "person": {
         "identification": 6288336,
@@ -2411,19 +2411,19 @@
         "paternalLastName": "Pannebecker",
         "maternalLastName": "Colling",
         "marriedLastName": "Gianella",
-        "birthday": "1980-04-25T04:00:00.000Z",
+        "birthday": "1980-04-25T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bb7472f903688a15a",
-      "startDate": "2018-03-01T04:00:00.000Z",
+      "id": "5b58f845f0f0d6cdc3c83646",
+      "startDate": 43160,
       "salary": null,
       "charge": "Jardinero",
       "type": "soporte",
       "afp": null,
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.751Z",
+      "lastUpdate": "2018-07-25T22:23:01.780Z",
       "enabled": true,
       "person": {
         "identification": 4952745,
@@ -2434,19 +2434,19 @@
         "paternalLastName": "Paucara",
         "maternalLastName": "Escobar",
         "marriedLastName": null,
-        "birthday": "1978-08-06T04:00:00.000Z",
+        "birthday": "1978-08-06T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b5ac50e6dd9663cb7",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f845366c379af333b5af",
+      "startDate": 42767,
       "salary": 2000,
       "charge": "Conserje",
       "type": "soporte",
       "afp": "Futuro",
       "afpAccount": 40847329,
-      "lastUpdate": "2018-07-23T02:29:31.756Z",
+      "lastUpdate": "2018-07-25T22:23:01.782Z",
       "enabled": true,
       "person": {
         "identification": 6029156,
@@ -2457,19 +2457,19 @@
         "paternalLastName": "Paucara",
         "maternalLastName": "Escobar",
         "marriedLastName": "Nina",
-        "birthday": "1975-01-06T04:00:00.000Z",
+        "birthday": "1975-01-06T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b4e1006cc786f06ed",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f845a058094b832f6087",
+      "startDate": 42767,
       "salary": 1805,
       "charge": "Jardinera",
       "type": "soporte",
       "afp": "Futuro",
       "afpAccount": 44539964,
-      "lastUpdate": "2018-07-23T02:29:31.760Z",
+      "lastUpdate": "2018-07-25T22:23:01.794Z",
       "enabled": true,
       "person": {
         "identification": 4370543,
@@ -2480,19 +2480,19 @@
         "paternalLastName": "Paucara",
         "maternalLastName": "Escobar",
         "marriedLastName": null,
-        "birthday": "1976-07-27T04:00:00.000Z",
+        "birthday": "1976-07-27T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bb19b7c9cfe6b7a15",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845c4e1749485af9d0f",
+      "startDate": 42401,
       "salary": 2000,
       "charge": "Regente",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 39536257,
-      "lastUpdate": "2018-07-23T02:29:31.765Z",
+      "lastUpdate": "2018-07-25T22:23:01.803Z",
       "enabled": true,
       "person": {
         "identification": 5343520,
@@ -2503,19 +2503,19 @@
         "paternalLastName": "Paz",
         "maternalLastName": "Moreno",
         "marriedLastName": null,
-        "birthday": "1979-10-11T04:00:00.000Z",
+        "birthday": "1979-10-11T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8bf535ea4f5d91dcbd",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f845a221c0466aa44db5",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 31553931,
-      "lastUpdate": "2018-07-23T02:29:31.769Z",
+      "lastUpdate": "2018-07-25T22:23:01.814Z",
       "enabled": true,
       "person": {
         "identification": 3219550,
@@ -2526,19 +2526,19 @@
         "paternalLastName": "Pavez",
         "maternalLastName": "Muñoz",
         "marriedLastName": null,
-        "birthday": "1960-05-12T04:00:00.000Z",
+        "birthday": "1960-05-12T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b541b2222ff6e7848",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f84538fc6232d5da1a95",
+      "startDate": 43132,
       "salary": 1950,
       "charge": "Conserje",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 45321851,
-      "lastUpdate": "2018-07-23T02:29:31.773Z",
+      "lastUpdate": "2018-07-25T22:23:01.824Z",
       "enabled": true,
       "person": {
         "identification": 8236434,
@@ -2549,19 +2549,19 @@
         "paternalLastName": "Pereira",
         "maternalLastName": "Sanabria",
         "marriedLastName": "Roxana",
-        "birthday": "1976-10-28T04:00:00.000Z",
+        "birthday": "1976-10-28T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b926e731136a78a3c",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84578237f652fd35cd8",
+      "startDate": 42401,
       "salary": 2000,
       "charge": "Chofer",
       "type": "soporte",
       "afp": "Futuro",
       "afpAccount": 3953403,
-      "lastUpdate": "2018-07-23T02:29:31.777Z",
+      "lastUpdate": "2018-07-25T22:23:01.834Z",
       "enabled": true,
       "person": {
         "identification": 3288644,
@@ -2572,19 +2572,19 @@
         "paternalLastName": "Perez ",
         "maternalLastName": "Robles",
         "marriedLastName": null,
-        "birthday": "1972-01-08T04:00:00.000Z",
+        "birthday": "1972-01-08T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8be6712ddf8895676a",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f845d7a64a1f60f430df",
+      "startDate": 43132,
       "salary": null,
       "charge": "Jardinero",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 15447601,
-      "lastUpdate": "2018-07-23T02:29:31.781Z",
+      "lastUpdate": "2018-07-25T22:23:01.844Z",
       "enabled": true,
       "person": {
         "identification": 3832653,
@@ -2595,19 +2595,19 @@
         "paternalLastName": "Pimentel",
         "maternalLastName": "Caballero",
         "marriedLastName": null,
-        "birthday": "1966-07-08T04:00:00.000Z",
+        "birthday": "1966-07-08T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b779335e1082fa214",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845c66ce0473bd8b1f7",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 15958231,
-      "lastUpdate": "2018-07-23T02:29:31.785Z",
+      "lastUpdate": "2018-07-25T22:23:01.860Z",
       "enabled": true,
       "person": {
         "identification": 38995540,
@@ -2618,19 +2618,19 @@
         "paternalLastName": "Quiroga ",
         "maternalLastName": "Flores",
         "marriedLastName": null,
-        "birthday": "1974-04-14T04:00:00.000Z",
+        "birthday": "1974-04-14T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b50923ae0769608d9",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f845ffc42f154a84ece7",
+      "startDate": 43132,
       "salary": 1805,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 43241906,
-      "lastUpdate": "2018-07-23T02:29:31.789Z",
+      "lastUpdate": "2018-07-25T22:23:01.870Z",
       "enabled": true,
       "person": {
         "identification": 7834013,
@@ -2641,19 +2641,19 @@
         "paternalLastName": "Ramos",
         "maternalLastName": "Arancibia",
         "marriedLastName": null,
-        "birthday": "1956-07-03T04:00:00.000Z",
+        "birthday": "1956-07-03T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bb81a48622615eb0b",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8455fb78d32fea5180a",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 32157541,
-      "lastUpdate": "2018-07-23T02:29:31.794Z",
+      "lastUpdate": "2018-07-25T22:23:01.880Z",
       "enabled": true,
       "person": {
         "identification": 3263714,
@@ -2664,19 +2664,19 @@
         "paternalLastName": "Rojas ",
         "maternalLastName": "Peña",
         "marriedLastName": null,
-        "birthday": "1968-06-22T04:00:00.000Z",
+        "birthday": "1968-06-22T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b70d1eed305a93adc",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8455d3b19f9601c06d8",
+      "startDate": 42401,
       "salary": 3500,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 26495661,
-      "lastUpdate": "2018-07-23T02:29:31.798Z",
+      "lastUpdate": "2018-07-25T22:23:01.889Z",
       "enabled": true,
       "person": {
         "identification": 3538120,
@@ -2687,19 +2687,19 @@
         "paternalLastName": "Romero ",
         "maternalLastName": "Soliz",
         "marriedLastName": null,
-        "birthday": "1962-03-29T04:00:00.000Z",
+        "birthday": "1962-03-29T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b234d868e90431d17",
-      "startDate": "2018-05-01T04:00:00.000Z",
+      "id": "5b58f845d80e570be8a07041",
+      "startDate": 43221,
       "salary": null,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 37257675,
-      "lastUpdate": "2018-07-23T02:29:31.803Z",
+      "lastUpdate": "2018-07-25T22:23:01.894Z",
       "enabled": true,
       "person": {
         "identification": 5843517,
@@ -2710,19 +2710,19 @@
         "paternalLastName": "Rosales",
         "maternalLastName": "Alba",
         "marriedLastName": null,
-        "birthday": "1965-12-22T04:00:00.000Z",
+        "birthday": "1965-12-22T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b0c9998a0a686a66b",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f845ed9907d1eb5f8fc9",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 17815447,
-      "lastUpdate": "2018-07-23T02:29:31.807Z",
+      "lastUpdate": "2018-07-25T22:23:01.903Z",
       "enabled": true,
       "person": {
         "identification": 2819862,
@@ -2733,19 +2733,19 @@
         "paternalLastName": "Ruiz ",
         "maternalLastName": null,
         "marriedLastName": "Sanjinez",
-        "birthday": "1957-11-26T04:00:00.000Z",
+        "birthday": "1957-11-26T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bfa05d92e2c7b87f7",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f8454447c44f2ebf7333",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 43951879,
-      "lastUpdate": "2018-07-23T02:29:31.811Z",
+      "lastUpdate": "2018-07-25T22:23:01.914Z",
       "enabled": true,
       "person": {
         "identification": 6020098,
@@ -2756,19 +2756,19 @@
         "paternalLastName": "Salgueiro",
         "maternalLastName": "Condori",
         "marriedLastName": null,
-        "birthday": "1983-09-01T04:00:00.000Z",
+        "birthday": "1983-09-01T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b47525adedcbc7394",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f845e9f0fbd68c569839",
+      "startDate": 42772,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 27887340,
-      "lastUpdate": "2018-07-23T02:29:31.815Z",
+      "lastUpdate": "2018-07-25T22:23:01.924Z",
       "enabled": true,
       "person": {
         "identification": 3749577,
@@ -2779,19 +2779,19 @@
         "paternalLastName": "Sanchez",
         "maternalLastName": "Rojas",
         "marriedLastName": null,
-        "birthday": "1971-11-03T04:00:00.000Z",
+        "birthday": "1971-11-03T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b56da457b8acb7629",
-      "startDate": "2018-03-01T04:00:00.000Z",
+      "id": "5b58f845825a55a511995861",
+      "startDate": 43160,
       "salary": null,
       "charge": "Regente",
       "type": "soporte",
       "afp": null,
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.819Z",
+      "lastUpdate": "2018-07-25T22:23:01.934Z",
       "enabled": true,
       "person": {
         "identification": 9032633,
@@ -2802,19 +2802,19 @@
         "paternalLastName": "Sanchez",
         "maternalLastName": "Valencia",
         "marriedLastName": null,
-        "birthday": "1995-12-24T04:00:00.000Z",
+        "birthday": "1995-12-24T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bf1a3ef5e3262db9a",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f845e25d994dd8e757dc",
+      "startDate": 42767,
       "salary": 2000,
       "charge": "Chofer",
       "type": "soporte",
       "afp": "Futuro",
       "afpAccount": 44540036,
-      "lastUpdate": "2018-07-23T02:29:31.823Z",
+      "lastUpdate": "2018-07-25T22:23:01.944Z",
       "enabled": true,
       "person": {
         "identification": 3827077,
@@ -2825,19 +2825,19 @@
         "paternalLastName": "Sandoval",
         "maternalLastName": "Acuña",
         "marriedLastName": null,
-        "birthday": "1969-07-29T04:00:00.000Z",
+        "birthday": "1969-07-29T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b73b9d59a04c69cd7",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f8452bc61360cfd0d203",
+      "startDate": 43132,
       "salary": null,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 30505409,
-      "lastUpdate": "2018-07-23T02:29:31.828Z",
+      "lastUpdate": "2018-07-25T22:23:01.954Z",
       "enabled": true,
       "person": {
         "identification": 3844287,
@@ -2848,19 +2848,19 @@
         "paternalLastName": "Santander",
         "maternalLastName": "Totola",
         "marriedLastName": null,
-        "birthday": "1971-05-19T04:00:00.000Z",
+        "birthday": "1971-05-19T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b586baa3188a69cbf",
-      "startDate": "2017-08-01T04:00:00.000Z",
+      "id": "5b58f845e9db4ea55a369a7c",
+      "startDate": 42948,
       "salary": 2000,
       "charge": "Bibliot.",
       "type": "administrativo",
       "afp": "Futuro",
       "afpAccount": 35693149,
-      "lastUpdate": "2018-07-23T02:29:31.832Z",
+      "lastUpdate": "2018-07-25T22:23:01.964Z",
       "enabled": true,
       "person": {
         "identification": 5387117,
@@ -2871,19 +2871,19 @@
         "paternalLastName": "Siles",
         "maternalLastName": "Cuellar",
         "marriedLastName": null,
-        "birthday": "1982-01-27T04:00:00.000Z",
+        "birthday": "1982-01-27T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8be3784f05b57e4517",
-      "startDate": "2018-02-06T04:00:00.000Z",
+      "id": "5b58f84559cc8d0fab6f8c2b",
+      "startDate": 43137,
       "salary": 1805,
       "charge": "Mantenimiento",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.836Z",
+      "lastUpdate": "2018-07-25T22:23:01.980Z",
       "enabled": true,
       "person": {
         "identification": 5401750,
@@ -2894,19 +2894,19 @@
         "paternalLastName": "Segundo",
         "maternalLastName": "Castro",
         "marriedLastName": null,
-        "birthday": "1976-03-23T04:00:00.000Z",
+        "birthday": "1976-03-23T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b02cc6d2e4f819d7b",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8454aa9f3a1e3256598",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 26420481,
-      "lastUpdate": "2018-07-23T02:29:31.840Z",
+      "lastUpdate": "2018-07-25T22:23:01.989Z",
       "enabled": true,
       "person": {
         "identification": 2808551,
@@ -2917,19 +2917,19 @@
         "paternalLastName": "Suarez ",
         "maternalLastName": "Moreno",
         "marriedLastName": "Oropeza",
-        "birthday": "1955-12-12T04:00:00.000Z",
+        "birthday": "1955-12-12T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b5d58f22652e12948",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84549f8388d8515b5e0",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 30052932,
-      "lastUpdate": "2018-07-23T02:29:31.844Z",
+      "lastUpdate": "2018-07-25T22:23:01.994Z",
       "enabled": true,
       "person": {
         "identification": 4691307,
@@ -2940,19 +2940,19 @@
         "paternalLastName": "Suarez ",
         "maternalLastName": "Zelada",
         "marriedLastName": "Ruiz",
-        "birthday": "1980-11-13T04:00:00.000Z",
+        "birthday": "1980-11-13T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b4de7c36395e0e6c9",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f846a8d984f91a66268e",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 42146239,
-      "lastUpdate": "2018-07-23T02:29:31.849Z",
+      "lastUpdate": "2018-07-25T22:23:02.003Z",
       "enabled": true,
       "person": {
         "identification": 6377529,
@@ -2963,19 +2963,19 @@
         "paternalLastName": "Susano",
         "maternalLastName": "Zabala",
         "marriedLastName": null,
-        "birthday": "1990-03-31T04:00:00.000Z",
+        "birthday": "1990-03-31T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8baae9302438bf9bdc",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f846a654d6e3165dd502",
+      "startDate": 42772,
       "salary": 1805,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 49185858,
-      "lastUpdate": "2018-07-23T02:29:31.853Z",
+      "lastUpdate": "2018-07-25T22:23:02.010Z",
       "enabled": true,
       "person": {
         "identification": 4685747,
@@ -2986,19 +2986,19 @@
         "paternalLastName": "Tarupayo",
         "maternalLastName": "Paniagua",
         "marriedLastName": null,
-        "birthday": "1990-06-24T04:00:00.000Z",
+        "birthday": "1990-06-24T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b55212a2f4a5beb21",
-      "startDate": "2018-03-01T04:00:00.000Z",
+      "id": "5b58f846ee8fd72589010172",
+      "startDate": 43160,
       "salary": null,
       "charge": "Sec",
       "type": "docente",
       "afp": null,
       "afpAccount": null,
-      "lastUpdate": "2018-07-23T02:29:31.857Z",
+      "lastUpdate": "2018-07-25T22:23:02.020Z",
       "enabled": true,
       "person": {
         "identification": 6385559,
@@ -3009,19 +3009,19 @@
         "paternalLastName": "Terrazas",
         "maternalLastName": "Villagomez",
         "marriedLastName": null,
-        "birthday": "1991-05-25T04:00:00.000Z",
+        "birthday": "1991-05-25T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b287ace38175e045b",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f846d28149e043ad7a66",
+      "startDate": 43132,
       "salary": null,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 40076921,
-      "lastUpdate": "2018-07-23T02:29:31.862Z",
+      "lastUpdate": "2018-07-25T22:23:02.034Z",
       "enabled": true,
       "person": {
         "identification": 6200912,
@@ -3032,19 +3032,19 @@
         "paternalLastName": "Tapia",
         "maternalLastName": "Callau",
         "marriedLastName": null,
-        "birthday": "1991-07-10T04:00:00.000Z",
+        "birthday": "1991-07-10T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bd3d904286f429beb",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f846e91443fdc1bbcd3f",
+      "startDate": 43132,
       "salary": 1805,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 43951740,
-      "lastUpdate": "2018-07-23T02:29:31.866Z",
+      "lastUpdate": "2018-07-25T22:23:02.044Z",
       "enabled": true,
       "person": {
         "identification": 6200905,
@@ -3055,19 +3055,19 @@
         "paternalLastName": "Tapia",
         "maternalLastName": "Callau",
         "marriedLastName": null,
-        "birthday": "1986-03-06T04:00:00.000Z",
+        "birthday": "1986-03-06T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b87f8b969556328a3",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f8461447e36ee349f8a6",
+      "startDate": 42767,
       "salary": 1805,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 43465853,
-      "lastUpdate": "2018-07-23T02:29:31.870Z",
+      "lastUpdate": "2018-07-25T22:23:02.056Z",
       "enabled": true,
       "person": {
         "identification": 11303481,
@@ -3078,19 +3078,19 @@
         "paternalLastName": "Tejerina",
         "maternalLastName": "Leon",
         "marriedLastName": null,
-        "birthday": "1992-02-03T04:00:00.000Z",
+        "birthday": "1992-02-03T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b0dcecae339268261",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8468058350c4ba46ce4",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 32528279,
-      "lastUpdate": "2018-07-23T02:29:31.874Z",
+      "lastUpdate": "2018-07-25T22:23:02.066Z",
       "enabled": true,
       "person": {
         "identification": 3268760,
@@ -3101,19 +3101,19 @@
         "paternalLastName": "Tordoya ",
         "maternalLastName": "Vega",
         "marriedLastName": null,
-        "birthday": "1970-02-11T04:00:00.000Z",
+        "birthday": "1970-02-11T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8bb6921cba17f146f4",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f846410aee620ce70a13",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 19897443,
-      "lastUpdate": "2018-07-23T02:29:31.878Z",
+      "lastUpdate": "2018-07-25T22:23:02.077Z",
       "enabled": true,
       "person": {
         "identification": 3852570,
@@ -3124,19 +3124,19 @@
         "paternalLastName": "Torres ",
         "maternalLastName": "Issa",
         "marriedLastName": null,
-        "birthday": "1971-04-08T04:00:00.000Z",
+        "birthday": "1971-04-08T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b422d43ab2f12c5ad",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f846377d1cfe73c8882f",
+      "startDate": 42767,
       "salary": 1805,
       "charge": "Tutor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 39536567,
-      "lastUpdate": "2018-07-23T02:29:31.883Z",
+      "lastUpdate": "2018-07-25T22:23:02.082Z",
       "enabled": true,
       "person": {
         "identification": 3298458,
@@ -3147,19 +3147,19 @@
         "paternalLastName": "Torrez",
         "maternalLastName": "Daza",
         "marriedLastName": null,
-        "birthday": "1971-10-30T04:00:00.000Z",
+        "birthday": "1971-10-30T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b3558f35804ae6a6b",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f846efe43a6ec3407477",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 20466262,
-      "lastUpdate": "2018-07-23T02:29:31.887Z",
+      "lastUpdate": "2018-07-25T22:23:02.095Z",
       "enabled": true,
       "person": {
         "identification": 3018957,
@@ -3170,19 +3170,19 @@
         "paternalLastName": "Valencia",
         "maternalLastName": "Vargas",
         "marriedLastName": null,
-        "birthday": "1964-09-22T04:00:00.000Z",
+        "birthday": "1964-09-22T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b3e92a755b1f20ae0",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f846ad28ee024a5bf7fc",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 43241803,
-      "lastUpdate": "2018-07-23T02:29:31.892Z",
+      "lastUpdate": "2018-07-25T22:23:02.110Z",
       "enabled": true,
       "person": {
         "identification": 4596165,
@@ -3193,19 +3193,19 @@
         "paternalLastName": "Valdez",
         "maternalLastName": "Cuellar",
         "marriedLastName": null,
-        "birthday": "1975-03-14T04:00:00.000Z",
+        "birthday": "1975-03-14T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8bd2b44670d4903522",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f846b213b9f6f958a353",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 32921721,
-      "lastUpdate": "2018-07-23T02:29:31.895Z",
+      "lastUpdate": "2018-07-25T22:23:02.120Z",
       "enabled": true,
       "person": {
         "identification": 4711508,
@@ -3216,19 +3216,19 @@
         "paternalLastName": "Valverde",
         "maternalLastName": "Peña",
         "marriedLastName": null,
-        "birthday": "1978-09-16T04:00:00.000Z",
+        "birthday": "1978-09-16T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b3f852b8702ab2238",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84685d791de06ee5de7",
+      "startDate": 42401,
       "salary": 2000,
       "charge": "Guardia",
       "type": "soporte",
       "afp": "Prevision",
       "afpAccount": 38935934,
-      "lastUpdate": "2018-07-23T02:29:31.899Z",
+      "lastUpdate": "2018-07-25T22:23:02.130Z",
       "enabled": true,
       "person": {
         "identification": 6232343,
@@ -3239,19 +3239,19 @@
         "paternalLastName": "Vargas ",
         "maternalLastName": "Castedo",
         "marriedLastName": null,
-        "birthday": "1978-11-08T04:00:00.000Z",
+        "birthday": "1978-11-08T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b83fcea81c7ad6390",
-      "startDate": "2018-02-01T04:00:00.000Z",
+      "id": "5b58f8461657452b16ff1869",
+      "startDate": 43132,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 41162924,
-      "lastUpdate": "2018-07-23T02:29:31.903Z",
+      "lastUpdate": "2018-07-25T22:23:02.134Z",
       "enabled": true,
       "person": {
         "identification": 7734412,
@@ -3262,19 +3262,19 @@
         "paternalLastName": "Vargas ",
         "maternalLastName": "Ayllon",
         "marriedLastName": null,
-        "birthday": "1988-06-01T04:00:00.000Z",
+        "birthday": "1988-06-01T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b2c8d439928d7b437",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8468d8b48f9974a989b",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 20822297,
-      "lastUpdate": "2018-07-23T02:29:31.908Z",
+      "lastUpdate": "2018-07-25T22:23:02.144Z",
       "enabled": true,
       "person": {
         "identification": 2961281,
@@ -3285,19 +3285,19 @@
         "paternalLastName": "Vasquez ",
         "maternalLastName": "Goyonaga",
         "marriedLastName": null,
-        "birthday": "1965-04-18T04:00:00.000Z",
+        "birthday": "1965-04-18T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bb297d650bb498f32",
-      "startDate": "2017-02-06T04:00:00.000Z",
+      "id": "5b58f846cd8c660a3741c7c7",
+      "startDate": 42772,
       "salary": 1805,
       "charge": "Auxiliar",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 42294307,
-      "lastUpdate": "2018-07-23T02:29:31.912Z",
+      "lastUpdate": "2018-07-25T22:23:02.154Z",
       "enabled": true,
       "person": {
         "identification": 6357635,
@@ -3308,19 +3308,19 @@
         "paternalLastName": "Vargas ",
         "maternalLastName": "Subirana",
         "marriedLastName": null,
-        "birthday": "1998-06-15T04:00:00.000Z",
+        "birthday": "1998-06-15T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bd32f61c79d5dd7bb",
-      "startDate": "2017-02-01T04:00:00.000Z",
+      "id": "5b58f8463a49e0c2651a983c",
+      "startDate": 42767,
       "salary": 1950,
       "charge": "Profesor",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 44540051,
-      "lastUpdate": "2018-07-23T02:29:31.917Z",
+      "lastUpdate": "2018-07-25T22:23:02.164Z",
       "enabled": true,
       "person": {
         "identification": 13509756,
@@ -3331,19 +3331,19 @@
         "paternalLastName": "Villibord",
         "maternalLastName": "Santos",
         "marriedLastName": null,
-        "birthday": "1987-03-13T04:00:00.000Z",
+        "birthday": "1987-03-13T00:00:00.000Z",
         "sex": "M"
       }
     },
     {
-      "id": "5b553d8b8f127c4895cc7341",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f84673ba52df42b540f3",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 38368912,
-      "lastUpdate": "2018-07-23T02:29:31.921Z",
+      "lastUpdate": "2018-07-25T22:23:02.174Z",
       "enabled": true,
       "person": {
         "identification": 7662857,
@@ -3354,19 +3354,19 @@
         "paternalLastName": "Zabala ",
         "maternalLastName": "Zabala",
         "marriedLastName": null,
-        "birthday": "1987-06-15T04:00:00.000Z",
+        "birthday": "1987-06-15T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b8e650378a2b2071e",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f846c49d9b70180753eb",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Contadora",
       "type": "administrativo",
       "afp": "Futuro",
       "afpAccount": 30449832,
-      "lastUpdate": "2018-07-23T02:29:31.926Z",
+      "lastUpdate": "2018-07-25T22:23:02.182Z",
       "enabled": true,
       "person": {
         "identification": 3843013,
@@ -3377,19 +3377,19 @@
         "paternalLastName": "Zabala ",
         "maternalLastName": "Añez",
         "marriedLastName": "Justiniano",
-        "birthday": "1978-02-11T04:00:00.000Z",
+        "birthday": "1978-02-11T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8bc0b455a03298a30a",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8465cd8a066b8d6c4c6",
+      "startDate": 42401,
       "salary": 1950,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Prevision",
       "afpAccount": 26823019,
-      "lastUpdate": "2018-07-23T02:29:31.930Z",
+      "lastUpdate": "2018-07-25T22:23:02.201Z",
       "enabled": true,
       "person": {
         "identification": 4565762,
@@ -3400,19 +3400,19 @@
         "paternalLastName": "Zabala ",
         "maternalLastName": "Oliva",
         "marriedLastName": null,
-        "birthday": "1975-05-10T04:00:00.000Z",
+        "birthday": "1975-05-10T00:00:00.000Z",
         "sex": "F"
       }
     },
     {
-      "id": "5b553d8b864efa76dbd20791",
-      "startDate": "2016-02-01T04:00:00.000Z",
+      "id": "5b58f8469c83ea2793c90390",
+      "startDate": 42401,
       "salary": 2500,
       "charge": "Profesora",
       "type": "docente",
       "afp": "Futuro",
       "afpAccount": 21851323,
-      "lastUpdate": "2018-07-23T02:29:31.935Z",
+      "lastUpdate": "2018-07-25T22:23:02.216Z",
       "enabled": true,
       "person": {
         "identification": 3176575,
@@ -3423,10 +3423,9 @@
         "paternalLastName": "Zabala ",
         "maternalLastName": "Justiniano",
         "marriedLastName": null,
-        "birthday": "1963-04-29T04:00:00.000Z",
+        "birthday": "1963-04-29T00:00:00.000Z",
         "sex": "F"
       }
     }
-  ],
-  "teacher": []
+  ]
 }
