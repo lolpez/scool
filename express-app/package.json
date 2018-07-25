@@ -9,6 +9,7 @@
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
+    "exceljs": "^1.5.1",
     "express": "^4.16.3",
     "hbs": "^4.0.1",
     "lowdb": "^1.0.0",

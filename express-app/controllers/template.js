@@ -3,14 +3,15 @@ var XLSX = require('xlsx');
 var path = require("path");
 var router = express.Router();
 var modelWorker = require('../models/worker');
+var Excel = require('exceljs');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
     var date = new Date();
-    var filename = `Planilla de sueldo ${("0" + (date.getUTCDate() - 1)).slice(-2)}-${("0" + (date.getUTCMonth() + 1)).slice(-2)}-${date.getUTCFullYear()}.xlsx`;
-    var downloadFile = path.join(__dirname, "..", "..", "download");
+    var filename = `Planilla de sueldo ${("0" + (date.getUTCDate())).slice(-2)}-${("0" + (date.getUTCMonth() + 1)).slice(-2)}-${date.getUTCFullYear()}.xlsx`;
+    var downloadPath = path.join(__dirname, "..", "..", "download");
     var data = [];
-    modelWorker.selectAll().then((workers) => {
+    /*modelWorker.selectAll().then((workers) => {
         var n = 1;        
         workers.forEach(worker => {
             var workerBirthday = null;
@@ -46,11 +47,34 @@ router.get('/', function(req, res, next) {
         var ws = XLSX.utils.json_to_sheet(data);
         var wb = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wb, ws, "Planilla sueldos");
-        XLSX.writeFile(wb, `${downloadFile}/${filename}`);
-        res.download(`${downloadFile}/${filename}`);
-    }).catch((err) => {
+        XLSX.writeFile(wb, `${downloadPath}/${filename}`);*/
+
+        var workbook = new Excel.Workbook();
+        workbook.creator = 'Me';
+        workbook.lastModifiedBy = 'Her';
+        workbook.created = new Date(1985, 8, 30);
+        workbook.modified = new Date();
+        workbook.lastPrinted = new Date(2016, 9, 27);
+        var worksheet = workbook.addWorksheet('My Sheet');
+        worksheet.columns = [
+            { header: 'Id', key: 'id', width: 10 },
+            { header: 'Name', key: 'name', width: 100, style: { font: { name: 'Arial Black' } }  },
+            { header: 'D.O.B.', key: 'dob', width: 50, style: { numFmt: 'dd/mm/yyyy' } }
+        ];
+        
+        worksheet.addRow({id: 1, name: 'John Doe', dob: new Date(1970,1,1)});
+        var row = worksheet.lastRow;
+        row.height = 42.5;
+        row.outlineLevel  = 1;
+        worksheet.addRow({id: 2, name: 'Jane Doe', dob: new Date(1965,1,7)});
+        
+        workbook.xlsx.writeFile(`${downloadPath}/${filename}`).then(function() {
+            res.download(`${downloadPath}/${filename}`);
+        });
+        
+    /*}).catch((err) => {
         res.send(err);
-    });
+    });*/
 });
 
 module.exports = router;
