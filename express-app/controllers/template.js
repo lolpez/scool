@@ -1,5 +1,4 @@
 var express = require('express');
-var XLSX = require('xlsx');
 var path = require("path");
 var router = express.Router();
 var modelWorker = require('../models/worker');
