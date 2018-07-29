@@ -3,36 +3,149 @@
         thead
             tr
                 th Nº
-                th Apellidos y Nombres
-                th Adelantos
-                th Pensión Escolar
-                th Librería
-                th Canastones
-                th Cumpleañós del día del padre
-                th Descuento uniforme
-                th Total
+                th Carnet de identidad
+                th Ext.
+                th Primer Apellido
+                th Segundo Apellido
+                th Apellido de Casada
+                th Nombre 1
+                th Nombre 2
+                th Nacionalidad
+                th Fecha de nacimiento
+                th Sexo
+                th Cargo
+                th Fecha de ingreso
+                th Haber anterior
+                th Incremento 2018
+                th Otros bonos
+                th Total ganado
+                th Descuento AFP (12.71%)
+                th(colspan="2") Otros descuentos (Ver en planilla de descuentos)
+                th Total descuentos
+                th Líquido pagable
+                th Nº
         tfoot
             tr
                 th Nº
-                th Apellidos y Nombres
-                th Adelantos
-                th Pensión Escolar
-                th Librería
-                th Canastones
-                th Cumpleañós del día del padre
-                th Descuento uniforme
-                th Total
+                th Carnet de identidad
+                th Ext.
+                th Primer Apellido
+                th Segundo Apellido
+                th Apellido de Casada
+                th Nombre 1
+                th Nombre 2
+                th Nacionalidad
+                th Fecha de nacimiento
+                th Sexo
+                th Cargo
+                th Fecha de ingreso
+                th Haber anterior
+                th Incremento 2018
+                th Otros bonos
+                th Total ganado
+                th Descuento AFP (12.71%)
+                th(colspan="2") Otros descuentos (Ver en planilla de descuentos)
+                th Total descuentos
+                th Líquido pagable
+                th Nº
         tbody
             -var n = 1
-            each support in supports
+            each worker in supports
+                -var increment = worker.salary * 0.055
+                -var totalGain = worker.salary + increment
+                -var afpDiscount = totalGain * 0.1271
+                -var liquidPayable = totalGain - afpDiscount
                 tr
                     td=n
-                    td=`${(support.person.paternalLastName) ? support.person.paternalLastName : ""} ${(support.person.maternalLastName) ? support.person.maternalLastName : ""} ${(support.person.firstName) ? support.person.firstName : ""} ${(support.person.secondName) ? support.person.secondName : ""}`
-                    td(id="value0-" + support.id, data-id=support.id).only-numbers.editable-cell(contenteditable='true')
-                    td(id="value1-" + support.id, data-id=support.id).only-numbers.editable-cell(contenteditable='true')
-                    td(id="value2-" + support.id, data-id=support.id).only-numbers.editable-cell(contenteditable='true')
-                    td(id="value3-" + support.id, data-id=support.id).only-numbers.editable-cell(contenteditable='true')
-                    td(id="value4-" + support.id, data-id=support.id).only-numbers.editable-cell(contenteditable='true')
-                    td(id="value5-" + support.id, data-id=support.id).only-numbers.editable-cell(contenteditable='true')
-                    td(id="total-" + support.id)=0
+                    td=worker.person.identification
+                    td=worker.person.identificationExt
+                    td=worker.person.paternalLastName
+                    td=worker.person.maternalLastName
+                    td=worker.person.marriedLastName
+                    td=worker.person.firstName
+                    td=worker.person.secondName
+                    td=worker.person.nationality
+                    td=worker.person.birthday
+                    td=worker.person.sex
+                    td=worker.charge
+                    td=worker.startDate
+                    td(id=`valueSalary-${worker.id}`)=worker.salary
+                    td(id=`valueIncrement-${worker.id}`, data-id=worker.id)=increment
+                    td(id=`valueOtherBonus-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-cell.editable-other-bonus
+                    td(id=`valueTotalGain-${worker.id}`, data-id=worker.id)=totalGain
+                    td(id=`valueAFPDiscount-${worker.id}`, data-id=worker.id)=afpDiscount
+                    td(id=`valueOtherDiscount-${worker.id}`, data-id=worker.id)=0
+                    td
+                        span.btn.btn-primary.waves-effect.goToCell(data-id=worker.id, data-tab="supportTab")
+                            i.material-icons arrow_back
+                            span Ver en planilla
+                    td(id=`valueTotalDiscount-${worker.id}`, data-id=worker.id)=afpDiscount
+                    td(id=`valueLiquidPayable-${worker.id}`, data-id=worker.id)=liquidPayable
+                    td=n
+                -n++
+            each worker in teachers
+                -var increment = worker.salary * 0.055
+                -var totalGain = worker.salary + increment
+                -var afpDiscount = totalGain * 0.1271
+                -var liquidPayable = totalGain - afpDiscount
+                tr
+                    td=n
+                    td=worker.person.identification
+                    td=worker.person.identificationExt
+                    td=worker.person.paternalLastName
+                    td=worker.person.maternalLastName
+                    td=worker.person.marriedLastName
+                    td=worker.person.firstName
+                    td=worker.person.secondName
+                    td=worker.person.nationality
+                    td=worker.person.birthday
+                    td=worker.person.sex
+                    td=worker.charge
+                    td=worker.startDate
+                    td(id=`valueSalary-${worker.id}`)=worker.salary
+                    td(id=`valueIncrement-${worker.id}`, data-id=worker.id)=increment
+                    td(id=`valueOtherBonus-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-cell.editable-other-bonus
+                    td(id=`valueTotalGain-${worker.id}`, data-id=worker.id)=totalGain
+                    td(id=`valueAFPDiscount-${worker.id}`, data-id=worker.id)=afpDiscount
+                    td(id=`valueOtherDiscount-${worker.id}`, data-id=worker.id)=0
+                    td
+                        button.btn.btn-primary.waves-effect.goToCell(data-id=worker.id, data-tab="adminTab")
+                            i.material-icons arrow_back
+                            span Ver en planilla
+                    td(id=`valueTotalDiscount-${worker.id}`, data-id=worker.id)=afpDiscount
+                    td(id=`valueLiquidPayable-${worker.id}`, data-id=worker.id)=liquidPayable
+                    td=n
+                -n++
+            each worker in admins
+                -var increment = worker.salary * 0.055
+                -var totalGain = worker.salary + increment
+                -var afpDiscount = totalGain * 0.1271
+                -var liquidPayable = totalGain - afpDiscount
+                tr
+                    td=n
+                    td=worker.person.identification
+                    td=worker.person.identificationExt
+                    td=worker.person.paternalLastName
+                    td=worker.person.maternalLastName
+                    td=worker.person.marriedLastName
+                    td=worker.person.firstName
+                    td=worker.person.secondName
+                    td=worker.person.nationality
+                    td=worker.person.birthday
+                    td=worker.person.sex
+                    td=worker.charge
+                    td=worker.startDate
+                    td(id=`valueSalary-${worker.id}`)=worker.salary
+                    td(id=`valueIncrement-${worker.id}`, data-id=worker.id)=increment
+                    td(id=`valueOtherBonus-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-cell.editable-other-bonus
+                    td(id=`valueTotalGain-${worker.id}`, data-id=worker.id)=totalGain
+                    td(id=`valueAFPDiscount-${worker.id}`, data-id=worker.id)=afpDiscount
+                    td(id=`valueOtherDiscount-${worker.id}`, data-id=worker.id)=0
+                    td
+                        button.btn.btn-primary.waves-effect.goToCell(data-id=worker.id, data-tab="adminTab")
+                            i.material-icons arrow_back
+                            span Ver en planilla
+                    td(id=`valueTotalDiscount-${worker.id}`, data-id=worker.id)=afpDiscount
+                    td(id=`valueLiquidPayable-${worker.id}`, data-id=worker.id)=liquidPayable
+                    td=n
                 -n++

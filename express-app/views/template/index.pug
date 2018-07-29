@@ -11,9 +11,8 @@ block content
             .card
                 .header
                     h2=title
-                    
                 .body
-                    ul.nav.nav-tabs.tab-nav-right(role='tablist')
+                    ul#templateTabs.nav.nav-tabs.tab-nav-right(role='tablist')
                         li.active(role='presentation')
                             a(href='#supportTab', data-toggle='tab')
                                 i.material-icons mood
@@ -23,7 +22,7 @@ block content
                                 i.material-icons school
                                 | Descuentos Personal Administrativo y Docentes
                         li(role='presentation')
-                            a(href='#template', data-toggle='tab')
+                            a(href='#templateTab', data-toggle='tab')
                                 i.material-icons attach_money
                                 | Planilla de Sueldo
                     .tab-content
@@ -31,7 +30,7 @@ block content
                             include ./support
                         #adminTab.tab-pane.fade(role='tabpanel')
                             include ./admin-teacher
-                        #template.tab-pane.fade(role='tabpanel')
+                        #templateTab.tab-pane.fade(role='tabpanel')
                             include ./template
 block scripts
     script.
@@ -45,6 +44,26 @@ block scripts
                     event.preventDefault(); 
                 }
             }
+        });
+
+        $(".editable-other-bonus").bind("DOMSubtreeModified", function(){
+            updateTemplate($(this).data("id"));
+        });
+
+        $(".goToCell").click(function(){
+            var id = $(this).data("id");
+            var ele = $(`#discountRow-${id}`);
+            var w = $(window);
+            $(`#templateTabs a[href="#${$(this).data("tab")}"]`).tab('show');
+            ele.attr("style", "background-color: yellow");          
+            setTimeout(function(){
+                if (ele.length){
+                    $('html,body').animate({scrollTop: ele.offset().top - (w.height()/2)}, 1000 );
+                }
+            }, 300);
+            setTimeout(function(){
+                ele.removeAttr("style")
+            }, 4000);
         });
 
         //Support
@@ -79,19 +98,18 @@ block scripts
             }
         });
 
-        $(".editable-support").keyup(function(){
+        $(".editable-support").bind("DOMSubtreeModified", function(){
             var total = 0;
             var id = $(this).data("id");
             for (i=0; i<6 ; i++){
                 var ele = $(`#value${i}-${id}`);
                 var value = parseFloat(ele.html());
                 if (!isNaN(value)){
-                    //t.cell($(ele)).data(value) ;
                     total = total + value;
                 }
             }
             $(`#total-${id}`).html(total);
-            //t.cell($(`#total-${id}`)).data(total) ;
+            updateTemplate(id);
         });
 
         //admin-teacher
@@ -126,19 +144,18 @@ block scripts
             }
         });
 
-         $(".editable-admin-teacher").keyup(function(){
+        $(".editable-admin-teacher").bind("DOMSubtreeModified", function(){
             var total = 0;
             var id = $(this).data("id");
             for (i=0; i<6 ; i++){
                 var ele = $(`#value${i}-${id}`);
                 var value = parseFloat(ele.html());
                 if (!isNaN(value)){
-                    //t.cell($(ele)).data(value) ;
                     total = total + value;
                 }
             }
             $(`#total-${id}`).html(total);
-            //t.cell($(`#total-${id}`)).data(total) ;
+            updateTemplate(id);
         });
 
         //template
@@ -171,6 +188,32 @@ block scripts
                     "sortDescending": ": ordenar descendentemente"
                 }
             }
-        });
+        });       
+
+        function updateTemplate(id){
+            var valueSalary = parseFloat($(`#valueSalary-${id}`).html());
+            var valueIncrement = parseFloat($(`#valueIncrement-${id}`).html());
+            var valueOtherBonus = parseFloat($(`#valueOtherBonus-${id}`).html());
+            var valueOtherDiscount = parseFloat($(`#total-${id}`).html());
+            var valueAFPDiscount = parseFloat($(`#valueAFPDiscount-${id}`).html());   
+            if (isNaN(valueSalary)) valueSalary = 0;
+            if (isNaN(valueIncrement)) valueIncrement = 0;
+            if (isNaN(valueOtherBonus)) valueOtherBonus = 0;
+            if (isNaN(valueOtherDiscount)) valueOtherDiscount = 0;
+            if (isNaN(valueAFPDiscount)) valueAFPDiscount = 0;
+
+            var valueTotalGain = valueSalary + valueIncrement + valueOtherBonus;
+            var valueTotalDiscount = valueOtherDiscount + valueAFPDiscount;
+            var valueLiquidPayable = valueTotalGain - valueTotalDiscount;
+
+            //Total Gain
+            $(`#valueTotalGain-${id}`).html(valueTotalGain);
+            //Other Discount cell
+            $(`#valueOtherDiscount-${id}`).html(valueOtherDiscount);
+            //Total Discount cell
+            $(`#valueTotalDiscount-${id}`).html(valueTotalDiscount);
+            //Liquid payable
+            $(`#valueLiquidPayable-${id}`).html(valueLiquidPayable);
+        }
 
         

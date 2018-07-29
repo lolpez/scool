@@ -5,7 +5,6 @@
                 th Nº
                 th Apellidos y Nombres
                 th Adelantos
-                th Pensión Escolar
                 th Librería y uniformes
                 th Canastones
                 th Día del padre
@@ -17,7 +16,6 @@
                 th Nº
                 th Apellidos y Nombres
                 th Adelantos
-                th Pensión Escolar
                 th Librería y uniformes
                 th Canastones
                 th Día del padre
@@ -26,27 +24,27 @@
                 th Total
         tbody
             -var n = 1
-            each teacher in teachers
-                tr
+            each worker in teachers
+                tr(id=`discountRow-${worker.id}`)
                     td=n
-                    td=`${(teacher.person.paternalLastName) ? teacher.person.paternalLastName : ""} ${(teacher.person.maternalLastName) ? teacher.person.maternalLastName : ""} ${(teacher.person.firstName) ? teacher.person.firstName : ""} ${(teacher.person.secondName) ? teacher.person.secondName : ""}`
-                    td(id="value0-" + teacher.id, data-id=teacher.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="value1-" + teacher.id, data-id=teacher.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="value2-" + teacher.id, data-id=teacher.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="value3-" + teacher.id, data-id=teacher.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="value4-" + teacher.id, data-id=teacher.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="value5-" + teacher.id, data-id=teacher.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="total-" + teacher.id)=0
+                    td=`${(worker.person.paternalLastName) ? worker.person.paternalLastName : ""} ${(worker.person.maternalLastName) ? worker.person.maternalLastName : ""} ${(worker.person.firstName) ? worker.person.firstName : ""} ${(worker.person.secondName) ? worker.person.secondName : ""}`
+                    td(id=`value0-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`value1-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`value2-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`value3-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`value4-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`value5-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`total-${worker.id}`)=0
                 -n++
-            each admin in admins
-                tr
+            each worker in admins
+                tr(id=`discountRow-${worker.id}`)
                     td=n
-                    td=`${(admin.person.paternalLastName) ? admin.person.paternalLastName : ""} ${(admin.person.maternalLastName) ? admin.person.maternalLastName : ""} ${(admin.person.firstName) ? admin.person.firstName : ""} ${(admin.person.secondName) ? admin.person.secondName : ""}`
-                    td(id="value0-" + admin.id, data-id=admin.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="value1-" + admin.id, data-id=admin.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="value2-" + admin.id, data-id=admin.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="value3-" + admin.id, data-id=admin.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="value4-" + admin.id, data-id=admin.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="value5-" + admin.id, data-id=admin.id).only-numbers.editable-admin-teacher(contenteditable='true')
-                    td(id="total-" + admin.id)=0
+                    td=`${(worker.person.paternalLastName) ? worker.person.paternalLastName : ""} ${(worker.person.maternalLastName) ? worker.person.maternalLastName : ""} ${(worker.person.firstName) ? worker.person.firstName : ""} ${(worker.person.secondName) ? worker.person.secondName : ""}`
+                    td(id=`value0-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`value1-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`value2-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`value3-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`value4-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`value5-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-admin-teacher
+                    td(id=`total-${worker.id}`)=0
                 -n++

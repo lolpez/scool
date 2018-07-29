@@ -24,15 +24,15 @@
                 th Total
         tbody
             -var n = 1
-            each support in supports
-                tr
+            each worker in supports
+                tr(id=`discountRow-${worker.id}`)
                     td=n
-                    td=`${(support.person.paternalLastName) ? support.person.paternalLastName : ""} ${(support.person.maternalLastName) ? support.person.maternalLastName : ""} ${(support.person.firstName) ? support.person.firstName : ""} ${(support.person.secondName) ? support.person.secondName : ""}`
-                    td(id="value0-" + support.id, data-id=support.id).only-numbers.editable-support(contenteditable='true')
-                    td(id="value1-" + support.id, data-id=support.id).only-numbers.editable-support(contenteditable='true')
-                    td(id="value2-" + support.id, data-id=support.id).only-numbers.editable-support(contenteditable='true')
-                    td(id="value3-" + support.id, data-id=support.id).only-numbers.editable-support(contenteditable='true')
-                    td(id="value4-" + support.id, data-id=support.id).only-numbers.editable-support(contenteditable='true')
-                    td(id="value5-" + support.id, data-id=support.id).only-numbers.editable-support(contenteditable='true')
-                    td(id="total-" + support.id)=0
+                    td=`${(worker.person.paternalLastName) ? worker.person.paternalLastName : ""} ${(worker.person.maternalLastName) ? worker.person.maternalLastName : ""} ${(worker.person.firstName) ? worker.person.firstName : ""} ${(worker.person.secondName) ? worker.person.secondName : ""}`
+                    td(id=`value0-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-support
+                    td(id=`value1-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-support
+                    td(id=`value2-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-support
+                    td(id=`value3-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-support
+                    td(id=`value4-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-support
+                    td(id=`value5-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-support
+                    td(id=`total-${worker.id}`)=0
                 -n++
