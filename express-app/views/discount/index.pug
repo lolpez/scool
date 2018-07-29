@@ -1,0 +1,153 @@
+extends ../layout
+
+block content
+    .row.clearfix
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            .card
+                .header
+                    h2=title
+                    ul.header-dropdown.m-r--5
+                        li.dropdown
+                            a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                i.material-icons more_vert
+                            ul.dropdown-menu.pull-right(style="width: 230px")
+                                li
+                                    a(href='javascript:void(0);')
+                                        i.material-icons add
+                                        |  Registrar nuevo personal
+                                li
+                                    a(href='/discount') 
+                                        i.material-icons money_off
+                                        | Generar Planilla de descuentos
+                                li
+                                    a(href='/template')
+                                        i.material-icons assignment_returned
+                                        | Generar Planilla de sueldos
+                .body
+                    ul.nav.nav-tabs.tab-nav-right(role='tablist')
+                        li.active(role='presentation')
+                            a(href='#supportTab', data-toggle='tab') Descuentos Personal Soporte
+                        li(role='presentation')
+                            a(href='#adminTab', data-toggle='tab') Descuentos Personal Administrativo y Docentes
+                        li(role='presentation')
+                            a(href='#template', data-toggle='tab') Planilla de Sueldo
+                    .tab-content
+                        #supportTab.tab-pane.fade.in.active(role='tabpanel')
+                            b Home Content
+                            p
+                            | Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                            | Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                            | pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                            | sadipscing mel.
+                        #adminTab.tab-pane.fade(role='tabpanel')
+                            b Profile Content
+                            p
+                            | Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                            | Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                            | pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                            | sadipscing mel.
+                        #template.tab-pane.fade(role='tabpanel')
+                            b Message Content
+                            p
+                            | Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                            | Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                            | pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                            | sadipscing mel.
+                    .table-responsive
+                        table#dataTable.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
+                            thead
+                                tr
+                                    th Nº
+                                    th Apellidos y Nombres
+                                    th Adelantos
+                                    th Pensión Escolar
+                                    th Librería
+                                    th Canastones
+                                    th Cumpleañós del día del padre
+                                    th Descuento uniforme
+                                    th Total
+                            tfoot
+                                tr
+                                    th Nº
+                                    th Apellidos y Nombres
+                                    th Adelantos
+                                    th Pensión Escolar
+                                    th Librería
+                                    th Canastones
+                                    th Cumpleañós del día del padre
+                                    th Descuento uniforme
+                                    th Total
+                            tbody
+                                -var n = 1
+                                each worker in workers
+                                    tr
+                                        td=n
+                                        td=`${(worker.person.paternalLastName) ? worker.person.paternalLastName : ""} ${(worker.person.maternalLastName) ? worker.person.maternalLastName : ""} ${(worker.person.firstName) ? worker.person.firstName : ""} ${(worker.person.secondName) ? worker.person.secondName : ""}`
+                                        td(id="value0-" + worker.id, data-id=worker.id).only-numbers.editable-cell(contenteditable='true')
+                                        td(id="value1-" + worker.id, data-id=worker.id).only-numbers.editable-cell(contenteditable='true')
+                                        td(id="value2-" + worker.id, data-id=worker.id).only-numbers.editable-cell(contenteditable='true')
+                                        td(id="value3-" + worker.id, data-id=worker.id).only-numbers.editable-cell(contenteditable='true')
+                                        td(id="value4-" + worker.id, data-id=worker.id).only-numbers.editable-cell(contenteditable='true')
+                                        td(id="value5-" + worker.id, data-id=worker.id).only-numbers.editable-cell(contenteditable='true')
+                                        td(id="total-" + worker.id)=0
+                                    -n++
+block scripts
+    script.
+        var n = parseInt("#{n}");
+        var t = $('#dataTable').DataTable({
+            buttons: [],
+            paging: false,
+            dom: 'Bfrtip',
+            responsive: true,
+            "language": {                             
+                "decimal": "",
+                "emptyTable": "No existen registros en #{title}",   
+                "info": "Mostrando del registro _START_ al _END_ de un total de _TOTAL_ registros",
+                "infoEmpty": "Mostrando 0 registros (ninguno)",
+                "infoFiltered": "(Datos filtrados de _MAX_ registros)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Moostrar _MENU_ entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "No se encontraron registros",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                },
+                "aria": {
+                    "sortAscending": ": ordenar ascendentemente",
+                    "sortDescending": ": ordenar descendentemente"
+                }
+            }
+        });
+
+        $(".editable-cell").keyup(function(){
+            var total = 0;
+            var id = $(this).data("id");
+            for (i=0; i<6 ; i++){
+                var ele = $(`#value${i}-${id}`);
+                var value = parseFloat(ele.html());
+                if (!isNaN(value)){
+                    //t.cell($(ele)).data(value) ;
+                    total = total + value;
+                }
+            }
+            $(`#total-${id}`).html(total);
+            //t.cell($(`#total-${id}`)).data(total) ;
+        });
+
+        $(".only-numbers").keydown(function(event) {
+            if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 110 || event.keyCode == 190 ||
+                (event.keyCode == 65 && event.ctrlKey === true) || 
+                (event.keyCode >= 35 && event.keyCode <= 39)  ) {
+                return;
+            } else {
+                if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                    event.preventDefault(); 
+                }
+            }
+        });

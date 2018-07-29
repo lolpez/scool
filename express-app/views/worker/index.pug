@@ -15,14 +15,6 @@ block content
                                     a(href='javascript:void(0);')
                                         i.material-icons add
                                         |  Registrar nuevo personal
-                                li
-                                    a(href='/template')
-                                        i.material-icons assignment_returned
-                                        | Generar Planilla de sueldos
-                                li
-                                    a(href='javascript:void(0);') 
-                                        i.material-icons file_upload
-                                        | Importar desde excel
                 .body
                     .table-responsive
                         table#dataTable.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
@@ -58,7 +50,6 @@ block content
                                     -n++
 block scripts
     script.
-        var n = parseInt("#{n}");
         var t = $('#dataTable').DataTable({
             dom: 'Bfrtip',
             responsive: true,

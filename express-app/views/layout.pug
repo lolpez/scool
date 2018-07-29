@@ -89,13 +89,13 @@ html
 								span Personal
 							ul.ml-menu
 								li
-									a(href='/worker/administrativo')
-										i.material-icons work
-										span Administrativo
-								li
 									a(href='/worker/docente')
 										i.material-icons school
 										span Docente
+								li
+									a(href='/worker/administrativo')
+										i.material-icons work
+										span Administrativo								
 								li
 									a(href='/worker/soporte')
 										i.material-icons mood
@@ -104,6 +104,10 @@ html
 									a(href='/worker')
 										i.material-icons people
 										span Ver todos
+						li
+							a(href='/template')
+								i.material-icons assignment
+								span Planillas
 						li
 							a(href='/')
 								i.material-icons settings
@@ -134,7 +138,7 @@ html
 		//Bootstrap Notify Plugin Js
 		script(src='/plugins/bootstrap-notify/bootstrap-notify.js')
 		//SweetAlert Plugin Js
-		script(src='plugins/sweetalert/sweetalert.min.js')
+		script(src='/plugins/sweetalert/sweetalert.min.js')
 		// Jquery DataTable Plugin Js
 		script(src='/plugins/jquery-datatable/jquery.dataTables.js')
 		script(src='/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js')
@@ -143,7 +147,6 @@ html
 		script(src='/plugins/jquery-datatable/extensions/export/jszip.min.js')
 		script(src='/plugins/jquery-datatable/extensions/export/pdfmake.min.js')
 		script(src='/plugins/jquery-datatable/extensions/export/vfs_fonts.js')
-		script(src='/plugins/jquery-datatable/extensions/export/buttons.html5.min.js')
 		script(src='/plugins/jquery-datatable/extensions/export/buttons.print.min.js')
 		// Custom Js
 		script(src='/js/admin.js')

@@ -5,26 +5,14 @@ var modelWorker = require('../models/worker');
 var Excel = require('exceljs');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    var date = new Date();
-    modelWorker.selectByType("docente").then((teachers) => {
-        modelWorker.selectByType("soporte").then((supports) => {       
-            modelWorker.selectByType("administrativo").then((admins) => {       
-                res.render('template/index',
-                    {
-                        title: `Planilla mes`,
-                        date: date,
-                        teachers: teachers,
-                        supports: supports,
-                        admins: admins
-                    }
-                );
-            }).catch((err) => {
-                res.send(err);
-            });
-        }).catch((err) => {
-            res.send(err);
-        });
+router.get('/:type', function(req, res, next) {
+    modelWorker.selectByType(req.params.type).then((workers) => {        
+        res.render('discount/index',
+            {
+                title: `Personal ${req.params.type}`,
+                workers: workers
+            }
+        );
     }).catch((err) => {
         res.send(err);
     });
@@ -83,6 +71,5 @@ router.post('/', function(req, res, next) {
         res.send(err);
     });
 });
-
 
 module.exports = router;

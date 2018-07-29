@@ -2,15 +2,15 @@ extends layout
 
 block content
     .row.clearfix
-        .col-lg-4.col-md-4.col-ms-6.col-xs-4
+        .col-lg-4.col-md-4.col-ms-6.col-xs-12
             .info-box.bg-pink.hover-expand-effect
                 a.shortcut(href="/worker/docente", title="Ver personal de docencia")
                     .icon
                         i.material-icons school
                 .content
-                    .text Profesores
+                    .text Personal Docente
                     .number=docenteCount
-        .col-lg-4.col-md-4.col-ms-6.col-xs-4
+        .col-lg-4.col-md-4.col-ms-6.col-xs-12
             .info-box.bg-indigo.hover-expand-effect
                 a.shortcut(href="/worker/administrativo", title="Ver personal administrativo")
                     .icon
@@ -18,7 +18,7 @@ block content
                 .content
                     .text Personal Administrativo
                     .number=administrativoCount
-        .col-lg-4.col-md-4.col-ms-6.col-xs-4
+        .col-lg-4.col-md-4.col-ms-6.col-xs-12
             .info-box.bg-orange.hover-expand-effect
                 a.shortcut(href="/worker/soporte", title="Ver personal de soporte")
                     .icon
@@ -26,7 +26,7 @@ block content
                 .content
                     .text Personal de soporte
                     .number=soporteCount
-        .col-xs-6.col-sm-6.col-md-6.col-lg-6.col-xs-offset-3
+        .col-lg-6.col-md-6.col-sm-6.col-xs-12.col-sm-offset-3
             .card
                 .body.bg-purple
                     .m-b--35.font-bold Resumen del año 2018
@@ -82,8 +82,7 @@ block content
                             | Diciembre
                             span.pull-right
                                 i.material-icons trending_up
-
-        .col-xs-6.col-sm-6.col-md-6.col-lg-6.col-xs-offset-3
+        .col-lg-6.col-md-6.col-sm-6.col-xs-12.col-sm-offset-3
             .info-box.bg-light-green.hover-expand-effect
                 a.shortcut(href="/worker", title="Ver todo el personal")
                     .icon

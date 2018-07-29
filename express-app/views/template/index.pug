@@ -1,118 +1,176 @@
 extends ../layout
 
+block styles
+    style.        
+        .dataTables_filter {
+            float: left !important;
+        }
 block content
-    .block-header
-        h2
-            | JQUERY DATATABLES #{title}
-            small
-                | Taken from 
-                a(href='https://datatables.net/', target='_blank') datatables.net
-    
-    // Exportable Table
     .row.clearfix
         .col-lg-12.col-md-12.col-sm-12.col-xs-12
             .card
                 .header
-                    h2 Lista de planillas
-                    button#addRecord Helloo
-                    ul.header-dropdown.m-r--5
-                        li.dropdown
-                            a.dropdown-toggle(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                                i.material-icons more_vert
-                            ul.dropdown-menu.pull-right
-                                li
-                                    a(href='javascript:void(0);') Action
-                                li
-                                    a(href='javascript:void(0);') Another action
-                                li
-                                    a(href='javascript:void(0);') Something else here
+                    h2=title
+                    
                 .body
-                    .table-responsive
-                        table#table-template.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
-                            thead
-                                tr
-                                    th Nº
-                                    th Nombre
-                                    th Acciones
-                            tfoot
-                                tr
-                                    th Nº
-                                    th Nombre
-                                    th Acciones
-                            tbody
-                                -var n = 1
-                                each template in templates
-                                    tr(id=template._id)
-                                        td=n
-                                        td=template.name
-                                        td
-                                            a.deleteRecord(href="#", data-id=template._id) Delete this
-                                    -n++
+                    ul.nav.nav-tabs.tab-nav-right(role='tablist')
+                        li.active(role='presentation')
+                            a(href='#supportTab', data-toggle='tab')
+                                i.material-icons mood
+                                | Descuentos Personal Soporte
+                        li(role='presentation')
+                            a(href='#adminTab', data-toggle='tab')
+                                i.material-icons school
+                                | Descuentos Personal Administrativo y Docentes
+                        li(role='presentation')
+                            a(href='#template', data-toggle='tab')
+                                i.material-icons attach_money
+                                | Planilla de Sueldo
+                    .tab-content
+                        #supportTab.tab-pane.fade.in.active(role='tabpanel')
+                            include ./support
+                        #adminTab.tab-pane.fade(role='tabpanel')
+                            include ./admin-teacher
+                        #template.tab-pane.fade(role='tabpanel')
+                            include ./template
 block scripts
     script.
-        var n = "#{n}";
-        var t = $('#table-template').DataTable({
+        $(".only-numbers").keydown(function(event) {
+            if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 110 || event.keyCode == 190 ||
+                (event.keyCode == 65 && event.ctrlKey === true) || 
+                (event.keyCode >= 35 && event.keyCode <= 39)  ) {
+                return;
+            } else {
+                if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                    event.preventDefault(); 
+                }
+            }
+        });
+
+        //Support
+        var s = $('#dataTableSupport').DataTable({
+            buttons: [],
+            paging: false,
             dom: 'Bfrtip',
             responsive: true,
-            buttons: [
-                'excel', 'pdf', 'print'
-            ]
+            "language": {                             
+                "decimal": "",
+                "emptyTable": "No existen registros en personal de soporte",   
+                "info": "Mostrando del registro _START_ al _END_ de un total de _TOTAL_ registros",
+                "infoEmpty": "Mostrando 0 registros (ninguno)",
+                "infoFiltered": "(Datos filtrados de _MAX_ registros)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Moostrar _MENU_ entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar en personal de soporte:",
+                "zeroRecords": "No se encontraron registros",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                },
+                "aria": {
+                    "sortAscending": ": ordenar ascendentemente",
+                    "sortDescending": ": ordenar descendentemente"
+                }
+            }
         });
-        function updateTableActions(){
-            $(".deleteRecord").off("click").click(deleteRow);
-        }        
 
-        function deleteRow(){
+        $(".editable-support").keyup(function(){
+            var total = 0;
             var id = $(this).data("id");
-            console.log(id)
-            $.post({
-                url: "/template/delete",
-                data: {id: id},
-                success: function(result, textStatus, xhr){
-                    console.log(result, textStatus, xhr)
-                    switch (xhr.status){
-                        case 200:                            
-                            t.row($(`#${id}`)).remove().draw();
-                            updateTableActions();
-                            n--;
-                        break;
-                        default:
-                            console.log(result, textStatus, xhr)
-                        break;
-                    }
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown){
-                    console.log(XMLHttpRequest, textStatus, errorThrown)
+            for (i=0; i<6 ; i++){
+                var ele = $(`#value${i}-${id}`);
+                var value = parseFloat(ele.html());
+                if (!isNaN(value)){
+                    //t.cell($(ele)).data(value) ;
+                    total = total + value;
                 }
-            })
-        }        
-        
-        $("#addRecord").click(function(){
-            $.post({
-                url: "/template",
-                data: {name: "yolo"},
-                success: function(result, textStatus, xhr){
-                    switch (xhr.status){
-                        case 201:
-                            var template = result.response;
-                            console.log(xhr.getResponseHeader("Location"))
-                            t.row.add([
-                                n,
-                                template.name,
-                                `<a class="deleteRecord" href="#" data-id=${template._id}>Delete this</a>`
-                            ]).draw(false);
-                            n++;
-                            updateTableActions();
-                        break;
-                        default:
-                            console.log(result, textStatus, xhr)
-                        break;
-                    }
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown){
-                    console.log(XMLHttpRequest, textStatus, errorThrown)
-                }
-            })
-        })
+            }
+            $(`#total-${id}`).html(total);
+            //t.cell($(`#total-${id}`)).data(total) ;
+        });
 
-        updateTableActions();
+        //admin-teacher
+        var at = $('#dataTableAdminTeacher').DataTable({
+            buttons: [],
+            paging: false,
+            dom: 'Bfrtip',
+            responsive: true,
+            "language": {                             
+                "decimal": "",
+                "emptyTable": "No existen registros en personal docente y administrativo",   
+                "info": "Mostrando del registro _START_ al _END_ de un total de _TOTAL_ registros",
+                "infoEmpty": "Mostrando 0 registros (ninguno)",
+                "infoFiltered": "(Datos filtrados de _MAX_ registros)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Moostrar _MENU_ entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar en personal docente y administrativo:",
+                "zeroRecords": "No se encontraron registros",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                },
+                "aria": {
+                    "sortAscending": ": ordenar ascendentemente",
+                    "sortDescending": ": ordenar descendentemente"
+                }
+            }
+        });
+
+         $(".editable-admin-teacher").keyup(function(){
+            var total = 0;
+            var id = $(this).data("id");
+            for (i=0; i<6 ; i++){
+                var ele = $(`#value${i}-${id}`);
+                var value = parseFloat(ele.html());
+                if (!isNaN(value)){
+                    //t.cell($(ele)).data(value) ;
+                    total = total + value;
+                }
+            }
+            $(`#total-${id}`).html(total);
+            //t.cell($(`#total-${id}`)).data(total) ;
+        });
+
+        //template
+        var at = $('#dataTableTemplate').DataTable({
+            buttons: [],
+            paging: false,
+            dom: 'Bfrtip',
+            responsive: true,
+            "language": {                             
+                "decimal": "",
+                "emptyTable": "No existen registros en planilla",   
+                "info": "Mostrando del registro _START_ al _END_ de un total de _TOTAL_ registros",
+                "infoEmpty": "Mostrando 0 registros (ninguno)",
+                "infoFiltered": "(Datos filtrados de _MAX_ registros)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Moostrar _MENU_ entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar planilla:",
+                "zeroRecords": "No se encontraron registros",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                },
+                "aria": {
+                    "sortAscending": ": ordenar ascendentemente",
+                    "sortDescending": ": ordenar descendentemente"
+                }
+            }
+        });
+
+        

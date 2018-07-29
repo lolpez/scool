@@ -9,6 +9,7 @@ const express = require("express"),
 //Controllers
 var controllerIndex = require('./controllers/index');
 var controllerTemplate = require('./controllers/template');
+var controllerDicount = require('./controllers/discount');
 var controllerWorker = require('./controllers/worker');
 var controllerApiV1 = require('./controllers/api-v1');
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/', controllerIndex);
 app.use('/template', controllerTemplate);
+app.use('/discount', controllerDicount);
 app.use('/worker', controllerWorker);
 app.use('/api/v1', controllerApiV1);
 
