@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require("path");
 var router = express.Router();
+var modelTemplate = require('../models/template');
 var modelWorker = require('../models/worker');
 var Excel = require('exceljs');
 
@@ -9,10 +10,11 @@ router.get('/', function(req, res, next) {
     var date = new Date();
     modelWorker.selectByType("docente").then((teachers) => {
         modelWorker.selectByType("soporte").then((supports) => {       
-            modelWorker.selectByType("administrativo").then((admins) => {       
+            modelWorker.selectByType("administrativo").then((admins) => {
                 res.render('template/index',
                     {
-                        title: `Planilla mes`,
+                        url: "/template",
+                        title: "Planilla",
                         date: date,
                         teachers: teachers,
                         supports: supports,
@@ -31,6 +33,20 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
+    var data = req.body;
+    var date = new Date(data.date);
+    var filename = `SUELDOS ${("0" + (date.getUTCMonth() + 1)).slice(-2)}-${date.getUTCFullYear()}.xlsx`;
+    new modelTemplate({
+        month: date.getUTCMonth() + 1,
+        year: date.getFullYear(),
+        filename: filename,
+        creator: require("os").userInfo().username,
+        discountSupport: data.discountSupport,
+        discountAdminTeacher: data.discountAdminTeacher,
+        finalTemplate: data.finalTemplate
+    }).insert();
+
+/*
     var date = new Date();
     var filename = `Descuentos ${("0" + (date.getUTCDate())).slice(-2)}-${("0" + (date.getUTCMonth() + 1)).slice(-2)}-${date.getUTCFullYear()}.xlsx`;
     var downloadPath = path.join(__dirname, "..", "..", "download");
@@ -81,7 +97,7 @@ router.post('/', function(req, res, next) {
         });
     }).catch((err) => {
         res.send(err);
-    });
+    });*/
 });
 
 

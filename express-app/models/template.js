@@ -7,54 +7,36 @@ if (!db.has(tableName).value()) db.set(tableName, []).write()
  * Table Template
  * 
  * @param {object} data Information about the template
- * @param {string} data.id template`s ID (optional)
- * @param {date} data.generatedDate Date when the template was generated (optional)
- * @param {string} data.title Title of the template
- * @param {string} data.subtitle Subtitle of the template
+ * @param {string} data.id Templates`s ID (optional)
+ * @param {int} data.month Month of the generated template 
+ * @param {int} data.year Year of the generated template
+ * @param {string} data.filename Filename of the stored template
+ * @param {string} data.creator User who generated the template
+ * @param {date} data.created Datetime of the creation of the template (optional)
  * @param {date} data.lastUpdate Last update datetime (optional)
  * @param {bool} data.enabled Register is Enabled (optional)
- * @param {object} data.row Row information
- * @param {string} data.row.identification Worker's unique country ID
- * @param {string} data.row.identificationExt Worker's unique city extension ID
- * @param {string} data.row.afp Country nationality of the worker
- * @param {string} data.row.afpAccount Worker's firt name
- * @param {string} data.row.paternamLastName Worker's second name
- * @param {string} data.row.maternalLastName Worker's father paternal last name
- * @param {string} data.row.marriedLastName Worker's husband paternal last name only if the worker is woman and married
- * @param {string} data.row.firstName Worker's first name
- * @param {string} data.row.nationality Country nationality of the worker
- * @param {date} data.row.birthday Date when the worker was born
- * @param {date} data.row.sex Date when the worker was born
- * @param {date} data.row.charge Date when the worker was born
- * @param {string} data.row.startDate Date when the worker started working (optional)
- * @param {string} data.row.salary Worker's husband paternal last name only if the worker is women and married
- * @param {string} data.person.sex If the worker is man or women
+ * @param {object} data.discountSupport Discount template of Support workers
+ * @param {object} data.discountAdminTeacher Discount template of Teachers and Administrator workers
+ * @param {object} data.finalTemplate Summary of the full template
  *
 **/
 
 var Model = function(data){
-	/*Worker Data*/
+	/*Template Data*/
 	this.id = (data.id) ? data.id : db.objID();	
-	this.startDate = (data.startDate) ? data.startDate : new Date();
-	this.salary = data.salary;
-	this.charge = data.charge;
-	this.type = data.type;
-	this.afp = data.afp;
-	this.afpAccount= data.afpAccount;
+	this.month = (data.month) ? data.month : 1;
+	this.year = (data.year) ? data.year : 2018;
+	this.filename = data.filename;
+	this.creator = data.creator;
+	this.created = data.created;
 	this.lastUpdate = (data.lastUpdate) ? data.lastUpdate : new Date();
 	this.enabled = (data.enabled) ? data.enabled : true;
-	/*Person Data*/
-	this.person = {};
-	this.person.identification = data.person.identification;
-	this.person.identificationExt = data.person.identificationExt;
-	this.person.nationality = data.person.nationality;
-	this.person.firstName = data.person.firstName;
-	this.person.secondName = data.person.secondName;
-	this.person.paternalLastName = data.person.paternalLastName;
-	this.person.maternalLastName = data.person.maternalLastName;
-	this.person.marriedLastName = data.person.marriedLastName;
-	this.person.birthday = data.person.birthday;
-	this.person.sex = data.person.sex;
+	/*Discount Support Data*/
+	this.discountSupport = data.discountSupport;
+	/*Discount Admin-Teacher Data*/
+	this.discountAdminTeacher = data.discountAdminTeacher;
+	/*Full Summary Data*/
+	this.finalTemplate = data.finalTemplate;
 }
 
 Model.prototype.findByID = function (id) {
@@ -88,6 +70,18 @@ Model.deleteById = function(id){
 Model.selectAll = function () {
 	return new Promise((resolve, reject) => {
 		resolve(db.get(tableName).filter({ enabled: true }).value())
+	});
+}
+
+Model.selectByType = function (type) {
+	return new Promise((resolve, reject) => {
+		resolve(db.get(tableName).filter({ type: type, enabled: true }).value())
+	});
+}
+
+Model.getCountByType = function (type) {
+	return new Promise((resolve, reject) => {
+		resolve(db.get(tableName).filter({ type: type, enabled: true }).size().value())
 	});
 }
 

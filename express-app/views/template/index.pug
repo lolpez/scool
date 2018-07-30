@@ -5,12 +5,45 @@ block styles
         .dataTables_filter {
             float: left !important;
         }
+        .button-demo{
+            margin-top: 8px;
+        }
+        .buttons .btn {
+            margin-right: 8px;
+            margin-bottom: 13px;
+            min-width: 120px;
+        }
 block content
     .row.clearfix
         .col-lg-12.col-md-12.col-sm-12.col-xs-12
             .card
                 .header
-                    h2=title
+                    div(style="display: -webkit-inline-box")
+                        h2 #{title} mes de                    
+                            select#monthSelect.select.form-control
+                                option(value='1', selected=date.getUTCMonth()===0) Enero
+                                option(value='2', selected=date.getUTCMonth()===1) Fefrero
+                                option(value='3', selected=date.getUTCMonth()===2) Marzo
+                                option(value='4', selected=date.getUTCMonth()===3) Abril
+                                option(value='5', selected=date.getUTCMonth()===4) Mayo
+                                option(value='6', selected=date.getUTCMonth()===5) Junio
+                                option(value='7', selected=date.getUTCMonth()===6) Julio
+                                option(value='8', selected=date.getUTCMonth()===7) Agosto
+                                option(value='9', selected=date.getUTCMonth()===8) Septiembre
+                                option(value='10', selected=date.getUTCMonth()===9) Octubre
+                                option(value='11', selected=date.getUTCMonth()===10) Noviembre
+                                option(value='12', selected=date.getUTCMonth()===11) Diciembre
+                            | de 
+                            select#yearSelect.select.form-control
+                                option(value='2018', selected=date.getFullYear()===2018) 2018
+                                option(value='2019', selected=date.getFullYear()===2019) 2019
+                    .button-demo
+                        button#saveBtn.btn.btn-primary.waves-effect(type='button')
+                            i.material-icons save
+                            |  Guardar
+                        button#exportBtn.btn.btn-success.waves-effect(type='button')
+                            i.material-icons get_app
+                            |  Exportar a excel
                 .body
                     ul#templateTabs.nav.nav-tabs.tab-nav-right(role='tablist')
                         li.active(role='presentation')
@@ -34,6 +67,101 @@ block content
                             include ./template
 block scripts
     script.
+        $("#saveBtn").click(function(){
+            var discountSupport = [
+                {
+                    id: "abc",
+                    value0: 123,
+                    value1: 123,
+                    value2: 123,
+                    value3: 123,
+                    value4: 123,
+                    value5: 123,
+                },
+                {
+                    id: "def",
+                    value0: 456,
+                    value1: 456,
+                    value2: 456,
+                    value3: 456,
+                    value4: 456,
+                    value5: 456,
+                }
+            ];
+            var discountAdminTeacher = [
+                {
+                    id: "ghi",
+                    value0: 789,
+                    value1: 789,
+                    value2: 789,
+                    value3: 789,
+                    value4: 789,
+                    value5: 789,
+                },
+                {
+                    id: "jkl",
+                    value0: 101,
+                    value1: 101,
+                    value2: 101,
+                    value3: 101,
+                    value4: 101,
+                    value5: 101,
+                }
+            ];
+            var finalTemplate = [
+                {
+                    id: "mno",
+                    valueSalary: 1,
+                    valueIncrement: 2,
+                    valueOtherBonus: 3,
+                    valueTotalGain: 4,
+                    valueAFPDiscount: 5,
+                    valueOtherDiscount: 6,
+                    valueTotalDiscount: 7,
+                    valueLiquidPayable: 8,
+                },
+                {
+                    id: "pqr",
+                    valueSalary: 1,
+                    valueIncrement: 2,
+                    valueOtherBonus: 3,
+                    valueTotalGain: 4,
+                    valueAFPDiscount: 5,
+                    valueOtherDiscount: 6,
+                    valueTotalDiscount: 7,
+                    valueLiquidPayable: 8,
+                }
+            ];
+            var data = {
+                date: new Date($("#yearSelect").val(), $("#monthSelect").val(), 0),
+                discountSupport: discountSupport,
+                discountAdminTeacher: discountAdminTeacher,
+                finalTemplate: finalTemplate
+            }
+            $.post({
+                url: "#{url}",
+                data: JSON.stringify(data),
+                contentType: "application/json; charset=utf-8",
+                success: function(result, textStatus, xhr){
+                    switch (xhr.status){
+                        case 201:
+                            console.log(result)
+                        break;
+                        default:
+                            console.log(result, textStatus, xhr)
+                        break;
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown){
+                    console.log(XMLHttpRequest, textStatus, errorThrown)
+                }
+            })
+        });
+
+        $(".select").selectpicker({
+            width: "200px"
+        });
+
         $(".only-numbers").keydown(function(event) {
             if ( event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 110 || event.keyCode == 190 ||
                 (event.keyCode == 65 && event.ctrlKey === true) || 
