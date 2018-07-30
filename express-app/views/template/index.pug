@@ -41,7 +41,7 @@ block content
                         button#saveBtn.btn.btn-primary.waves-effect(type='button')
                             i.material-icons save
                             |  Guardar
-                        button#exportBtn.btn.btn-success.waves-effect(type='button')
+                        a#exportBtn.btn.btn-success.waves-effect(href='javascript:void(0);')
                             i.material-icons get_app
                             |  Exportar a excel
                 .body
@@ -68,70 +68,9 @@ block content
 block scripts
     script.
         $("#saveBtn").click(function(){
-            var discountSupport = [
-                {
-                    id: "abc",
-                    value0: 123,
-                    value1: 123,
-                    value2: 123,
-                    value3: 123,
-                    value4: 123,
-                    value5: 123,
-                },
-                {
-                    id: "def",
-                    value0: 456,
-                    value1: 456,
-                    value2: 456,
-                    value3: 456,
-                    value4: 456,
-                    value5: 456,
-                }
-            ];
-            var discountAdminTeacher = [
-                {
-                    id: "ghi",
-                    value0: 789,
-                    value1: 789,
-                    value2: 789,
-                    value3: 789,
-                    value4: 789,
-                    value5: 789,
-                },
-                {
-                    id: "jkl",
-                    value0: 101,
-                    value1: 101,
-                    value2: 101,
-                    value3: 101,
-                    value4: 101,
-                    value5: 101,
-                }
-            ];
-            var finalTemplate = [
-                {
-                    id: "mno",
-                    valueSalary: 1,
-                    valueIncrement: 2,
-                    valueOtherBonus: 3,
-                    valueTotalGain: 4,
-                    valueAFPDiscount: 5,
-                    valueOtherDiscount: 6,
-                    valueTotalDiscount: 7,
-                    valueLiquidPayable: 8,
-                },
-                {
-                    id: "pqr",
-                    valueSalary: 1,
-                    valueIncrement: 2,
-                    valueOtherBonus: 3,
-                    valueTotalGain: 4,
-                    valueAFPDiscount: 5,
-                    valueOtherDiscount: 6,
-                    valueTotalDiscount: 7,
-                    valueLiquidPayable: 8,
-                }
-            ];
+            var discountSupport = tableToJson(document.getElementById("dataTableSupport"));
+            var discountAdminTeacher = tableToJson(document.getElementById("dataTableAdminTeacher"));
+            var finalTemplate = tableToJson(document.getElementById("dataTableTemplate"));
             var data = {
                 date: new Date($("#yearSelect").val(), $("#monthSelect").val(), 0),
                 discountSupport: discountSupport,
@@ -145,7 +84,8 @@ block scripts
                 success: function(result, textStatus, xhr){
                     switch (xhr.status){
                         case 201:
-                            console.log(result)
+                            notify(result.message, result.success, xhr.getResponseHeader("Location"));
+                            $("#exportBtn").attr("href", xhr.getResponseHeader("Location"))
                         break;
                         default:
                             console.log(result, textStatus, xhr)
@@ -275,7 +215,7 @@ block scripts
         $(".editable-admin-teacher").bind("DOMSubtreeModified", function(){
             var total = 0;
             var id = $(this).data("id");
-            for (i=0; i<6 ; i++){
+            for (i=0; i<7 ; i++){
                 var ele = $(`#value${i}-${id}`);
                 var value = parseFloat(ele.html());
                 if (!isNaN(value)){
@@ -344,4 +284,36 @@ block scripts
             $(`#valueLiquidPayable-${id}`).html(valueLiquidPayable);
         }
 
-        
+        function tableToJson(table) { 
+            var data = [];
+            var headers = [];
+            var index = 0;
+            for (var i=0; i<table.rows[0].cells.length; i++) {
+                if (i === 0){
+                    headers[index] = "id";
+                    headers[index + 1] = table.rows[0].cells[i].dataset.key;
+                    index++;
+                }else{
+                    headers[index] = table.rows[0].cells[i].dataset.key;
+                }
+                index++;
+            }            
+            for (var i=1; i<table.rows.length - 1; i++) {
+                index = 0;
+                var tableRow = table.rows[i]; var rowData = {};
+                for (var j=0; j<tableRow.cells.length; j++) { 
+                    var value = tableRow.cells[j].innerHTML;
+                    if (value ==="") value = 0;
+                    if (j ===0) {
+                        rowData[ headers[index] ] = tableRow.cells[j].dataset.id;
+                        rowData[ headers[index + 1] ] = value;
+                        index++;
+                    }else{
+                        rowData[ headers[index] ] = value;
+                    }
+                    index++;
+                }
+                data.push(rowData); 
+            } 
+            return data;
+        }

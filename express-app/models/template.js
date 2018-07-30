@@ -39,8 +39,10 @@ var Model = function(data){
 	this.finalTemplate = data.finalTemplate;
 }
 
-Model.prototype.findByID = function (id) {
-	return db.find({id: id}).value();
+Model.findByID = function (id) {
+	return new Promise((resolve, reject) => {
+		resolve(db.get(tableName).find({id: id}).value())
+	});
 }
 
 Model.prototype.insert = function(){

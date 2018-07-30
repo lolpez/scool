@@ -2,28 +2,29 @@
     table#dataTableTemplate.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
         thead
             tr
-                th Nº
-                th Carnet de identidad
-                th Ext.
-                th Primer Apellido
-                th Segundo Apellido
-                th Apellido de Casada
-                th Nombre 1
-                th Nombre 2
-                th Nacionalidad
-                th Fecha de nacimiento
-                th Sexo
-                th Cargo
-                th Fecha de ingreso
-                th Haber anterior
-                th Incremento 2018
-                th Otros bonos
-                th Total ganado
-                th Descuento AFP (12.71%)
-                th(colspan="2") Otros descuentos (Ver en planilla de descuentos)
-                th Total descuentos
-                th Líquido pagable
-                th Nº
+                th(data-key="pos") Nº
+                th(data-key="identification") Carnet de identidad
+                th(data-key="identificationExt") Ext.
+                th(data-key="paternalLastName") Primer Apellido
+                th(data-key="maternalLastName") Segundo Apellido
+                th(data-key="marriedLastName") Apellido de Casada
+                th(data-key="firstName") Nombre 1
+                th(data-key="secondName") Nombre 2
+                th(data-key="nationality") Nacionalidad
+                th(data-key="birthday") Fecha de nacimiento
+                th(data-key="sex") Sexo
+                th(data-key="charge") Cargo
+                th(data-key="startDate") Fecha de ingreso
+                th(data-key="valueSalary") Haber anterior
+                th(data-key="valueIncrement") Incremento 2018
+                th(data-key="valueOtherBonus") Otros bonos
+                th(data-key="valueTotalGain") Total ganado
+                th(data-key="valueAFPDiscount") Descuento AFP (12.71%)
+                th(data-key="valueOtherDiscount") Otros descuentos
+                th(data-key="valueOtherDiscountBtn") Detalle de descuentos
+                th(data-key="valueTotalDiscount") Total descuentos
+                th(data-key="valueLiquidPayable") Líquido pagable
+                th(data-key="pos") Nº
         tfoot
             tr
                 th Nº
@@ -44,7 +45,8 @@
                 th Otros bonos
                 th Total ganado
                 th Descuento AFP (12.71%)
-                th(colspan="2") Otros descuentos (Ver en planilla de descuentos)
+                th Otros descuentos
+                th Detalle de descuentos
                 th Total descuentos
                 th Líquido pagable
                 th Nº

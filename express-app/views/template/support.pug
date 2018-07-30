@@ -2,15 +2,15 @@
     table#dataTableSupport.table.table-bordered.table-striped.table-hover.dataTable.js-exportable
         thead
             tr
-                th Nº
-                th Apellidos y Nombres
-                th Adelantos
-                th Pensión Escolar
-                th Librería
-                th Canastones
-                th Cumpleaños del día del padre
-                th Descuento uniforme
-                th Total
+                th(data-key="pos") Nº
+                th(data-key="name") Apellidos y Nombres
+                th(data-key="value0") Adelantos
+                th(data-key="value1") Pensión Escolar
+                th(data-key="value2") Librería
+                th(data-key="value3") Canastones
+                th(data-key="value4") Cumpleaños del día del padre
+                th(data-key="value5") Descuento uniforme
+                th(data-key="total") Total
         tfoot
             tr
                 th Nº
@@ -26,7 +26,7 @@
             -var n = 1
             each worker in supports
                 tr(id=`discountRow-${worker.id}`)
-                    td=n
+                    td(data-id=worker.id)=n
                     td=`${(worker.person.paternalLastName) ? worker.person.paternalLastName : ""} ${(worker.person.maternalLastName) ? worker.person.maternalLastName : ""} ${(worker.person.firstName) ? worker.person.firstName : ""} ${(worker.person.secondName) ? worker.person.secondName : ""}`
                     td(id=`value0-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-support
                     td(id=`value1-${worker.id}`, data-id=worker.id, contenteditable='true').only-numbers.editable-support
