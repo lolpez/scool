@@ -1,7 +1,7 @@
 extends ../layout
 
 block styles
-    style.        
+    style.
         .dataTables_filter {
             float: left !important;
         }
@@ -38,10 +38,10 @@ block content
                                 option(value='2018', selected=date.getFullYear()===2018) 2018
                                 option(value='2019', selected=date.getFullYear()===2019) 2019
                     .button-demo
-                        button#saveBtn.btn.btn-primary.waves-effect(type='button')
+                        button#saveBtn.btn.btn-success.waves-effect(type='button')
                             i.material-icons save
                             |  Guardar
-                        a#exportBtn.btn.btn-success.waves-effect(href='javascript:void(0);')
+                        a#exportBtn.btn.btn-primary.waves-effect(href='javascript:void(0);', disabled="disabled")
                             i.material-icons get_app
                             |  Exportar a excel
                 .body
@@ -85,7 +85,7 @@ block scripts
                     switch (xhr.status){
                         case 201:
                             notify(result.message, result.success, xhr.getResponseHeader("Location"));
-                            $("#exportBtn").attr("href", xhr.getResponseHeader("Location"))
+                            $("#exportBtn").attr("href", xhr.getResponseHeader("Location")).removeAttr("disabled");
                         break;
                         default:
                             console.log(result, textStatus, xhr)

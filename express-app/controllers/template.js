@@ -53,19 +53,20 @@ router.post('/', function(req, res, next) {
     //Sheet for support workers
     var worksheet = workbook.addWorksheet(`Desc. soporte y auxiliar`);
     worksheet.columns = [
-        { header: 'Nº', key: 'n', width: 5},
-        { header: 'Apellidos y Nombres', key: 'name', width: 30},
-        { header: 'Adelantos', key: 'advances', width: 15},
-        { header: 'Pension escolar', key: 'schoolPension', width: 20},
-        { header: 'Libreria', key: 'papers', width: 15},
-        { header: 'Canastones', key: 'baskets', width: 15},
-        { header: 'Cumpleaños del dìa del padre', key: 'fathersDay', width: 36},
-        { header: 'Descuentos Uniforme', key: 'uniform', width: 15},
-        { header: 'Total Descuentos', key: 'total', width: 25}
+        { header: 'Nº', key: 'n', width: 3},
+        { header: 'Apellidos y Nombres', key: 'name', width: 25},
+        { header: 'Adelantos', key: 'advances', width: 12},
+        { header: 'Pension escolar', key: 'schoolPension', width: 12},
+        { header: 'Libreria', key: 'papers', width: 12},
+        { header: 'Canastones', key: 'baskets', width: 12},
+        { header: 'Cumpleaños del dìa del padre', key: 'fathersDay', width: 12},
+        { header: 'Descuentos Uniforme', key: 'uniform', width: 12},
+        { header: 'Total Descuentos', key: 'total', width: 12}
     ];
     var row = worksheet.lastRow;
     row.eachCell(function(cell, colNumber) {
-        cell.style = { font: { name: 'Arial Black' } };
+        cell.style = { font: { name: 'Arial Black', size: 8, bold: true, color: { argb: 'F25500' }  } };
+        cell.alignment = { vertical: 'middle', horizontal: 'center' };
     });      
     template.discountSupport.forEach(sup => {
         worksheet.addRow({
@@ -79,25 +80,32 @@ router.post('/', function(req, res, next) {
             uniform: sup.value5,
             total: sup.total,
         });
+        var row = worksheet.lastRow;
+        row.height = 15;
+        row.eachCell(function(cell, colNumber) {
+            cell.style.font = { size: 9 }
+            cell.alignment = { vertical: 'middle', horizontal: 'left' };
+        });   
     });
 
     //Sheet for admins and teachers
     var worksheet = workbook.addWorksheet(`Desc. docentes y admin.`);
     worksheet.columns = [
-        { header: 'Nº', key: 'n', width: 5},
-        { header: 'Apellidos y Nombres', key: 'name', width: 30},
-        { header: 'Pension escolar', key: 'schoolPension', width: 20},
-        { header: 'Adelantos', key: 'advances', width: 15},
-        { header: 'Libreria y uniformes', key: 'papers', width: 15},
-        { header: 'Canaston', key: 'baskets', width: 15},
-        { header: 'Día del padre', key: 'fathersDay', width: 36},
-        { header: 'Cumpleaños pasanaku', key: 'pasanaku', width: 15},
-        { header: 'Uniforme', key: 'uniform', width: 15},
-        { header: 'Total Descuentos', key: 'total', width: 25}
+        { header: 'Nº', key: 'n', width: 3},
+        { header: 'Apellidos y Nombres', key: 'name', width: 25},
+        { header: 'Pension escolar', key: 'schoolPension', width: 12},
+        { header: 'Adelantos', key: 'advances', width: 12},
+        { header: 'Libreria y uniformes', key: 'papers', width: 12},
+        { header: 'Canaston', key: 'baskets', width: 12},
+        { header: 'Día del padre', key: 'fathersDay', width: 12},
+        { header: 'Cumpleaños pasanaku', key: 'pasanaku', width: 12},
+        { header: 'Uniforme', key: 'uniform', width: 12},
+        { header: 'Total Descuentos', key: 'total', width: 12}
     ];
     var row = worksheet.lastRow;
     row.eachCell(function(cell, colNumber) {
-        cell.style = { font: { name: 'Arial Black' } };
+        cell.style = { font: { name: 'Arial Black', size: 8, bold: true, color: { argb: 'F25500' }  } };
+        cell.alignment = { vertical: 'middle', horizontal: 'center' };
     });      
     template.discountAdminTeacher.forEach(adm => {
         worksheet.addRow({
@@ -112,38 +120,45 @@ router.post('/', function(req, res, next) {
             uniform: adm.value6,
             total: adm.total,
         });
+        var row = worksheet.lastRow;
+        row.height = 15;
+        row.eachCell(function(cell, colNumber) {
+            cell.style.font = { size: 9 }
+            cell.alignment = { vertical: 'middle', horizontal: 'left' };
+        });    
     });
 
     //Sheet final template 
     var worksheet = workbook.addWorksheet(`Planilla`);
     worksheet.columns = [
-        { header: 'Nº', key: 'n', width: 5},
-        { header: 'Carnet de identidad', key: 'identification', width: 10},
-        { header: 'Ext.', key: 'identificationExt', width: 5},
-        { header: 'Primer apellido', key: 'firstLastName', width: 15},
-        { header: 'Segundo apellido', key: 'secondLastName', width: 15},
-        { header: 'Apellido de casado', key: 'secondLastName', width: 15},
-        { header: 'Nombre 1', key: 'firstName', width: 15},
-        { header: 'Nombre 2', key: 'secondName', width: 15},
+        { header: 'Nº', key: 'n', width: 3},
+        { header: 'Carnet de identidad', key: 'identification', width: 7},
+        { header: 'Ext.', key: 'identificationExt', width: 3},
+        { header: 'Primer apellido', key: 'firstLastName', width: 5},
+        { header: 'Segundo apellido', key: 'secondLastName', width: 5},
+        { header: 'Apellido de casado', key: 'secondLastName', width: 5},
+        { header: 'Nombre 1', key: 'firstName', width: 5},
+        { header: 'Nombre 2', key: 'secondName', width: 5},
         { header: 'Nac.', key: 'nationality', width: 5},
-        { header: 'Fecha nacimiento', key: 'birthday', width: 15},
-        { header: 'Sexo', key: 'sex', width: 5},
+        { header: 'Fecha nacimiento', key: 'birthday', width: 5, style: { numFmt: 'dd/mm/yyyy' }},
+        { header: 'Sexo', key: 'sex', width: 3},
         { header: 'Cargo', key: 'charge', width: 5},
-        { header: 'Fecha de ingreso', key: 'startDate', width: 15},
-        { header: 'Haber basico anterior', key: 'salary', width: 10},
-        { header: 'Incremento 2018', key: 'afpIncrement', width: 10},
-        { header: 'Otros bonos', key: 'otherBonus', width: 10},
-        { header: 'Total ganado', key: 'totalGain', width: 10},
-        { header: 'Descuendo AFP 12.71%', key: 'afpDiscount', width: 10},
-        { header: 'Otros descuentos', key: 'otherDiscounts', width: 15},
-        { header: 'Liquido pagable', key: 'liquidPayable', width: 15},
+        { header: 'Fecha de ingreso', key: 'startDate', width: 5, style: { numFmt: 'dd/mm/yyyy' }},
+        { header: 'Haber basico anterior', key: 'salary', width: 12},
+        { header: 'Incremento 2018', key: 'afpIncrement', width: 12},
+        { header: 'Otros bonos', key: 'otherBonus', width: 12},
+        { header: 'Total ganado', key: 'totalGain', width: 12},
+        { header: 'Descuendo AFP 12.71%', key: 'afpDiscount', width: 12},
+        { header: 'Otros descuentos', key: 'otherDiscounts', width: 12},
+        { header: 'Liquido pagable', key: 'liquidPayable', width: 12},
         { header: 'Firmas', key: 'signature', width: 20},
-        { header: 'Nº', key: 'n2', width: 5}
+        { header: 'Nº', key: 'n2', width: 3}
     ];
     var row = worksheet.lastRow;
     row.eachCell(function(cell, colNumber) {
-        cell.style = { font: { name: 'Arial Black' } };
-    });      
+        cell.style = { font: { name: 'Arial Black', size: 8, bold: true, color: { argb: 'F25500' }  } };
+        cell.alignment = { vertical: 'middle', horizontal: 'center' };
+    });
     template.finalTemplate.forEach(final => {
         worksheet.addRow({
             n: final.pos,
@@ -171,7 +186,11 @@ router.post('/', function(req, res, next) {
         });
         var row = worksheet.lastRow;
         row.height = 50;
-    });    
+        row.eachCell(function(cell, colNumber) {
+            cell.style.font = { size: 9 }
+            cell.alignment = { vertical: 'middle', horizontal: 'left' };
+        });         
+    });
     workbook.xlsx.writeFile(`${downloadPath}/${template.filename}`).then(function() {
         res.status(201);
         res.location(`${req.protocol}://${req.get("host")}${req.originalUrl}/download/${template.id}`);
