@@ -129,7 +129,7 @@ router.post('/', function(req, res, next) {
     });
 
     //Sheet final template 
-    var worksheet = workbook.addWorksheet(`Planilla`);
+    var worksheet = workbook.addWorksheet(`Planilla de sueldos`);
     worksheet.columns = [
         { header: 'Nº', key: 'n', width: 3},
         { header: 'Carnet de identidad', key: 'identification', width: 7},
